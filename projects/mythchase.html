@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>James Callan</title>
+<title>Myth Chase</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -42,6 +42,12 @@ body {
   margin-left: 50px;
 }
 
+.email a {
+  font-size: 16px;
+  margin-top: -20px;
+  margin-left: -22px;
+}
+
 #main {
   display: flex;
   transition: margin-left .5s;
@@ -61,7 +67,7 @@ h2 {
 
 .project p {
   color: #c5c5c5;
-  margin-left: 700px;
+  margin-left: 690px;
   font-size: 20px;
 }
 
@@ -91,10 +97,14 @@ function closeNav() {
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:closeNav()" class="closebtn"">&times;</a>
-  <a href="/index.html">Home</a>
-  <a href="/projects.html">Projects</a>
-  <a href="https://github.com/JamieCallan117/">GitHub Repositories</a>
+  <a href="/index.html">Projects</a>
+  <a href="https://github.com/JamieCallan117/">My GitHub</a>
   <a href="/cv.html">CV</a>
+
+  <div class="email">
+    <p style="color:#ffffff;margin-left: 10px;">This page is about the various projects I've produced over my time as a Software Engineer.<br><br>You can contact me at:</p>
+    <a href="mailto:JamCal117@gmail.com"><u>JamCal117@gmail.com</u></a>
+  </div>
 </div>
 
 <div id="main">
@@ -115,6 +125,34 @@ function closeNav() {
 <div class="project">
   <p>The coursework for my University module, 'Introduction to<br>Video Games Programming'. I took the game Pac-man, <br>recreated it in Unity with custom levels and characters.</p>
   <img src="/MythChase.jpg" width="600" height="338">
+  <p>The game launches into a main menu where you can choose <br>
+    to play, view leaderboards, view achievements or exit. This <br>
+    menu is controlled via the keyboard only.</p>
+  <img src="/MythChaseLeaderboard.jpg" width="600" height="338">
+  <p>The leaderboards are per level and sort by the highest <br>
+    any player has achieved and submitted. Any repeated name <br>
+    will overwrite the existing score of that name.</p>
+  <img src="/MythChaseAchievements.jpg" width="600" height="338">
+  <p>The achievements are global and once they are unlocked <br>
+    they cannot be completed again, the stat they track just <br>
+    continues to increase. </p>
+  <img src="/MythChaseCharacters.jpg" width="600" height="338">
+  <p>The game features 5 different characters which each have <br>
+    a different power up. There are also 3 different levels <br>
+    with different layouts.</p>
+  <hr style="width:35%">
+  <p>I started by looking at existing implementations of <br>
+    Pac-man in Unity as they would be a good guide for how <br>
+    to create certain parts of the game. After this I made <br>
+    the first level and worked on movement and then <br>
+    submitted the code for peer review as part of the module. <br>
+    After receiving feedback I made improvements before <br>
+    working on the rest of the game.</p>
+  <p>As the game uses Unity it is written in C# and I made <br>
+    design patterns through such as the component and <br>
+    observer pattern.</p>
+  <p>The GitHub repository for the game is 
+    <br>available <a style="margin-left: 0px;font-size: 20px;"; href="https://github.com/JamieCallan117/MythChase"><u>here</u></a>.</p>
 </div>
    
 </body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>James Callan</title>
+<title>Accessible Codenames</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -42,6 +42,12 @@ body {
   margin-left: 50px;
 }
 
+.email a {
+  font-size: 16px;
+  margin-top: -20px;
+  margin-left: -22px;
+}
+
 #main {
   display: flex;
   transition: margin-left .5s;
@@ -61,7 +67,13 @@ h2 {
 
 .project p {
   color: #c5c5c5;
-  margin-left: 700px;
+  margin-left: 690px;
+  font-size: 20px;
+}
+
+.project li {
+  color: #c5c5c5;
+  margin-left: 600px;
   font-size: 20px;
 }
 
@@ -91,10 +103,14 @@ function closeNav() {
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:closeNav()" class="closebtn"">&times;</a>
-  <a href="/index.html">Home</a>
-  <a href="/projects.html">Projects</a>
-  <a href="https://github.com/JamieCallan117/">GitHub Repositories</a>
+  <a href="/index.html">Projects</a>
+  <a href="https://github.com/JamieCallan117/">My GitHub</a>
   <a href="/cv.html">CV</a>
+
+  <div class="email">
+    <p style="color:#ffffff;margin-left: 10px;">This page is about the various projects I've produced over my time as a Software Engineer.<br><br>You can contact me at:</p>
+    <a href="mailto:JamCal117@gmail.com"><u>JamCal117@gmail.com</u></a>
+  </div>
 </div>
 
 <div id="main">
@@ -113,8 +129,94 @@ function closeNav() {
 </div>
 
 <div class="project">
-  <p>This was my final year project for my Software Engineering<br>course at Swansea University. I recreated the board game<br>Codenames as an Android application with a strong focus<br>on accessibility.</p>
+  <p>This was my final year project for my Software Engineering <br>
+    course at Swansea University. I recreated the board game <br>
+    Codenames as an Android application with a strong focus <br>
+    on accessibility.</p>
   <img src="/Codenames.jpg" width="600" height="285">
+  <p>Codenames is played with 2 teams of players, both having a <br>
+    minimum of 2 members. One member per team is assigned <br>
+    the role of 'spymaster' whilst every other member is simply <br>
+    just a regular player.
+  </p>
+  <img src="/CodenamesTeamSetup.jpg" width="600" height="285">
+  <p>Once the teams have been setup and you start the game, <br>
+    you will be presented with the board which contains 25 <br>
+    unique words all assigned to one of 4 colours. By default <br>
+    these are blue for team A, red for team B, a light green for <br>
+    neutral and black for the bomb word.</p>
+  <p>To play the game, the starting teams spymaster must find a <br>
+    word that links to as many of the words coloured with their <br>
+    teams colour. For example, if their team has the words "file" <br>
+    and "root" you could give the hint "directory" as that relates <br>
+    to both words. To indiciate to your team how many words they <br>
+    have to choose, you must also give a number along with the <br>
+    word, in this case 2.</p>
+  <img src="/CodenamesGuess.jpg" width="600" height="285">
+  <p>After a hint has been given, the other members of the team <br>
+    must select which words they think the hint relates to. They <br>
+    are allowed to guess 1 more than the number given, so if the <br>
+    hint relates to 2 words, 3 guesses can be made.</p>
+  <p>However, you aren't allowed to freely guess as guessing a <br>
+    word belonging to the other team or a neutral word will end <br>
+    your teams turn early and clicking the bomb word will instantly <br>
+    end the game with your loss.</p>
+  <p>After your team completes your turn, the opposing teams <br>
+    spymaster must now give a hint for their team and the cycle <br>
+    repeats until either the bomb word is clicked, or one team <br>
+    successfully clicks all of their words.</p>
+  <p>The game features two ways to play, either as a replacement <br>
+    to the board game or you can play online with friends. If you <br>
+    choose to play locally then you can select team members to <br>
+    make it easier to remember whos team everyone is on, or <br>
+    you can play without setting up teams. You then pass the <br>
+    device around your group dependent on who the current game <br>
+    phase applies too.</p>
+  <p>The online version of the game can be played on your own <br>
+    device and allows you to play with people not in the same <br>
+    room as you. The game still functions the same but now <br>
+    includes a chat option to communicate with team members.</p>
+  <img src="/CodenamesOnline.jpg" width="600" height="285">
+  <p>For the accessibility features in the game, I chose to go <br>
+    with Text-to-Speech and customising colours. The <br>
+    Text-to-Speech is triggered by performing a held press on <br>
+    an element that has text associated with it, so a button or <br>
+    just plain text for example. This will then read the text out <br>
+    to the user.</p>
+  <p>As for customising colours, you have free control over the <br>
+    colour of 8 different categories in the app. These are:</p>
+    <ul>
+      <li>Team A</li>
+      <li>Team B</li>
+      <li>Bomb Square</li>
+      <li>Neutral Square</li>
+      <li>Unmodified Square</li>
+      <li>Application Background</li>
+      <li>Menu Buttons</li>
+      <li>Menu Text</li>
+    </ul>
+    <p>There are 3 available slots to save different combinations <br>
+    of colours.</p>
+    <img src="/CodenamesColours.jpg" width="600" height="285">
+  <hr style="width:35%">
+  <p>I initially started by created designs for how each scene <br>
+    in the app would look and then I created that using XML in <br>
+    Android Studio. Afterwards I created basic code in Kotlin <br>
+    for navigating through the different scenes, testing that <br>
+    every piece of code I wrote worked as intended as I went.</p>
+  <p>The server to connect the devices together for online play <br>
+    was written in JavaScript using the Node.js framework. <br>
+    Whilst is certainly has room for improvement, given that <br>
+    it was self taught due to JavaScript not being taught at my <br>
+    University I think it works very well.</p>
+  <p>The GitHub repository for the Android application is 
+    <br>available <a style="margin-left: 0px;font-size: 20px;"; href="https://github.com/JamieCallan117/AccessibleCodenames"><u>here</u></a>
+    and the server is available <a style="margin-left: 0px;font-size: 20px;"; href="https://github.com/JamieCallan117/AccessibleCodenamesServer"><u>here</u></a>.</p>
+  <hr style="width:35%">
+  <p>My dissertation for this project is available below.</p>
+  <center>
+    <embed src="/Dissertation.pdf" width="800px" height="1150px" />
+  </center>
 </div>
    
 </body>
