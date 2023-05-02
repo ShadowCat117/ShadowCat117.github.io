@@ -1,107 +1,94 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>James Callan CV</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
+   <head>
+      <title>James Callan CV</title>
+      <style>
+         body {
+            background-color: #444;
+            font-family: "Lato", sans-serif;
+         }
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+         /* Style the button */
+         .sidebar-button {
+            display: none;
+         }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #ffffff;
-  display: block;
-  transition: 0.3s;
-}
+         /* The side navigation menu */
+         .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+         }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+         /* The navigation menu links */
+         .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ccc;
+            display: block;
+            transition: 0.3s;
+         }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+         /* When you mouse over the navigation links, change their color */
+         .sidebar a:hover {
+            color: #f1f1f1;
+         }
 
-.email a {
-  font-size: 16px;
-  margin-top: -20px;
-  margin-left: -22px;
-}
+         .sidebar .closebtn {
+            display: none;
+         }
 
-#main {
-  display: flex;
-  transition: margin-left .5s;
-  padding: 16px;
-  justify-content: space-between;
-}
+         /* Set the main content to the right of the sidebar */
+         .main {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #444;
+            min-height: 100vh;
+         }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-</head>
-<body>
+         /* Center the content inside the main section */
+         .content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ddd;
+         }
 
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
+         .content img {
+            max-height: 350px;
+            width: auto;
+            border: 1px solid white;
+         }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0px";
-    document.getElementById("main").style.marginLeft = "0px";
-}
-</script>
+         .content p {
+            font-size: 20px;
+         }
+         
+         h1 {
+          color: #ccc;
+            text-align: center;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- The side navigation menu -->
+      <div class="sidebar" id="mySidebar">
+         <a href="/">Projects</a>
+         <a href="https://github.com/JamieCallan117">GitHub</a>
+         <a href="/cv.html">CV</a>
+      </div>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:closeNav()" class="closebtn"">&times;</a>
-  <a href="/">Projects</a>
-  <a href="https://github.com/JamieCallan117/">My GitHub</a>
-  <a href="/cv.html">CV</a>
-
-  <div class="email">
-    <p style="color:#ffffff;margin-left: 10px;">This page is about the various projects I've produced over my time as a Software Engineer.<br><br>You can contact me at:</p>
-    <a href="mailto:JamCal117@gmail.com"><u>JamCal117@gmail.com</u></a>
-  </div>
-</div>
-
-<div id="main">
-    <body bgcolor="#181A1B">
-      <span style="font-size:30px;cursor:pointer;color: #ffffff;" onclick="openNav()">&#9776;</span>
-      <h1 style="color:rgb(66, 195, 228)">James Callan</h1>
-      <p></p>
-    </body>
-</div>
-
-<div>
-  <hr>
-  <center>
-    <h2 style="color:rgb(66, 195, 228)">My CV</h2>
-    <embed src="James Callan CV.pdf" width="800px" height="1150px" />
-  </center>
-</div>
-   
-</body>
-</html> 
+      <main class="main">
+         <h1>My CV</h1>
+         <div class="content">
+            <embed src="/Resources/PDFs/James Callan CV.pdf" width="800px" height="1150px" />
+         </div>
+      </main>
+   </body>
+</html>

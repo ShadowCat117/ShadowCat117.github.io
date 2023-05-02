@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Artemis</title>
+      <style>
+         body {
+            background-color: #444;
+            font-family: "Lato", sans-serif;
+         }
+
+         /* Style the button */
+         .sidebar-button {
+            display: none;
+         }
+
+         /* The side navigation menu */
+         .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+         }
+
+         /* The navigation menu links */
+         .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ccc;
+            display: block;
+            transition: 0.3s;
+         }
+
+         /* When you mouse over the navigation links, change their color */
+         .sidebar a:hover {
+            color: #f1f1f1;
+         }
+
+         .sidebar .closebtn {
+            display: none;
+         }
+
+         /* Set the main content to the right of the sidebar */
+         .main {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #444;
+            min-height: 100vh;
+         }
+
+         /* Center the content inside the main section */
+         .content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ddd;
+         }
+
+         .content img {
+            max-height: 350px;
+            width: auto;
+            border: 1px solid white;
+         }
+
+         .content video {
+            max-height: 350px;
+            width: auto;
+            border: 1px solid white;
+         }
+
+         .content p {
+            font-size: 20px;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- The side navigation menu -->
+      <div class="sidebar" id="mySidebar">
+         <a href="/">Projects</a>
+         <a href="https://github.com/JamieCallan117">GitHub</a>
+         <a href="/cv.html">CV</a>
+      </div>
+
+      <main class="main">
+         <h1 style="color: #ccc;">Artemis</h1>
+         <div class="content">
+            <p>Artemis is a rewrite of the Minecraft mod Wynntils for modern
+               versions of the game. I have made a few contributions to the
+               mod. So far these are ports of features from the original mod.</p>
+            <p>The mod had been released in an Alpha state with a lot of the basics from
+               the original mod, known as legacy, implemented. However, there was a lot
+               from legacy that was yet to be ported over. Over the next few months,
+               features were ported over from various different contributors.
+            </p>
+            <p>
+               One feature that was missing that I missed having was the waypoint manager,
+               which allowed easy access for viewing and editing your custom waypoints.
+               Currently, the only way to view and edit them was to navigate the map and
+               locate them, then use different input methods to edit or delete them. 
+            </p>
+            <video controls>
+               <source src="/Resources/Artemis/WaypointManager.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
+            <p>The second feature I worked on is yet to be merged into the main branch
+               as one of the main devs wanted to rewrite part of the code but what I
+               originally wrote did work.
+            </p>
+            <p>
+               The server uses a Minecraft container screen to display various
+               items that can be purchased, in this case <q>passes</q> to travel over
+               the ocean to different islands.
+            </p>
+            <p>
+               This feature replaced that screen with an overhead map of the world that you
+               can use the mouse to pan the view and see all the possible locations you can
+               travel to. It also adds extra features such as being able to see inaccessible
+               locations and drawing a line between locations.
+            </p>
+            <p>
+               The feature can be toggled on and off via the in-game config.
+            </p>
+            <video controls>
+               <source src="/Resources/Artemis/Seaskippermp4.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
+            <p>
+               This is the first open source project I have contributed to so it has definitely
+               helped me to have a better understanding on working on a bigger project and
+               the process to go through getting a feature merged.
+            </p>
+            <p>
+               I do currently have at least 1 more feature planned to implement, which is an
+               alternative screen for the above feature, where instead of clicking on the map
+               to select your location, there will be a <q>departure board</q> of all locations
+               displayed to the left of the screen and the map will be on the right of the screen
+               and update to the location of the selected destination as you click each button.
+            </p>
+            <p>
+               I do have a lot of this feature complete, but am currently awaiting for the other
+               dev to finish the rewrite of some of my code from the original feature.
+            </p>
+         </div>
+      </main>
+   </body>
+</html>

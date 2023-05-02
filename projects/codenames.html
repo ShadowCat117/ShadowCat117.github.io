@@ -1,223 +1,171 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Accessible Codenames</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
+   <head>
+      <title>Accessible Codenames</title>
+      <style>
+         body {
+            background-color: #444;
+            font-family: "Lato", sans-serif;
+         }
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+         /* Style the button */
+         .sidebar-button {
+            display: none;
+         }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #ffffff;
-  display: block;
-  transition: 0.3s;
-}
+         /* The side navigation menu */
+         .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+         }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+         /* The navigation menu links */
+         .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ccc;
+            display: block;
+            transition: 0.3s;
+         }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+         /* When you mouse over the navigation links, change their color */
+         .sidebar a:hover {
+            color: #f1f1f1;
+         }
 
-.email a {
-  font-size: 16px;
-  margin-top: -20px;
-  margin-left: -22px;
-}
+         .sidebar .closebtn {
+            display: none;
+         }
 
-#main {
-  display: flex;
-  transition: margin-left .5s;
-  padding: 16px;
-  justify-content: space-between;
-}
+         /* Set the main content to the right of the sidebar */
+         .main {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #444;
+            min-height: 100vh;
+         }
 
-h2 {
-  margin-left: -400px;
-}
+         /* Center the content inside the main section */
+         .content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ddd;
+         }
 
-.project a {
-  color: rgb(3, 0, 179);
-  margin-left: 700px;
-  font-size: 30px;
-}
+         .content img {
+            max-height: 350px;
+            width: auto;
+            border: 1px solid white;
+         }
 
-.project p {
-  color: #c5c5c5;
-  margin-left: 690px;
-  font-size: 20px;
-}
+         .content p {
+            font-size: 20px;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- The side navigation menu -->
+      <div class="sidebar" id="mySidebar">
+         <a href="/">Projects</a>
+         <a href="https://github.com/JamieCallan117">GitHub</a>
+         <a href="/cv.html">CV</a>
+      </div>
 
-.project li {
-  color: #c5c5c5;
-  margin-left: 690px;
-  font-size: 20px;
-}
-
-.project img {
-  margin-left: 650px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-</head>
-<body>
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0px";
-    document.getElementById("main").style.marginLeft = "0px";
-}
-</script>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:closeNav()" class="closebtn"">&times;</a>
-  <a href="/">Projects</a>
-  <a href="https://github.com/JamieCallan117/">My GitHub</a>
-  <a href="/cv.html">CV</a>
-
-  <div class="email">
-    <p style="color:#ffffff;margin-left: 10px;">This page is about the various projects I've produced over my time as a Software Engineer.<br><br>You can contact me at:</p>
-    <a href="mailto:JamCal117@gmail.com"><u>JamCal117@gmail.com</u></a>
-  </div>
-</div>
-
-<div id="main">
-    <body bgcolor="#181A1B">
-      <span style="font-size:30px;cursor:pointer;color: #ffffff;" onclick="openNav()">&#9776;</span>
-      <h1 style="color:rgb(66, 195, 228)">James Callan</h1>
-      <p></p>
-    </body>
-</div>
-
-<div>
-  <hr>
-  <center>
-    <h2 style="color:rgb(66, 195, 228);font-size: 36px;">Accessible Codenames</h2>
-  </center>
-</div>
-
-<div class="project">
-  <p>This was my final year project for my Software Engineering <br>
-    course at Swansea University. I recreated the board game <br>
-    Codenames as an Android application with a strong focus <br>
-    on accessibility.</p>
-  <img src="/Codenames.jpg" width="600" height="285">
-  <p>Codenames is played with 2 teams of players, both having a <br>
-    minimum of 2 members. One member per team is assigned <br>
-    the role of 'spymaster' whilst every other member is simply <br>
-    just a regular player.
-  </p>
-  <img src="/CodenamesTeamSetup.jpg" width="600" height="285">
-  <p>Once the teams have been setup and you start the game, <br>
-    you will be presented with the board which contains 25 <br>
-    unique words all assigned to one of 4 colours. By default <br>
-    these are blue for team A, red for team B, a light green for <br>
-    neutral and black for the bomb word.</p>
-  <p>To play the game, the starting teams spymaster must find a <br>
-    word that links to as many of the words coloured with their <br>
-    teams colour. For example, if their team has the words "file" <br>
-    and "root" you could give the hint "directory" as that relates <br>
-    to both words. To indiciate to your team how many words they <br>
-    have to choose, you must also give a number along with the <br>
-    word, in this case 2.</p>
-  <img src="/CodenamesGuess.jpg" width="600" height="285">
-  <p>After a hint has been given, the other members of the team <br>
-    must select which words they think the hint relates to. They <br>
-    are allowed to guess 1 more than the number given, so if the <br>
-    hint relates to 2 words, 3 guesses can be made.</p>
-  <p>However, you aren't allowed to freely guess as guessing a <br>
-    word belonging to the other team or a neutral word will end <br>
-    your teams turn early and clicking the bomb word will instantly <br>
-    end the game with your loss.</p>
-  <p>After your team completes your turn, the opposing teams <br>
-    spymaster must now give a hint for their team and the cycle <br>
-    repeats until either the bomb word is clicked, or one team <br>
-    successfully clicks all of their words.</p>
-  <p>The game features two ways to play, either as a replacement <br>
-    to the board game or you can play online with friends. If you <br>
-    choose to play locally then you can select team members to <br>
-    make it easier to remember whos team everyone is on, or <br>
-    you can play without setting up teams. You then pass the <br>
-    device around your group dependent on who the current game <br>
-    phase applies too.</p>
-  <p>The online version of the game can be played on your own <br>
-    device and allows you to play with people not in the same <br>
-    room as you. The game still functions the same but now <br>
-    includes a chat option to communicate with team members.</p>
-  <img src="/CodenamesOnline.jpg" width="600" height="285">
-  <p>For the accessibility features in the game, I chose to go <br>
-    with Text-to-Speech and customising colours. The <br>
-    Text-to-Speech is triggered by performing a held press on <br>
-    an element that has text associated with it, so a button or <br>
-    just plain text for example. This will then read the text out <br>
-    to the user.</p>
-  <p>As for customising colours, you have free control over the <br>
-    colour of 8 different categories in the app. These are:</p>
-    <ul>
-      <li>Team A</li>
-      <li>Team B</li>
-      <li>Bomb Square</li>
-      <li>Neutral Square</li>
-      <li>Unmodified Square</li>
-      <li>Application Background</li>
-      <li>Menu Buttons</li>
-      <li>Menu Text</li>
-    </ul>
-    <p>There are 3 available slots to save different combinations <br>
-    of colours.</p>
-    <img src="/CodenamesColours.jpg" width="600" height="285">
-  <hr style="width:35%">
-  <p>I initially started by created designs for how each scene <br>
-    in the app would look and then I created that using XML in <br>
-    Android Studio. Afterwards I created basic code in Kotlin <br>
-    for navigating through the different scenes, testing that <br>
-    every piece of code I wrote worked as intended as I went.</p>
-  <p>The server to connect the devices together for online play <br>
-    was written in JavaScript using the Node.js framework. <br>
-    Whilst is certainly has room for improvement, given that <br>
-    it was self taught due to JavaScript not being taught at my <br>
-    University I think it works very well.</p>
-  <p>The GitHub repository for the Android application is 
-    <br>available <a style="margin-left: 0px;font-size: 20px;"; href="https://github.com/JamieCallan117/AccessibleCodenames"><u>here</u></a>
-    and the server is available <a style="margin-left: 0px;font-size: 20px;"; href="https://github.com/JamieCallan117/AccessibleCodenamesServer"><u>here</u></a>.</p>
-  <hr style="width:35%">
-  <p>My dissertation for this project is available below.</p>
-  <center>
-    <embed src="/Dissertation.pdf" width="800px" height="1150px" />
-  </center>
-</div>
-   
-</body>
-</html> 
+      <main class="main">
+         <h1 style="color: #ccc;">Accessible Codenames</h1>
+         <div class="content">
+            <p>This was my final year project for my Software Engineering
+              course at Swansea University. I recreated the board game
+              Codenames as an Android application with a strong focus
+              on accessibility.</p>
+            <img src="/Resources/Codenames/Codenames.jpg" alt="A screenshot of the board of the game as shown in the app.">
+            <p>Codenames is played with 2 teams of players, both having a
+              minimum of 2 members. One member per team is assigned
+              the role of 'spymaster' whilst every other member is simply
+              just a regular player.</p>
+            <img src="/Resources/Codenames/CodenamesTeamSetup.jpg" alt="A screenshot of the scene for setting up teams for the game.">
+            <p>Once the teams have been setup and you start the game,
+              you will be presented with the board which contains 25
+              unique words all assigned to one of 4 colours. By default
+              these are blue for team A, red for team B, a light green for
+              neutral and black for the bomb word.</p>
+            <p>To play the game, the starting teams spymaster must find a
+              word that links to as many of the words coloured with their
+              teams colour. For example, if their team has the words "file"
+              and "root" you could give the hint "directory" as that relates
+              to both words. To indiciate to your team how many words they
+              have to choose, you must also give a number along with the
+              word, in this case 2.</p>
+            <img src="/Resources/Codenames/CodenamesGuess.jpg" alt="A screenshot of the game in the guessing phase of the game.">
+            <p>After a hint has been given, the other members of the team
+              must select which words they think the hint relates to. They
+              are allowed to guess 1 more than the number given, so if the
+              hint relates to 2 words, 3 guesses can be made.</p>
+            <p>However, you aren't allowed to freely guess as guessing a
+              word belonging to the other team or a neutral word will end
+              your teams turn early and clicking the bomb word will instantly
+              end the game with your loss.</p>
+            <p>After your team completes your turn, the opposing teams
+              spymaster must now give a hint for their team and the cycle
+              repeats until either the bomb word is clicked, or one team
+              successfully clicks all of their words.</p>
+            <p>The game features two ways to play, either as a replacement
+              to the board game or you can play online with friends. If you
+              choose to play locally then you can select team members to
+              make it easier to remember whos team everyone is on, or
+              you can play without setting up teams. You then pass the
+              device around your group dependent on who the current game
+              phase applies too.</p>
+            <p>The online version of the game can be played on your own
+              device and allows you to play with people not in the same
+              room as you. The game still functions the same but now
+              includes a chat option to communicate with team members.</p>
+            <img src="/Resources/Codenames/CodenamesOnline.jpg" alt="A screenshot of the teams in an online match of the game.">
+            <p>For the accessibility features in the game, I chose to go
+              with Text-to-Speech and customising colours. The
+              Text-to-Speech is triggered by performing a held press on
+              an element that has text associated with it, so a button or
+              just plain text for example. This will then read the text out
+              to the user.</p>
+            <p>As for customising colours, you have free control over the
+              colour of 8 different categories in the app. These are:</p>
+              <ul>
+                <li>Team A</li>
+                <li>Team B</li>
+                <li>Bomb Square</li>
+                <li>Neutral Square</li>
+                <li>Unmodified Square</li>
+                <li>Application Background</li>
+                <li>Menu Buttons</li>
+                <li>Menu Text</li>
+              </ul>
+              <p>There are 3 available slots to save different combinations
+              of colours.</p>
+            <img src="/Resources/Codenames/CodenamesColours.jpg" alt="A screenshot of the scene in the game that allows you to choose the colours of different elements of the game.">
+            <p>I initially started by created designs for how each scene
+              in the app would look and then I created that using XML in
+              Android Studio. Afterwards I created basic code in Kotlin
+              for navigating through the different scenes, testing that
+              every piece of code I wrote worked as intended as I went.</p>
+            <p>The server to connect the devices together for online play
+              was written in JavaScript using the Node.js framework.
+              Whilst is certainly has room for improvement, given that
+              it was self taught due to JavaScript not being taught on my course
+              at University I think it works very well.</p>
+            <p>The GitHub repository for the Android application is 
+              <br>available <a style="margin-left: 0px;font-size: 20px;"; href="https://github.com/JamieCallan117/AccessibleCodenames"><u>here</u></a>
+              and the server is available <a style="margin-left: 0px;font-size: 20px;"; href="https://github.com/JamieCallan117/AccessibleCodenamesServer"><u>here</u></a>.</p>
+            <p>My dissertation for this project is available below.</p>
+            <embed src="/Resources/PDFs/Dissertation.pdf" width="800px" height="1150px" />
+         </div>
+      </main>
+   </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CC-117</title>
+      <style>
+         body {
+            background-color: #444;
+            font-family: "Lato", sans-serif;
+         }
+
+         /* Style the button */
+         .sidebar-button {
+            display: none;
+         }
+
+         /* The side navigation menu */
+         .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+         }
+
+         /* The navigation menu links */
+         .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ccc;
+            display: block;
+            transition: 0.3s;
+         }
+
+         /* When you mouse over the navigation links, change their color */
+         .sidebar a:hover {
+            color: #f1f1f1;
+         }
+
+         .sidebar .closebtn {
+            display: none;
+         }
+
+         /* Set the main content to the right of the sidebar */
+         .main {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #444;
+            min-height: 100vh;
+         }
+
+         /* Center the content inside the main section */
+         .content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ddd;
+         }
+
+         .content img {
+            max-height: 350px;
+            width: auto;
+            border: 1px solid white;
+         }
+
+         .content p {
+            font-size: 20px;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- The side navigation menu -->
+      <div class="sidebar" id="mySidebar">
+         <a href="/">Projects</a>
+         <a href="https://github.com/JamieCallan117">GitHub</a>
+         <a href="/cv.html">CV</a>
+      </div>
+
+      <main class="main">
+         <h1 style="color: #ccc;">CC-117</h1>
+         <div class="content">
+            <p>This is a Discord bot I made for my Wynncraft Guild. It reads
+               data from the Wynncraft public API and uses that to perform
+               various different features.</p>
+            <p>The bot started out as a way to automatically apply roles in
+               the Discord server based on their in-game stats, so if they
+               had the Chief rank in the Guild, they would be given the Chief
+               rank in the Discord server.
+            </p>
+            <img src="/Resources/CC-117/UpdateRanks.png" alt="The bot sending a message on how many members have had their roles updated.">
+            <p>After looking more into the API, I thought of some more features
+               that could be included in the bot. So the next feature I implemented
+               was the ability to track other guilds and get a rough idea on how
+               many players each guild had online at a time.
+            </p>
+            <p>This would get the current number of players online and calculate
+               the running average over the course of a week before resetting the
+               running average but using the average at the end of the previous
+               week as a starting point.
+            </p>
+            <img src="/Resources/CC-117/TrackedGuilds.png" alt="The bot responding to the trackedguilds command.">
+            <p>The next feature was an extension of tracking guilds and it tried to
+               find the most and least active hours for a guild, those being when
+               they had the most or least players online in the last 24 hours.
+            </p>
+            <p>The bot would display the information in the timezone you selected in
+               the command and every hour in the last 24 where they had the most and
+               least players online. It would also display the average number of players
+               online who had either the Captain role or a role above that.
+            </p>
+            <img src="/Resources/CC-117/ActiveHours.png" alt="The bot responding to the activehours command.">
+            <p>The most recent feature I've added is to see how long it has been since
+               every member in a guild logged in. It displays the username, guild rank
+               and how many days it has been since the user logged in. If they are
+               currently online, then it will say that.
+            </p>
+            <img src="/Resources/CC-117/LastLogins.png" alt="The bot responding to the lastlogins command.">
+            <p>
+               As our guild has a threshold for how long you can be inactive before being
+               removed from the guild, viewing the last logins for our guild will
+               highlight members green if they are fine and red if they should be
+               removed from the guild.
+            </p>
+            <img src="/Resources/CC-117/LastLoginsHOC.png" alt="The bot responding to the lastlogins command for our guild.">
+            <p>
+               Currently the bot has a few things hardcoded for our guilds Discord
+               server so a lot of the functionality wouldn't work on other servers,
+               but I am actively trying to make improvements towards that to hopefully
+               allow it to be on multiple servers.
+            </p>
+            <p>
+               I also hope to improve the data storage system as currently it is all
+               stored in text files and I would like it to be stored in a database
+               instead.
+            </p>
+            <p>
+               I originally created the bot in Python, but when I decided to allow
+               for slash commands to be used I swapped to using Java, in the future 
+               I may rewrite the bot in JavaScript.
+            </p>
+            <p>The GitHub repository for the bot is 
+               available <a style="margin-left: 0px;font-size: 20px;"; href="https://github.com/JamieCallan117/CC-117"><u>here</u></a>.</p>
+         </div>
+      </main>
+   </body>
+</html>

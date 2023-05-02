@@ -1,156 +1,165 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>James Callan Projects</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #ffffff;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.email a {
-  font-size: 16px;
-  margin-top: -20px;
-  margin-left: -22px;
-}
-
-#main {
-  display: flex;
-  transition: margin-left .5s;
-  padding: 16px;
-  justify-content: space-between;
-}
-
-h2 {
-  margin-left: -400px;
-}
-
-.project a {
-  color: rgb(3, 0, 179);
-  margin-left: 700px;
-  font-size: 30px;
-}
-
-.project p {
-  color: #c5c5c5;
-  margin-left: 690px;
-  font-size: 20px;
-}
-
-.project img {
-  margin-left: 650px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-</head>
-<body>
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0px";
-    document.getElementById("main").style.marginLeft = "0px";
-}
-</script>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:closeNav()" class="closebtn"">&times;</a>
-  <a href="/">Projects</a>
-  <a href="https://github.com/JamieCallan117/">My GitHub</a>
-  <a href="/cv.html">CV</a>
-
-  <div class="email">
-    <p style="color:#ffffff;margin-left: 10px;">This page is about the various projects I've produced over my time as a Software Engineer.<br><br>You can contact me at:</p>
-    <a href="mailto:JamCal117@gmail.com"><u>JamCal117@gmail.com</u></a>
-  </div>
-</div>
-
-<div id="main">
-    <body bgcolor="#181A1B">
-      <span style="font-size:30px;cursor:pointer;color: #ffffff;" onclick="openNav()">&#9776;</span>
-      <h1 style="color:rgb(66, 195, 228)">James Callan</h1>
-      <p></p>
-    </body>
-</div>
-
-<div>
-  <hr>
-  <center>
-    <h2 style="color:rgb(66, 195, 228);font-size: 36px;">My Projects</h2>
-  </center>
-</div>
-
-<div class="project">
-  <a href="/projects/codenames.html">Accessible Codenames</a>
-  <p>This was my final year project for my Software Engineering<br>course at Swansea University. I recreated the board game<br>Codenames as an Android application with a strong focus<br>on accessibility.</p>
-  <img src="Codenames.jpg" width="600" height="285">
-  <hr style="width:35%">
-  <br>
-</div>
-
-<div class="project">
-  <a href="/projects/mythchase.html">Myth Chase</a>
-  <p>The coursework for my University module, 'Introduction to<br>Video Games Programming'. I took the game Pac-man, <br>recreated it in Unity with custom levels and characters.</p>
-  <img src="MythChase.jpg" width="600" height="338">
-  <hr style="width:35%">
-  <br>
-</div>
-
-<div class="project">
-  <a href="/projects/rocketjump.html">Rocket Jump</a>
-  <p>A simple project trying out Unreal Engine 5. I took the first <br>person template and made a simple game with 2 levels <br>trying to reach the top of the map as quickly as possible.</p>
-  <img src="RocketJump.jpg" width="600" height="338">
-  <hr style="width:35%">
-  <br>
-</div>
-
-<div class="project">
-  <a href="/projects/ballsandmines.html">Balls and Mines</a>
-  <p>This project was a game jam made by some friends. I did not <br>participate in the original development but I later added simple <br>multiplayer to it so that you could play with 4 players online.</p>
-  <img src="BallsAndMines.jpg" width="600" height="338">
-</div>
-   
-</body>
-</html> 
+   <head>
+      <title>James Callan Projects</title>
+      <style>
+         body {
+         background-color: #444;
+         font-family: "Lato", sans-serif;
+         }
+         /* Style the button */
+         .sidebar-button {
+         display: none;
+         }
+         /* The side navigation menu */
+         .sidebar {
+         height: 100%;
+         width: 250px;
+         position: fixed;
+         z-index: 1;
+         top: 0;
+         left: 0;
+         background-color: #111;
+         overflow-x: hidden;
+         padding-top: 60px;
+         }
+         /* The navigation menu links */
+         .sidebar a {
+         padding: 8px 8px 8px 32px;
+         text-decoration: none;
+         font-size: 25px;
+         color: #ccc;
+         display: block;
+         transition: 0.3s;
+         }
+         /* When you mouse over the navigation links, change their color */
+         .sidebar a:hover {
+         color: #f1f1f1;
+         }
+         .sidebar .closebtn {
+         display: none;
+         }
+         /* Set the main content to the right of the sidebar */
+         .main {
+         transition: margin-left .5s;
+         padding: 20px;
+         margin-left: 250px;
+         }
+         /* Style the cards */
+         .card {
+         background-color: #111;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+         transition: 0.3s;
+         width: 30%;
+         margin: 10px;
+         display: inline-block;
+         }
+         .card:hover {
+         box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+         }
+         .card img {
+         height: 200px;
+         width: auto;
+         max-width: 100%;
+         display: block;
+         margin: 0 auto;
+         border: 1px solid #6e6e6e;
+         }
+         .card-container {
+         text-align: center;
+         }
+         .card-container h2 {
+         color: #ccc;
+         }
+         .card-container p {
+         color: #ccc;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- The side navigation menu -->
+      <div class="sidebar" id="mySidebar">
+         <a href="/">Projects</a>
+         <a href="https://github.com/JamieCallan117">GitHub</a>
+         <a href="/cv.html">CV</a>
+      </div>
+      <!-- The main content -->
+      <div class="main">
+         <h1 style="color: #ccc;">James Callan Projects</h1>
+         <div class="card-container">
+            <a href="/Projects/mazebounce.html">
+               <div class="card">
+                  <img src="/Resources/MazeBounce/MazeBounce.jpg" alt="Maze Bounce">
+                  <h2>Maze Bounce</h2>
+                  <p>It's a mobile game built in Unity
+                     that involves players placing corners in randomly
+                     generated mazes of different sizes to launch a ball through
+                     the maze to reach the end.
+                  </p>
+               </div>
+            </a>
+            <a href="/Projects/codenames.html">
+               <div class="card">
+                  <img src="/Resources/Codenames/Codenames.jpg" alt="Accessible Codenames">
+                  <h2>Accessible Codenames</h2>
+                  <p>This was my final year project for my Software Engineering
+                     course at Swansea University. I recreated the board game
+                     Codenames as an Android application with a strong focus
+                     on accessibility.
+                  </p>
+               </div>
+            </a>
+            <a href="/Projects/artemis.html">
+               <div class="card">
+                  <img src="/Resources/Artemis/Artemis.png" alt="Artemis">
+                  <h2>Artemis</h2>
+                  <p>Artemis is a rewrite of the Minecraft mod Wynntils for modern
+                     versions of the game. I have made a few contributions to the
+                     mod. So far these are ports of features from the original mod.
+                  </p>
+               </div>
+            </a>
+            <a href="/Projects/cc117.html">
+               <div class="card">
+                  <img src="/Resources/CC-117/TrackedGuilds.png" alt="CC-117">
+                  <h2>CC-117</h2>
+                  <p>This is a Discord bot I made for my Wynncraft Guild. It reads
+                     data from the Wynncraft public API and uses that to perform
+                     various different features.
+                  </p>
+               </div>
+            </a>
+            <a href="/Projects/mythchase.html">
+               <div class="card">
+                  <img src="/Resources/MythChase/MythChase.jpg" alt="Myth Chase">
+                  <h2>Myth Chase</h2>
+                  <p>The coursework for my University module, 'Introduction to
+                     Video Games Programming'. I took the game Pac-man,
+                     recreated it in Unity with custom levels and characters.
+                  </p>
+               </div>
+            </a>
+            <a href="/Projects/ballsandmines.html">
+               <div class="card">
+                  <img src="/Resources/BallsAndMines/BallsAndMines.jpg" alt="Balls and Mines">
+                  <h2>Balls and Mines</h2>
+                  <p>This project was a game jam made by some friends. I did not
+                     participate in the original development but I later added simple
+                     multiplayer to it so that you could play with 4 players online.
+                  </p>
+               </div>
+            </a>
+         </div>
+      </div>
+      <!-- The JavaScript to open and close the sidebar -->
+      <script>
+         function openNav() {
+         document.getElementById("mySidebar").classList.add("sidebar-open");
+         }
+         
+         function closeNav() {
+         document.getElementById("mySidebar").classList.remove("sidebar-open");
+         }
+      </script>
+   </body>
+</html>
