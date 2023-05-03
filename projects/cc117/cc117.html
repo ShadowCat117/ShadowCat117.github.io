@@ -2,89 +2,26 @@
 <html>
    <head>
       <title>CC-117</title>
-      <style>
-         body {
-            background-color: #444;
-            font-family: "Lato", sans-serif;
-         }
-
-         /* Style the button */
-         .sidebar-button {
-            display: none;
-         }
-
-         /* The side navigation menu */
-         .sidebar {
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            padding-top: 60px;
-         }
-
-         /* The navigation menu links */
-         .sidebar a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #ccc;
-            display: block;
-            transition: 0.3s;
-         }
-
-         /* When you mouse over the navigation links, change their color */
-         .sidebar a:hover {
-            color: #f1f1f1;
-         }
-
-         .sidebar .closebtn {
-            display: none;
-         }
-
-         /* Set the main content to the right of the sidebar */
-         .main {
-            margin-left: 250px;
-            padding: 20px;
-            background-color: #444;
-            min-height: 100vh;
-         }
-
-         /* Center the content inside the main section */
-         .content {
-            max-width: 800px;
-            margin: 0 auto;
-            color: #ddd;
-         }
-
-         .content img {
-            max-height: 350px;
-            width: auto;
-            border: 1px solid white;
-         }
-
-         .content p {
-            font-size: 20px;
-         }
-      </style>
+      <link rel="stylesheet" type="text/css" href="../../style.css">
    </head>
    <body>
-      <!-- The side navigation menu -->
       <div class="sidebar" id="mySidebar">
          <a href="/">Projects</a>
          <a href="https://github.com/JamieCallan117">GitHub</a>
          <a href="/cv.html">CV</a>
+         <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;">
+            This page is about my Discord bot that I made for my Wynncraft Guild.<br><br>You can contact me at: 
+            <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a>
+            <br><a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a>
+         </p>
       </div>
-
       <main class="main">
          <h1 style="color: #ccc;">CC-117</h1>
          <div class="content">
             <p>This is a Discord bot I made for my Wynncraft Guild. It reads
                data from the Wynncraft public API and uses that to perform
-               various different features.</p>
+               various different features.
+            </p>
             <p>The bot started out as a way to automatically apply roles in
                the Discord server based on their in-game stats, so if they
                had the Chief rank in the Guild, they would be given the Chief
@@ -142,7 +79,8 @@
                I may rewrite the bot in JavaScript.
             </p>
             <p>The GitHub repository for the bot is 
-               available <a style="margin-left: 0px;font-size: 20px;"; href="https://github.com/JamieCallan117/CC-117"><u>here</u></a>.</p>
+               available <a style="margin-left: 0px;font-size: 20px;"; href="https://github.com/JamieCallan117/CC-117"><u>here</u></a>.
+            </p>
          </div>
       </main>
    </body>
