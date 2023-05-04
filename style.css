@@ -94,3 +94,12 @@ h1 {
 	color: #ccc;
 	text-align: center;
 }
+h2 {
+	color: #ccc;
+	text-align: center;
+}
+li {
+	font-size: 20px; /* set the same font size as .content p */
+	line-height: 1.5; /* set the same line height as .content p */
+}
+  
