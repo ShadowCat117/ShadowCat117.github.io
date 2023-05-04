@@ -1,81 +1,34 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Artemis</title>
-      <link rel="stylesheet" type="text/css" href="../../style.css">
-   </head>
-   <body>
-      <div class="sidebar" id="mySidebar">
-         <a href="/">Projects</a>
-         <a href="https://github.com/JamieCallan117">GitHub</a>
-         <a href="/cv.html">CV</a>
-         <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;">
-            This page is about my contributions to the open source Minecraft mod, Artemis.<br><br>You can contact me at: 
-            <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a>
-            <br><a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a>
-         </p>
-      </div>
-      <main class="main">
-         <h1>Artemis</h1>
-         <div class="content">
-            <p>Artemis is a rewrite of the Minecraft mod Wynntils for modern
-               versions of the game. I have made a few contributions to the
-               mod. So far these are ports of features from the original mod.
-            </p>
-            <p>The mod had been released in an Alpha state with a lot of the basics from
-               the original mod, known as legacy, implemented. However, there was a lot
-               from legacy that was yet to be ported over. Over the next few months,
-               features were ported over from various different contributors.
-            </p>
-            <p>
-               One feature that was missing that I missed having was the waypoint manager,
-               which allowed easy access for viewing and editing your custom waypoints.
-               Currently, the only way to view and edit them was to navigate the map and
-               locate them, then use different input methods to edit or delete them. 
-            </p>
-            <video controls>
-               <source src="/Resources/Artemis/WaypointManager.mp4" type="video/mp4">
-               Your browser does not support the video tag.
+
+<head>
+    <title>Artemis</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+</head>
+
+<body>
+    <div class="sidebar" id="mySidebar"> <a href="/">Projects</a> <a href="https://github.com/JamieCallan117">GitHub</a> <a href="/cv.html">CV</a>
+        <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;"> This page is about my contributions to the open source Minecraft mod, Artemis.<br><br>You can contact me at: <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a> <br><a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a> </p>
+    </div>
+    <main class="main">
+        <h1>Artemis</h1>
+        <div class="content">
+            <p>Artemis is a rewrite of the Minecraft mod Wynntils for modern versions of the game. I have made a few contributions to the mod. So far these are ports of features from the original mod. </p>
+            <p>The mod had been released in an Alpha state with a lot of the basics from the original mod, known as legacy, implemented. However, there was a lot from legacy that was yet to be ported over. Over the next few months, features were ported over from various different contributors. </p>
+            <p> One feature that was missing that I missed having was the waypoint manager, which allowed easy access for viewing and editing your custom waypoints. Currently, the only way to view and edit them was to navigate the map and locate them, then use different input methods to edit or delete them. </p> <video controls>
+                <source src="/Resources/Artemis/WaypointManager.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
-            <p>The second feature I worked on is yet to be merged into the main branch
-               as one of the main devs wanted to rewrite part of the code but what I
-               originally wrote did work.
-            </p>
-            <p>
-               The server uses a Minecraft container screen to display various
-               items that can be purchased, in this case <q>passes</q> to travel over
-               the ocean to different islands.
-            </p>
-            <p>
-               This feature replaced that screen with an overhead map of the world that you
-               can use the mouse to pan the view and see all the possible locations you can
-               travel to. It also adds extra features such as being able to see inaccessible
-               locations and drawing a line between locations.
-            </p>
-            <p>
-               The feature can be toggled on and off via the in-game config.
-            </p>
-            <video controls>
-               <source src="/Resources/Artemis/Seaskippermp4.mp4" type="video/mp4">
-               Your browser does not support the video tag.
+            <p>The second feature I worked on is yet to be merged into the main branch as one of the main devs wanted to rewrite part of the code but what I originally wrote did work. </p>
+            <p> The server uses a Minecraft container screen to display various items that can be purchased, in this case <q>passes</q> to travel over the ocean to different islands. </p>
+            <p> This feature replaced that screen with an overhead map of the world that you can use the mouse to pan the view and see all the possible locations you can travel to. It also adds extra features such as being able to see inaccessible locations and drawing a line between locations. </p>
+            <p> The feature can be toggled on and off via the in-game config. </p> <video controls>
+                <source src="/Resources/Artemis/Seaskippermp4.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
-            <p>
-               This is the first open source project I have contributed to so it has definitely
-               helped me to have a better understanding on working on a bigger project and
-               the process to go through getting a feature merged.
-            </p>
-            <p>
-               I do currently have at least 1 more feature planned to implement, which is an
-               alternative screen for the above feature, where instead of clicking on the map
-               to select your location, there will be a <q>departure board</q> of all locations
-               displayed to the left of the screen and the map will be on the right of the screen
-               and update to the location of the selected destination as you click each button.
-            </p>
-            <p>
-               I do have a lot of this feature complete, but am currently awaiting for the other
-               dev to finish the rewrite of some of my code from the original feature.
-            </p>
-         </div>
-      </main>
-   </body>
+            <p> This is the first open source project I have contributed to so it has definitely helped me to have a better understanding on working on a bigger project and the process to go through getting a feature merged. </p>
+            <p> I do currently have at least 1 more feature planned to implement, which is an alternative screen for the above feature, where instead of clicking on the map to select your location, there will be a <q>departure board</q> of all locations displayed to the left of the screen and the map will be on the right of the screen and update to the location of the selected destination as you click each button. </p>
+            <p> I do have a lot of this feature complete, but am currently awaiting for the other dev to finish the rewrite of some of my code from the original feature. </p>
+        </div>
+    </main>
+</body>
+
 </html>

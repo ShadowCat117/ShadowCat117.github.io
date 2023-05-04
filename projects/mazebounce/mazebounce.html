@@ -1,109 +1,34 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Maze Bounce</title>
-      <link rel="stylesheet" type="text/css" href="../../style.css">
-   </head>
-   <body>
-      <div class="sidebar" id="mySidebar">
-         <a href="/">Projects</a>
-         <a href="https://github.com/JamieCallan117">GitHub</a>
-         <a href="/cv.html">CV</a>
-         <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;">
-            This page is about the mobile game I developed and released for Android.<br><br>You can contact me at: 
-            <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a>
-            <br><a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a>
-         </p>
-      </div>
-      <main class="main">
-         <h1>Maze Bounce</h1>
-         <div class="content">
-            <p>It's a mobile game built in Unity
-               that involves players placing corners in randomly
-               generated mazes of different sizes to launch a ball through
-               the maze to reach the end.
-            </p>
-            <img src="/Resources/MazeBounce/MazeBounce.jpg" alt="A screenshot of the first level of the game.">
-            <p>The game contains 10,000 randomly generated levels for each of the 6
-               difficulties. Each difficulty is just a name for the size of the maze,
-               so beginnger is 11x11, easy is 13x13 up to insane which is 19x19. The
-               mazes are randomly generated via a seed so they will always be the same
-               for each level.
-            </p>
-            <img src="/Resources/MazeBounce/MazeBounceLevels.jpg" alt="A screenshot of the final page of beginner levels, displaying up to level 10,000.">
-            <p>
-               There is also a daily level, which is the largest at 21x21 and there
-               is one available every day, resetting at midnight UTC. The daily maze
-               is the same for everyone every day.
-            </p>
-            <img src="/Resources/MazeBounce/MazeBounceDaily.jpg" alt="A screenshot of the daily level on the 28th of April 2023.">
-            <p>
-               The game currently contains over 4,000 different customisation options,
-               these are mostly the same patterns with different colour schemes using
-               Unity's shader system. These are available for the ball, the background,
-               the walls of the maze and the placeable corners. Most patterns are static,
-               but there are a few for each that are animated.
-            </p>
-            <p>
-               The game uses 16 different colours, so there are
-               16 of each customisation option just using the solid colour, then all
-               other patterns use a combination of those 16, some have unique primary
-               and secondary combinations and some allow for them to be swapped.
-            </p>
-            <p>
-               For example, the checkered pattern uses a similar amount of each colour
-               so it only allows for white and red to be used once. But a pattern
-               where one colour is used more than the other will also allow for red and
-               white to be used.
-            </p>
-            <img src="/Resources/MazeBounce/MazeBounceCustomisation.jpg" alt="A screenshot of some of the customisation options available for corners.">
-            <p>
-               There is room for many more customisation options, as currently you can
-               earn 700,000 tokens for completing every level and if you unlock each 
-               pattern via the random unlock rather than directing unlocking, you will
-               still have just under 500,000 left. 
-            </p>
-            <img src="/Resources/MazeBounce/MazeBounceCustomised.jpg" alt="A screenshot of a level with customisation options changed.">
-            <p>
-               The game features a few achievements using Google Play Games. They are all
-               fairly simple, being to just complete a certain amount of levels, but there
-               is one hidden achievement that is not unlocked from regular gameplay.
-            </p>
-            <img src="/Resources/MazeBounce/MazeBounceAchievements.jpg" alt="A screenshot of the Google Play Games achievements UI.">
-            <p>
-               The game also makes use of Unity IAP, Unity Cloud Save and Google AdMob for
-               different functionality. Unity IAP allows for in-app purchases to be made.
-               Unity Cloud Save allows for players data to be stored on the cloud in case
-               they swap device or reinstall the game. And Google AdMob is used for displaying
-               both rewarded and interstitial ads to the player.
-            </p>
-            <img src="/Resources/MazeBounce/MazeBounceShop.jpg" alt="A screenshot of the shop in the game.">
-            <p>
-               Finally, a GIF of the game in action.
-            </p>
-            <img src="/Resources/MazeBounce/MazeBounce.gif" alt="A GIF of the game in action.">
-            <p>
-               I started out by planning what features I wanted to include
-               in the game. At first they were just the basics of generating
-               mazes, placing corners so that a ball could be launched through
-               and bounce on the corners to reach the end and customisation options
-               for the ball, background, corners and the walls of the maze.
-            </p>
-            <p>
-               As development continued I thought of new ideas such as having different
-               sized mazes for different difficulties, so starting out at 11x11 and
-               going up to 19x19. Also including a daily level which would be 21x21.
-               And finally, a challenge difficulty, which was only 13x13 but all of the
-               walls were invisible, so you had to use trial and error to find the end.
-            </p>
-            <p>
-               I still have a few more ideas on features I could implement, however they
-               would take a lot of time to implement and I think they'll only be worth
-               adding if the game actually has any players so I will wait and see how
-               it does before starting work on them.
-            </p>
+
+<head>
+    <title>Maze Bounce</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+</head>
+
+<body>
+    <div class="sidebar" id="mySidebar"> <a href="/">Projects</a> <a href="https://github.com/JamieCallan117">GitHub</a> <a href="/cv.html">CV</a>
+        <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;"> This page is about the mobile game I developed and released for Android.<br><br>You can contact me at: <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a> <br><a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a> </p>
+    </div>
+    <main class="main">
+        <h1>Maze Bounce</h1>
+        <div class="content">
+            <p>It's a mobile game built in Unity that involves players placing corners in randomly generated mazes of different sizes to launch a ball through the maze to reach the end. </p> <img src="/Resources/MazeBounce/MazeBounce.jpg" alt="A screenshot of the first level of the game.">
+            <p>The game contains 10,000 randomly generated levels for each of the 6 difficulties. Each difficulty is just a name for the size of the maze, so beginnger is 11x11, easy is 13x13 up to insane which is 19x19. The mazes are randomly generated via a seed so they will always be the same for each level. </p> <img src="/Resources/MazeBounce/MazeBounceLevels.jpg" alt="A screenshot of the final page of beginner levels, displaying up to level 10,000.">
+            <p> There is also a daily level, which is the largest at 21x21 and there is one available every day, resetting at midnight UTC. The daily maze is the same for everyone every day. </p> <img src="/Resources/MazeBounce/MazeBounceDaily.jpg" alt="A screenshot of the daily level on the 28th of April 2023.">
+            <p> The game currently contains over 4,000 different customisation options, these are mostly the same patterns with different colour schemes using Unity's shader system. These are available for the ball, the background, the walls of the maze and the placeable corners. Most patterns are static, but there are a few for each that are animated. </p>
+            <p> The game uses 16 different colours, so there are 16 of each customisation option just using the solid colour, then all other patterns use a combination of those 16, some have unique primary and secondary combinations and some allow for them to be swapped. </p>
+            <p> For example, the checkered pattern uses a similar amount of each colour so it only allows for white and red to be used once. But a pattern where one colour is used more than the other will also allow for red and white to be used. </p> <img src="/Resources/MazeBounce/MazeBounceCustomisation.jpg" alt="A screenshot of some of the customisation options available for corners.">
+            <p> There is room for many more customisation options, as currently you can earn 700,000 tokens for completing every level and if you unlock each pattern via the random unlock rather than directing unlocking, you will still have just under 500,000 left. </p> <img src="/Resources/MazeBounce/MazeBounceCustomised.jpg" alt="A screenshot of a level with customisation options changed.">
+            <p> The game features a few achievements using Google Play Games. They are all fairly simple, being to just complete a certain amount of levels, but there is one hidden achievement that is not unlocked from regular gameplay. </p> <img src="/Resources/MazeBounce/MazeBounceAchievements.jpg" alt="A screenshot of the Google Play Games achievements UI.">
+            <p> The game also makes use of Unity IAP, Unity Cloud Save and Google AdMob for different functionality. Unity IAP allows for in-app purchases to be made. Unity Cloud Save allows for players data to be stored on the cloud in case they swap device or reinstall the game. And Google AdMob is used for displaying both rewarded and interstitial ads to the player. </p> <img src="/Resources/MazeBounce/MazeBounceShop.jpg" alt="A screenshot of the shop in the game.">
+            <p> Finally, a GIF of the game in action. </p> <img src="/Resources/MazeBounce/MazeBounce.gif" alt="A GIF of the game in action.">
+            <p> I started out by planning what features I wanted to include in the game. At first they were just the basics of generating mazes, placing corners so that a ball could be launched through and bounce on the corners to reach the end and customisation options for the ball, background, corners and the walls of the maze. </p>
+            <p> As development continued I thought of new ideas such as having different sized mazes for different difficulties, so starting out at 11x11 and going up to 19x19. Also including a daily level which would be 21x21. And finally, a challenge difficulty, which was only 13x13 but all of the walls were invisible, so you had to use trial and error to find the end. </p>
+            <p> I still have a few more ideas on features I could implement, however they would take a lot of time to implement and I think they'll only be worth adding if the game actually has any players so I will wait and see how it does before starting work on them. </p>
             <p>The GitHub repo for this project is private.</p>
-         </div>
-      </main>
-   </body>
+        </div>
+    </main>
+</body>
+
 </html>
