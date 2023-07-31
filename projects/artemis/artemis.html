@@ -26,7 +26,8 @@
                 <li><a href="#feature-seven">Feature Seven - Scrolling Support for Bookshelf</a></li>
                 <li><a href="#feature-eight">Feature Eight - Custom Bookshelf & Misc. Bucket Quick Jump Buttons</a></li>
                 <li><a href="#feature-nine">Feature Nine - Custom Block Bank Quick Jump Buttons</a></li>
-                <li><a href="#feature-nine">Feature Ten - Gavellian and Wynnic Translation</a></li>
+                <li><a href="#feature-ten">Feature Ten - Gavellian and Wynnic Translation</a></li>
+                <li><a href="#feature-eleven">Feature Eleven - Export Waypoints</a></li>
             </ul>
             <h3 id="feature-one">Feature One - Waypoint Manager</h3>
             <p> One feature that was missing that I missed having was the waypoint manager, which allowed easy access for viewing and editing your custom waypoints. Currently, the only way to view and edit them was to navigate the map and locate them, then use different input methods to edit or delete them. </p>
@@ -94,6 +95,13 @@
             <p> There are 3 conditions to pick from when the languages should be translated, these are: Always, When you have ciompleted the discovery granting you the transcriber and if you have the transcriber in your inventory. You can also choose for it to never be translated. </p>
             <p> You can also choose to have translations be coloured or not, so you know what was Gavellian or Wynnic. </p>
             <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1901"><u>here</u></a>. It is currently still under review so has not yet been merged.</p>
+            <h3 id="feature-eleven">Feature Eleven - Export Waypoints</h3>
+            <p> The eleventh feature that I implemented was an export button to the waypoint manager. Another contributor added an import button so that users could more easily migrate from the old version of the mod to this new version, but they did not add an export button. </p>
+            <p> The feature simply converts the data for all of your custom waypoints into a JSON string and copies it to your clipboard, ready to be shared with others. </p>
+            <p> Whilst working on this, I also changed the import method to only import new waypoints, so any waypoints that you already have won't be imported. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1903"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/ExportWaypoints.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
             <p> This is the first open source project I have contributed to so it has definitely helped me to have a better understanding on working on a bigger project and the process to go through getting a feature merged. </p>
             <p> There are still a few more features that need porting from the original mod I may work on, but I also have some ideas for new features that I may try to implement. </p>
         </div>
