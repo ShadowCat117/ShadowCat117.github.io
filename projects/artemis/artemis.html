@@ -25,6 +25,8 @@
                 <li><a href="#feature-six">Feature Six - Custom Bank Quick Jump Buttons</a></li>
                 <li><a href="#feature-seven">Feature Seven - Scrolling Support for Bookshelf</a></li>
                 <li><a href="#feature-eight">Feature Eight - Custom Bookshelf & Misc. Bucket Quick Jump Buttons</a></li>
+                <li><a href="#feature-nine">Feature Nine - Custom Block Bank Quick Jump Buttons</a></li>
+                <li><a href="#feature-nine">Feature Ten - Gavellian and Wynnic Translation</a></li>
             </ul>
             <h3 id="feature-one">Feature One - Waypoint Manager</h3>
             <p> One feature that was missing that I missed having was the waypoint manager, which allowed easy access for viewing and editing your custom waypoints. Currently, the only way to view and edit them was to navigate the map and locate them, then use different input methods to edit or delete them. </p>
@@ -79,6 +81,19 @@
             <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1754"><u>here</u></a>. </p> <video controls>
                 <source src="/Resources/Artemis/QuickJumpButtons.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
+            <h3 id="feature-nine">Feature Nine - Custom Block Bank Quick Jump Buttons</h3>
+            <p> The ninth feature that I added was again, basically the same as feature six and eight but for another container that also features jump buttons. </p>
+            <p> This container has some unique properties however, as unlike the others it has two modes, personal and island storage. Personal storage works just like the other containers, but island storage is unique for each housing island you have. </p>
+            <p> This feature does not have support for different jump pages in each of the different containers, only 1 generic custom set. However, in the future I plan to add a system so that the different housing islands can be detected, allowing for custom jump pages for each island. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1788"><u>here</u></a>. </p>
+            <h3 id="feature-ten">Feature Ten - Gavellian and Wynnic Translation</h3>
+            <p> The tenth feature that I've added allows you to send messages and understand what other players & NPC's are saying in the two in-game languages, High Gavellian and Ancient Wynnic. </p>
+            <p> There are two input methods, either you select a button for the language you want to type in, or you surround the text you want to be translated in brackets, {} for Wynnic and &lt;&gt; for Gavellian. </p>
+            <p> If you don't use the brackets system, the mod will automatically replace your input with the alternative in your selected language if it exists. Since Wynnic supports numbers, it will also convert your input as you type, so 1 will remain as 1, but if you type a 0 after then it will become 10. This has a cap of 5,000 as 100 is the largest supported character in Wynnic, so numbers past 100 can get long very quickly. </p>
+            <p> When you receive a chat message or NPC dialogue, that will also be translated if it contains Gavellian or Wynnic. </p>
+            <p> There are 3 conditions to pick from when the languages should be translated, these are: Always, When you have ciompleted the discovery granting you the transcriber and if you have the transcriber in your inventory. You can also choose for it to never be translated. </p>
+            <p> You can also choose to have translations be coloured or not, so you know what was Gavellian or Wynnic. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1901"><u>here</u></a>. It is currently still under review so has not yet been merged.</p>
             <p> This is the first open source project I have contributed to so it has definitely helped me to have a better understanding on working on a bigger project and the process to go through getting a feature merged. </p>
             <p> There are still a few more features that need porting from the original mod I may work on, but I also have some ideas for new features that I may try to implement. </p>
         </div>
