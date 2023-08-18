@@ -26,8 +26,11 @@
                 <li><a href="#feature-seven">Feature Seven - Scrolling Support for Bookshelf</a></li>
                 <li><a href="#feature-eight">Feature Eight - Custom Bookshelf & Misc. Bucket Quick Jump Buttons</a></li>
                 <li><a href="#feature-nine">Feature Nine - Custom Block Bank Quick Jump Buttons</a></li>
-                <li><a href="#feature-ten">Feature Ten - Gavellian and Wynnic Translation</a></li>
+                <li><a href="#feature-ten">Feature Ten - Gavellian and Wynnic Transcription</a></li>
                 <li><a href="#feature-eleven">Feature Eleven - Export Waypoints</a></li>
+                <li><a href="#feature-twelve">Feature Twelve - Transcription Tooltips</a></li>
+                <li><a href="#feature-thirteen">Feature Thirteen - Armour and Accessory durability functions</a></li>
+                <li><a href="#feature-fourteen">Feature Fourteen - Custom Bank Page Names</a></li>
             </ul>
             <h3 id="feature-one">Feature One - Waypoint Manager</h3>
             <p> One feature that was missing that I missed having was the waypoint manager, which allowed easy access for viewing and editing your custom waypoints. Currently, the only way to view and edit them was to navigate the map and locate them, then use different input methods to edit or delete them. </p>
@@ -87,20 +90,42 @@
             <p> This container has some unique properties however, as unlike the others it has two modes, personal and island storage. Personal storage works just like the other containers, but island storage is unique for each housing island you have. </p>
             <p> This feature does not have support for different jump pages in each of the different containers, only 1 generic custom set. However, in the future I plan to add a system so that the different housing islands can be detected, allowing for custom jump pages for each island. </p>
             <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1788"><u>here</u></a>. </p>
-            <h3 id="feature-ten">Feature Ten - Gavellian and Wynnic Translation</h3>
+            <h3 id="feature-ten">Feature Ten - Gavellian and Wynnic Transcription</h3>
             <p> The tenth feature that I've added allows you to send messages and understand what other players & NPC's are saying in the two in-game languages, High Gavellian and Ancient Wynnic. </p>
-            <p> There are two input methods, either you select a button for the language you want to type in, or you surround the text you want to be translated in brackets, {} for Wynnic and &lt;&gt; for Gavellian. </p>
+            <p> There are two input methods, either you select a button for the language you want to type in, or you surround the text you want to be transcribed in brackets, [[]] for Wynnic and &lt;&lt;&gt;&gt; for Gavellian. </p>
             <p> If you don't use the brackets system, the mod will automatically replace your input with the alternative in your selected language if it exists. Since Wynnic supports numbers, it will also convert your input as you type, so 1 will remain as 1, but if you type a 0 after then it will become 10. This has a cap of 5,000 as 100 is the largest supported character in Wynnic, so numbers past 100 can get long very quickly. </p>
-            <p> When you receive a chat message or NPC dialogue, that will also be translated if it contains Gavellian or Wynnic. </p>
-            <p> There are 3 conditions to pick from when the languages should be translated, these are: Always, When you have ciompleted the discovery granting you the transcriber and if you have the transcriber in your inventory. You can also choose for it to never be translated. </p>
-            <p> You can also choose to have translations be coloured or not, so you know what was Gavellian or Wynnic. </p>
-            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1901"><u>here</u></a>. It is currently still under review so has not yet been merged.</p>
+            <p> When you receive a chat message or NPC dialogue, that will also be transcribed if it contains Gavellian or Wynnic. </p>
+            <p> There are 3 conditions to pick from when the languages should be transcribed, these are: Always, When you have completed the discovery granting you the transcriber and if you have the transcriber in your inventory. You can also choose for it to never be transcribed. </p>
+            <p> You can also choose to have transcriptions be coloured or not, so you know what was Gavellian or Wynnic. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1901"><u>here</u></a>.</p> <video controls>
+                <source src="/Resources/Artemis/WynnicAndGavellianTranscription.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
             <h3 id="feature-eleven">Feature Eleven - Export Waypoints</h3>
             <p> The eleventh feature that I implemented was an export button to the waypoint manager. Another contributor added an import button so that users could more easily migrate from the old version of the mod to this new version, but they did not add an export button. </p>
             <p> The feature simply converts the data for all of your custom waypoints into a JSON string and copies it to your clipboard, ready to be shared with others. </p>
             <p> Whilst working on this, I also changed the import method to only import new waypoints, so any waypoints that you already have won't be imported. </p>
             <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1903"><u>here</u></a>. </p> <video controls>
                 <source src="/Resources/Artemis/ExportWaypoints.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-twelve">Feature Twelve - Transcription Tooltips</h3>
+            <p> For my twelth addition, I added a tooltip to transcribed text so that you know it was transcribed and you can also see the original message before it was transcribed. </p>
+            <p> I also added the option for the transcription to be displayed only in the tooltip, so the message you see will still remain the same, but hovering over it will display the transcribed text. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1961"><u>here</u></a>. </p>
+            <p> I also released a fix for an issue I found shortly after the feature was merged. The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/1975"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/TranscriptionTooltips.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-thirteen">Feature Thirteen - Armour and Accessory durability functions</h3>
+            <p> My thirteenth contribution to the mod was adding durability functions to armour and accessories. </p>
+            <p> In the game, you can craft armour and accessories and these will have durability, unlike regular items. But, you have to hover over them in your inventory to be able to see what their durability values are. There has existed a function for displaying the durability of an item in your hand for some time, but there was not any for your armour or accessories. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2013"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/EquipmentDurabilityFunctions.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-fourteen">Feature Fourteen - Custom Bank Page Names</h3>
+            <p> The fourteenth feature that I've added to the mod is the ability to set a custom name for your various different types of bank. </p>
+            <p> This feature also extends into the quick jump buttons feature by displaying the name of the target page on the button, so you have a better idea of where it is you want to go. </p>
+            <p> It supports all of the current bank styled containers, those being bank, block bank, bookshelf and misc bucket. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2023"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/CustomBankPageNames.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
             <p> This is the first open source project I have contributed to so it has definitely helped me to have a better understanding on working on a bigger project and the process to go through getting a feature merged. </p>
             <p> There are still a few more features that need porting from the original mod I may work on, but I also have some ideas for new features that I may try to implement. </p>
