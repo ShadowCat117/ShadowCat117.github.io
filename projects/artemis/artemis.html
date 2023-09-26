@@ -13,8 +13,8 @@
     <main class="main">
         <h1>Artemis</h1>
         <div class="content">
-            <p> Artemis is a rewrite of the Minecraft mod Wynntils for modern versions of the game. I have made a few contributions to the mod. Some are ports from the original mod, some are new features. </p>
-            <p> The mod had been released in an Alpha state with a lot of the basics from the original mod, known as legacy, implemented. However, there was a lot from legacy that was yet to be ported over. Over the next few months, features were ported over from various different contributors. </p>
+            <p> Artemis is a rewrite of the Minecraft mod Wynntils for modern versions of the game. I started out porting a feature from the original mod that was yet to be added and eventually added more over time to the point where I was asked to join the official development team. </p>
+            <p> The mod was originally released in an alpha state with many features missing from the original but a lot of the framework existed for them to be added. Over time, many of these features were ported from different contributors and also some new features not present in the original were added. </p>
             <h2>Contents</h2>
             <ul>
                 <li><a href="#feature-one">Feature One - Waypoint Manager</a></li>
@@ -31,6 +31,9 @@
                 <li><a href="#feature-twelve">Feature Twelve - Transcription Tooltips</a></li>
                 <li><a href="#feature-thirteen">Feature Thirteen - Armour and Accessory durability functions</a></li>
                 <li><a href="#feature-fourteen">Feature Fourteen - Custom Bank Page Names</a></li>
+                <li><a href="#feature-fifteen">Feature Fifteen - Per Character Guild Contribution</a></li>
+                <li><a href="#feature-sixteen">Feature Sixteen - Rarity and Quality Filters</a></li>
+                <li><a href="#feature-seventeen">Feature Seventeen - Scrolling in Guild Member List</a></li>
             </ul>
             <h3 id="feature-one">Feature One - Waypoint Manager</h3>
             <p> One feature that was missing that I missed having was the waypoint manager, which allowed easy access for viewing and editing your custom waypoints. Currently, the only way to view and edit them was to navigate the map and locate them, then use different input methods to edit or delete them. </p>
@@ -127,8 +130,25 @@
             <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2023"><u>here</u></a>. </p> <video controls>
                 <source src="/Resources/Artemis/CustomBankPageNames.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
+            <h3 id="feature-fifteen">Feature Fifteen - Per Character Guild Contribution</h3>
+            <p> For my fifteenth addition I added a new feature not present in the original mod, which was having unique guild contribution amounts for each of your characters. </p>
+            <p> In Wynncraft you can join a guild and to level up your guild, members must contribute XP. By default, Wynn contributes 0% but by running a command you can choose to contribute up to 100% of your XP. </p>
+            <p> Since the level cap for the game is 106, after that point XP is useless so many players contribute 100% of their XP at that point, however if you then swap to a character below level 106 it will not update your contribution amount as it is global, so this feature will remember if you ran the contribute command on a character and next time you load that character it will automatically run the contribute command, this way you can switch between characters without having to run the command manually every time.  </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2031"><u>here</u></a>. </p>
+            <p> After the feature was merged, a suggestion was made for a better way to implement the feature so I later followed up with that. The pull request for the change is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2044"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/PerCharacterGuildContribution.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-sixteen">Feature Sixteen - Rarity and Quality Filters</h3>
+            <p> The next feature was a small part of a larger system that was being worked on by another developer which was an advanced filtering system for our guides screen but also for banks. </p>
+            <p> The system allowed users to filter the guide/banks by various different stats and attributes, the two I added with this feature allowed filtering by quality of a material/ingredient which can either be a quality tier of 0, 1, 2 or 3. And also sorting gear by their rarity, which can be common, rare, set, fabled, legendary or mythic. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2069"><u>here</u></a>. </p> <img src="/Resources/Artemis/RarityAndQualityFilters.png" alt="A screenshot of the guide screen with quality and rarity filters active.">
+            <h3 id="feature-seventeen">Feature Seventeen - Scrolling in Guild Member List</h3>
+            <p> I then added the ability to scroll in the guild member list screen, another very simply feature similar to adding scrolling support for the bookshelf in feature seven. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2076"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/MemberScrolling.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
             <p> This is the first open source project I have contributed to so it has definitely helped me to have a better understanding on working on a bigger project and the process to go through getting a feature merged. </p>
-            <p> There are still a few more features that need porting from the original mod I may work on, but I also have some ideas for new features that I may try to implement. </p>
+            <p> Since I have now become an official member of the development team, I also have more experience working on a larger project as a team member since I can easily communicate with the other developers and I am more accustomed to reviewing others code. </p>
         </div>
     </main>
 
