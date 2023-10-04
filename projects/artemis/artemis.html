@@ -35,6 +35,8 @@
                 <li><a href="#feature-sixteen">Feature Sixteen - Rarity and Quality Filters</a></li>
                 <li><a href="#feature-seventeen">Feature Seventeen - Scrolling in Guild Member List</a></li>
                 <li><a href="#feature-eighteen">Feature Eighteen - Highlight Duplicate Cosmetics</a></li>
+                <li><a href="#feature-nineteen">Feature Nineteen - Support 2.0.4 Banks</a></li>
+                <li><a href="#feature-twenty">Feature Twenty - Waypoint Manager Redesign</a></li>
             </ul>
             <h3 id="feature-one">Feature One - Waypoint Manager</h3>
             <p> One feature that was missing that I missed having was the waypoint manager, which allowed easy access for viewing and editing your custom waypoints. Currently, the only way to view and edit them was to navigate the map and locate them, then use different input methods to edit or delete them. </p>
@@ -155,6 +157,21 @@
             <p> This feature was originally from the legacy version of the mod, however it only had support for hovering cosmetics, I believe this is an improvement as not all cosmetics are displayed at once so this allows you to see duplicates on all pages. </p>
             <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2135"><u>here</u></a>. </p> <video controls>
                 <source src="/Resources/Artemis/HighlightDuplicateCosmetics.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-nineteen">Feature Nineteen - Support 2.0.4 Banks</h3>
+            <p> The server announced a new update, 2.0.4, and with it came some changes to the way banks worked, so as I had done some features relating to the banks I decided to add support for them. </p>
+            <p> The changes split the regular bank into two types, account and character. Previously, only account existed where all your items in the bank were accessible by all characters, but now there would be a bank for your account and a bank for each character. </p>
+            <p> To accomodate for the changes, it was mostly editing regex patterns to read the new bank labels and modifying previous bank features to support the new character banks. There is a seperate set of quick jump destinations for account and character and then account and each character can have a unique set of custom names. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2140"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/SupportNewBanks.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-nineteen">Feature Twenty - Waypoint Manager Redesign</h3>
+            <p> As I had gotten a lot more familiar with working on the mod, I decided to revisit some of my previous additions starting with my very first one, the waypoint manager. </p>
+            <p> When I first ported it originally, I knew it wasn't matching the original perfectly, as I didn't have support for filtering by icons or importing and exporting waypoints. Since then, an import button was added by another contributor and I added an export button. But one of the things I wanted to include in this redesign was the icon filtering. </p>
+            <p> The redesign includes scrolling by 1 waypoint at a time instead of displaying a full page and scrolling past that page so it appears much smoother, the ability to select waypoints for better exporting and deleting, sorting waypoints by icon, name and coordinates as well as the ability to filter waypoints by name or icon. Name filtering is simply using a text input and looking for matching names. </p>
+            <p> The icon filtering takes a different approach from the legacy implementation, it instead uses a seperate screen displaying all used icons which can be toggled by clicking them. The reason for this more advanced system was due to a new system coming soon to the mod which would allow for custom icons and therefore a better system was needed for displaying many icons. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2154"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/WaypointManagerRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
             <p> This is the first open source project I have contributed to so it has definitely helped me to have a better understanding on working on a bigger project and the process to go through getting a feature merged. </p>
             <p> Since I have now become an official member of the development team, I also have more experience working on a larger project as a team member since I can easily communicate with the other developers and I am more accustomed to reviewing others code. </p>
