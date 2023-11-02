@@ -37,6 +37,8 @@
                 <li><a href="#feature-eighteen">Feature Eighteen - Highlight Duplicate Cosmetics</a></li>
                 <li><a href="#feature-nineteen">Feature Nineteen - Support 2.0.4 Banks</a></li>
                 <li><a href="#feature-twenty">Feature Twenty - Waypoint Manager Redesign</a></li>
+                <li><a href="#feature-twenty-one">Feature Twenty One - Center Guild Map</a></li>
+                <li><a href="#feature-twenty-two">Feature Twenty Two - Set Markers from Waypoint Manager</a></li>
             </ul>
             <h3 id="feature-one">Feature One - Waypoint Manager</h3>
             <p> One feature that was missing that I missed having was the waypoint manager, which allowed easy access for viewing and editing your custom waypoints. Currently, the only way to view and edit them was to navigate the map and locate them, then use different input methods to edit or delete them. </p>
@@ -165,13 +167,26 @@
             <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2140"><u>here</u></a>. </p> <video controls>
                 <source src="/Resources/Artemis/SupportNewBanks.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
-            <h3 id="feature-nineteen">Feature Twenty - Waypoint Manager Redesign</h3>
+            <h3 id="feature-twenty">Feature Twenty - Waypoint Manager Redesign</h3>
             <p> As I had gotten a lot more familiar with working on the mod, I decided to revisit some of my previous additions starting with my very first one, the waypoint manager. </p>
             <p> When I first ported it originally, I knew it wasn't matching the original perfectly, as I didn't have support for filtering by icons or importing and exporting waypoints. Since then, an import button was added by another contributor and I added an export button. But one of the things I wanted to include in this redesign was the icon filtering. </p>
             <p> The redesign includes scrolling by 1 waypoint at a time instead of displaying a full page and scrolling past that page so it appears much smoother, the ability to select waypoints for better exporting and deleting, sorting waypoints by icon, name and coordinates as well as the ability to filter waypoints by name or icon. Name filtering is simply using a text input and looking for matching names. </p>
             <p> The icon filtering takes a different approach from the legacy implementation, it instead uses a seperate screen displaying all used icons which can be toggled by clicking them. The reason for this more advanced system was due to a new system coming soon to the mod which would allow for custom icons and therefore a better system was needed for displaying many icons. </p>
             <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2154"><u>here</u></a>. </p> <video controls>
                 <source src="/Resources/Artemis/WaypointManagerRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-twenty-one">Feature Twenty One - Center Guild Map</h3>
+            <p> Something simple I'd seen requested a lot was the ability to center the guild map when you are outside of the main area since unlike the main map, the guild map is only relevant for the main areas as that's where the territores are. </p>
+            <p> This was a rather simple feature to add, simply defining bounds for what classed as inside the area and simply checking the player position. </p>
+            <p> The border shown in the video is simply for display purposes and does not appear in the final feature. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2216"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/CenterGuildMap.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-twenty-two">Feature Twenty Two - Set Markers from Waypoint Manager</h3>
+            <p> Another simple feature that I saw requested was being able to set markers for custom waypoint from the waypoint manager. </p>
+            <p> It allows this via two methods, either middle clicking a poi to add and right clicking to remove, or selecting pois and then clicking the set/remove markers buttons to add or remove markers at all of the selected pois. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2218"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/WaypointManagerMarkers.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
             <p> This is the first open source project I have contributed to so it has definitely helped me to have a better understanding on working on a bigger project and the process to go through getting a feature merged. </p>
             <p> Since I have now become an official member of the development team, I also have more experience working on a larger project as a team member since I can easily communicate with the other developers and I am more accustomed to reviewing others code. </p>
