@@ -39,6 +39,9 @@
                 <li><a href="#feature-twenty">Feature Twenty - Waypoint Manager Redesign</a></li>
                 <li><a href="#feature-twenty-one">Feature Twenty One - Center Guild Map</a></li>
                 <li><a href="#feature-twenty-two">Feature Twenty Two - Set Markers from Waypoint Manager</a></li>
+                <li><a href="#feature-twenty-three">Feature Twenty Three - Hide Minimap and Center Main Map in Unmapped Areas</a></li>
+                <li><a href="#feature-twenty-four">Feature Twenty Four - Item Sharing GUI</a></li>
+                <li><a href="#feature-twenty-five">Feature Twenty Five - Item Storage GUI</a></li>
             </ul>
             <h3 id="feature-one">Feature One - Waypoint Manager</h3>
             <p> One feature that was missing that I missed having was the waypoint manager, which allowed easy access for viewing and editing your custom waypoints. Currently, the only way to view and edit them was to navigate the map and locate them, then use different input methods to edit or delete them. </p>
@@ -187,6 +190,25 @@
             <p> It allows this via two methods, either middle clicking a poi to add and right clicking to remove, or selecting pois and then clicking the set/remove markers buttons to add or remove markers at all of the selected pois. </p>
             <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2218"><u>here</u></a>. </p> <video controls>
                 <source src="/Resources/Artemis/WaypointManagerMarkers.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-twenty-three">Feature Twenty Three - Hide Minimap and Center Main Map in Unmapped Areasr</h3>
+            <p> After adding the ability to center the guild map when outside of the main map region, a similar feature was to center the main map when outside of a mapped area and also to hide the minimap when in an unmapped area. </p>
+            <p> A check is made to see if there are any map files in a certain radius around the player, and if there are not then it will count you as in an unmapped area. </p>
+            <p> Opening the map when in an unmapped area will center the map on the main area. And if the setting is enabled, the minimap will not render when in an unmapped area. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2222"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/UnmappedAreas.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-twenty-four">Feature Twenty Four - Item Sharing GUI</h3>
+            <p> As another developer was reworking the feature that allowed you to share items in chat, one thing they wanted to add but didn't have the time to work on was a new GUI for sharing items, instead of a prompt in chat. </p>
+            <p> The original chat prompt still exists as a config option, but this GUI is the default, allowing you to see a preview of the item, save to your item record and quick share options for party and guild. This is also where you can edit options to show crafted item names, or to use extended encoding. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2304"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/ItemSharingGUI.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <h3 id="feature-twenty-five">Feature Twenty Five - Item Storage GUI</h3>
+            <p> Another part to the rework of sharing items was the ability to save certain items for quick access so you wouldn't have to return to your in-game bank to share the item. </p>
+            <p> The item record also allows players to sort their saved items into different categories, and allow items to be in various different categories. </p>
+            <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Artemis/pull/2312"><u>here</u></a>. </p> <video controls>
+                <source src="/Resources/Artemis/ItemStorageGUI.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
             <p> This is the first open source project I have contributed to so it has definitely helped me to have a better understanding on working on a bigger project and the process to go through getting a feature merged. </p>
             <p> Since I have now become an official member of the development team, I also have more experience working on a larger project as a team member since I can easily communicate with the other developers and I am more accustomed to reviewing others code. </p>
