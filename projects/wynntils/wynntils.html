@@ -373,7 +373,7 @@
                 <p> A new feature of 2.1 was aspects, which are class specific items that give buffs to certain abilities. </p>
                 <p> What this feature does, is allow the mod to identify if an item is an aspect and if so, highlight it based on the rarity and add an annotation for what class it is used on. The annotation colour also changes based on the tier of the aspect. </p>
                 <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2686"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/aspects.png" alt="A screenshot showing an info box with a custom name">
+                <img src="/Resources/Wynntils/aspects.png" alt="A screenshot showing annotated aspects">
                 <h3 id="feature-fifty-three">Aspect Container Scrolling</h3>
                 <p> After earning more aspects I discovered the container was scrollable so I added it to the list of scrollable containers for use in the container scroll feature. </p>
                 <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2691"><u>here</u></a>. </p>
@@ -381,6 +381,67 @@
                 <p> ModMenu is a mod for Fabric that allows you to edit configs for mods. Many mods use this as they do not have configs of their own but since we have our own, this simply adds support for ModMenu to open our settings screen from the list of installed mods. This also allows users to edit their settings whilst not logged in to Wynncraft which is something that is required by default. </p>
                 <p> As for NeoForge, it has a built in mod list where you can configure settings so I just had to set our settings screen in NeoForge to allow it to access it. </p>
                 <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2703"><u>here</u></a>. </p>
+                <h3 id="feature-fifty-five">Add world event container as a reward container</h3>
+                <p> Adds the containers from completing world events as a reward container so that features that affect reward containers will apply to it. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2737"><u>here</u></a>. </p>
+                <h3 id="feature-fifty-six">Update various <q>paper</q> textures to new Wynn style</h3>
+                <p> The new Wynncraft update changed their artstyle so in order to make the mod blend in better I updated some of our textures that used that old style. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2754"><u>here</u></a>. </p>
+                <h3 id="feature-fifty-seven">Add badges for new leaderboards</h3>
+                <p> Many new leaderboards have been added to the API since the original version of the mod so I added support for those new leaderboards by adding badges for each of them. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2568"><u>here</u></a>. </p>
+                <h3 id="feature-fifty-eight">Add option to hide vanilla powder bar</h3>
+                <p> Adds the option to hide the vanilla version of the powder special. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2765"><u>here</u></a>. </p>
+                <img src="/Resources/Wynntils/Powder.png" alt="A screenshot showing the custom powder special bar without the vanilla one underneath the crosshair">
+                <h3 id="feature-fifty-nine">Add ironman and publicProfile toggle to command expansion</h3>
+                <p> Adds 2 commands to the command expansion feature so they can be autocompleted. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2776"><u>here</u></a>. </p>
+                <h3 id="feature-sixty">Annihilation Sun Overlay</h3>
+                <p> One of the new features of the Wynncraft update was a boss called Annihilation with a powerful sun attack that if not destroyed can kill all players, this feature detects when the sun begins forming and displays an overlay on screen with the progress towards its completion. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2786"><u>here</u></a>. </p> <video controls>
+                    <source src="/Resources/Wynntils/SunOverlay.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+                <h3 id="feature-sixty-one">Update the visuals of the custom player list</h3>
+                <p> The custom player list texture was very old and outdated so I decided to update it by editing an existing texture in the Wynncraft resource pack. At the same time I also made the actual displayed text better as category headers were no longer hardcoded and would change if the one displayed in the vanilla list changed. Eg, the party category would update to raid info when in a raid. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2803"><u>here</u></a>. </p>
+                <img src="/Resources/Wynntils/PlayerList.png" alt="A screenshot showing the updated visuals of the custom player list overlay">
+                <h3 id="feature-sixty-two">Add CorruptedCacheAnnotator</h3>
+                <p> A new item added in the Wynncraft update is a Corrupted Cache, this is a very rare item so I added the ability for the mod to correctly identify one so that features like the mythic blocker can prevent you from closing a chest containing one. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2804"><u>here</u></a>. </p>
+                <h3 id="feature-sixty-three">Add colour picker for colour inputs</h3>
+                <p> When I first started contributing to Wynntils, a feature that I liked in the legacy mod but was not present was the colour picker. Unfortunately I was not experienced enough with Minecraft modding to correctly implement it, but now that I am much more experienced with it I decided to tackle it again and this time I was successful creating an even better version than the one present in the original mod. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2818"><u>here</u></a>. </p> <video controls>
+                    <source src="/Resources/Wynntils/ColourPicker.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+                <h3 id="feature-sixty-four">Add raid scoreboard leaderboard badges</h3>
+                <p> New leaderboards were added for raid scores so I added badges for those leaderboards. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2823"><u>here</u></a>. </p>
+                <h3 id="feature-sixty-five">Poi Creation Screen redesign</h3>
+                <p> I redesigned the Poi creation screen for a larger project some weeks prior to this but as that feature was delayed and there were benefits in the redesign that did not rely on that feature I took some of them and implemented them separately. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2850"><u>here</u></a>. </p>
+                <img src="/Resources/Wynntils/PoiRedesign.png" alt="A screenshot showing the redesigned Poi creation screen">
+                <h3 id="feature-sixty-six">Highlight jump button for current page</h3>
+                <p> A very simple feature to change the text colour of the current page number in banks so that you can easily tell what page you are on. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2868"><u>here</u></a>. </p>
+                <img src="/Resources/Wynntils/BankHighlight.png" alt="A screenshot showing current bank page being highlighted">
+                <h3 id="feature-sixty-seven">Add functions for damage dealt in raids</h3>
+                <p> This feature adds the ability for the mod to track how much damage you have dealt in each room of a raid. These functions are now used in the raid progress overlay. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2882"><u>here</u></a>. </p>
+                <img src="/Resources/Wynntils/RaidDamage.png" alt="A screenshot showing the raid overlay with damage per room">
+                <h3 id="feature-sixty-eight">Add keybind options for opening overlay selection and management screens</h3>
+                <p> This simply adds keybinds to open the overlay selection screen and overlay management screen directly. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2894"><u>here</u></a>. </p>
+                <h3 id="feature-sixty-nine">Hide raid intermission by default and don't include in raid best time</h3>
+                <p> Since Wynncraft now provides their own time taken to complete raids and it does not include the intermission time, this changes the raid personal best tracking to not include the intermission and also makes the intermission hidden by default. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2903"><u>here</u></a>. </p>
+                <h3 id="feature-seventy">Add new mythic found sound</h3>
+                <p> The mythic found sound is another one of those assets that has been around and left untouched for a long time. As Wynncraft now supports new instruments, a user sent an updated version of the sound that I asked if it could be included in the mod so it was. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2911"><u>here</u></a>. </p>
+                <h3 id="feature-seventy-one">Hide original activity beacon & marker</h3>
+                <p> The new Wynncraft updated added their own version of beacons and markers for activities however they are not as smooth as our custom one due to them being limited to vanilla so this feature hides the vanilla ones by default. </p>
+                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2882"><u>here</u></a>. </p>
+                <img src="/Resources/Wynntils/ActivityBeacon.png" alt="A screenshot showing the activity beacon & marker being hidden">
             </div>
 
             <div id="bug-fixes" class="content-section">
