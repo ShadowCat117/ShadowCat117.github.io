@@ -528,6 +528,26 @@
                     <li><a href="#fix-sixty-two">Fix player nametags rendering incorrectly</a></li>
                     <li><a href="#fix-sixty-three">Fix annotating tier 4 aspects</a></li>
                     <li><a href="#fix-sixty-four">Ophanim bar overlay with mythic aspects and add tracking for 4th shaman totem</a></li>
+                    <li><a href="#fix-sixty-five">Fix TCC boss scoreboard pattern</a></li>
+                    <li><a href="#fix-sixty-six">Fix gathering tool annotator</a></li>
+                    <li><a href="#fix-sixty-seven">Don't allow weapons as a valid item for mounting horses</a></li>
+                    <li><a href="#fix-sixty-eight">Fix widgets with scrolling text not being masked</a></li>
+                    <li><a href="#fix-sixty-nine">Fix player swimming in character selection screen</a></li>
+                    <li><a href="#fix-seventy">Fix TradeMarketAutoOpenChatFeature</a></li>
+                    <li><a href="#fix-seventy-one">Update bank page names after setting/resetting</a></li>
+                    <li><a href="#fix-seventy-two">Fix ReplayMod causing container features to not work</a></li>
+                    <li><a href="#fix-seventy-three">Fix tutorial content book</a></li>
+                    <li><a href="#fix-seventy-four">Reset current container if on a container screen</a></li>
+                    <li><a href="#fix-seventy-five">Fix TradeMarketPriceConversionFeature</a></li>
+                    <li><a href="#fix-seventy-six">Fix raid tracking not detecting failure from running out of time</a></li>
+                    <li><a href="#fix-seventy-seven">Use title to detect raid failure</a></li>
+                    <li><a href="#fix-seventy-eight">Fix ingredient pouch annotator</a></li>
+                    <li><a href="#fix-seventy-nine">Fix reveal nicknames not working for nicknames ending with s</a></li>
+                    <li><a href="#fix-eighty">Fix ghost player detection</a></li>
+                    <li><a href="#fix-eighty-one">Fix auto progress NPC dialogue not releasing sneak</a></li>
+                    <li><a href="#fix-eighty-two">Fix nicknames being changed by chat coordinates</a></li>
+                    <li><a href="#fix-eighty-three">Fix hide player armor hiding new cosmetics</a></li>
+                    <li><a href="#fix-eighty-four">Unfocus search widget in containers after searching</a></li>
                 </ul>
                 <h3 id="fix-one">Bank final page being reset</h3>
                 <p> This fixed an issue where the final page of a bank was being reset, causing quick jumps to not fully work. </p>
@@ -721,6 +741,66 @@
                 <h3 id="fix-sixty-four">Ophanim bar overlay with mythic aspects and add tracking for 4th shaman totem</h3>
                 <p> This fixed an issue where the ophanim bar overlay and shaman totem tracking features would not fully work when mythic aspects affected their counts. </p>
                 <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2700" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-sixty-five">Fix TCC boss scoreboard pattern</h3>
+                <p> This updates the pattern for the boss room detection in the canyon colossus raid. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2719" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-sixty-six">Fix gathering tool annotator</h3>
+                <p> This updates the pattern for the gathering tool annotator so it can correctly detect gathering tool items again. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2721" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-sixty-seven">Don't allow weapons as a valid item for mounting horses</h3>
+                <p> This fix prevents the horse mounting feature from trying to mount whilst holding a weapon as this input is not allowed and causes the feature to not work. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2722" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-sixty-eight">Fix widgets with scrolling text not being masked</h3>
+                <p> This fix makes it so widgets with scrolling text do not appear outside of masked areas. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2723" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-sixty-nine">Fix player swimming in character selection screen</h3>
+                <p> This fix ensures that the player is always standing in the character selection screen instead of doing a swimming animation. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2724" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-seventy">Fix TradeMarketAutoOpenChatFeature</h3>
+                <p> This fixes the trade market auto open chat feature by updating the expected chat message. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2727" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-seventy-one">Update bank page names after setting/resetting</h3>
+                <p> This makes it so bank page names actually change after they have been set or reset instead of requiring a page change to update. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2728" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-seventy-two">Fix ReplayMod causing container features to not work</h3>
+                <p> The replay mod adds another screen on top of containers which our container model was not compatible with, causing any feature that relies on the container model to not function correctly. This fixes it by not setting current container to null every time a screen is opened and only doing that on screen close. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2729" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-seventy-three">Fix tutorial content book</h3>
+                <p> This fixes the tutorial book detection so that the tutorial can be completed without opening our content book instead. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2730" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-seventy-four">Reset current container if on a container screen</h3>
+                <p> This fix restores similar functionality to the original functionality prior to my other recent fix to fix compatibility with replay mod however this maintains that functionality and compatibility. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2731" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-seventy-five">Fix TradeMarketPriceConversionFeature</h3>
+                <p> This fixes the trade market price conversion feature by updating the expected chat pattern. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2738" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-seventy-six">Fix raid tracking not detecting failure from running out of time</h3>
+                <p> This makes raid tracking detect a failure from running out of time as well as from too many players dying. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2751" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-seventy-seven">Use title to detect raid failure</h3>
+                <p> This makes raid tracking detect a failure from the title shown as well as the scoreboard as certain challenges can fail their objectives which will not show the expected scoreboard message. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2755" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-seventy-eight">Fix ingredient pouch annotator</h3>
+                <p> This fixes the ingredient pouch annotator so it can be correctly detected again, it also makes it so the pouch is detected when using the ultimate ironman gamemode. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2766" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-seventy-nine">Fix reveal nicknames not working for nicknames ending with s</h3>
+                <p> This fixes the reveal nicknames feature to work for nicknames that end in a s meaning they won't have a 2nd s after the apostrophe. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2767" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-eighty">Fix ghost player detection</h3>
+                <p> This fix changes the pattern for detecting ghost players by checking their team name. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2768" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-eighty-one">Fix auto progress NPC dialogue not releasing sneak</h3>
+                <p> This fix ensures that the sneak key is released after dialogue has been auto progressed. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2770" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-eighty-two">Fix nicknames being changed by chat coordinates</h3>
+                <p> This fix makes it so that nicknames are not changed by the chat coordinates feature. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2774" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-eighty-three">Fix hide player armor hiding new cosmetics</h3>
+                <p> This fix stops new cosmetics being hidden by the hide player armour feature. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2775" target="_blank"><u>here</u></a>. </p>
+                <h3 id="fix-eighty-four">Unfocus search widget in containers after searching</h3>
+                <p> This fix makes it so that the search widget is unfocused after searching in a container. This allows users to perform actions on items via keyboard which are used in certain containers. </p>
+                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2778" target="_blank"><u>here</u></a>. </p>
             </div>
 
             <div id="code-refactoring-chores" class="content-section">
