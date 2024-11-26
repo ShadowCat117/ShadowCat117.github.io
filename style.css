@@ -155,46 +155,25 @@ a:active {
     color: #000000
 }
 
-.scroll-to-top {
+.tab {
     display: none;
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 50px;
-    height: 50px;
-    background-color: #000000;
-    color: #fff;
-    transition: background-color 0.3s;
-    border: none;
-    border-radius: 50px;
+}
+
+.tab-label {
+    display: block;
     padding: 10px;
-    font-size: 24px;
+    background-color: #202127;
+    border: 1px solid #ddd;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.scroll-to-top:hover {
-    background-color: #8a8a8a;
+.tab-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
 }
 
-.scroll-to-top::before {
-    content: "Jump to top";
-    position: absolute;
-    bottom: 110%;
-    left: 50%;
-    width: max-content;
-    transform: translateX(-50%);
-    background-color: #000;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s, visibility 0.2s;
-}
-
-.scroll-to-top:hover::before {
-    opacity: 1;
-    visibility: visible;
+.tab:checked + .tab-label + .tab-content {
+    display: block;
 }

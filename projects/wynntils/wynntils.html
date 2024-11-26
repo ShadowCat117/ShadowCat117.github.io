@@ -5,25 +5,22 @@
     <title>Wynntils</title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
     <style>
-        .content-section { display: none; }
-        .content-section.active { display: block; }
-        .content-links-container {
-            text-align: center;
-            font-size: 1.5em;
-            margin: 20px 0;
-        }
-        .content-link {
-            cursor: pointer;
-            color: rgb(0, 0, 0);
-            text-decoration: underline;
-            margin: 0 10px;
-        }
+        .highlight { margin: 20px 0; }
+        .highlight img, .highlight video { max-width: 100%; height: auto; }
     </style>
 </head>
 
 <body>
-    <div class="sidebar" id="mySidebar"> <a href="/">Projects</a> <a href="https://github.com/ShadowCat117">GitHub</a> <a href="/cv.html">CV</a>
-        <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;"> This page is about my contributions to the open source Minecraft mod, Wynntils.<br><br>You can contact me at: <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a> <br><a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a> </p>
+    <div class="sidebar" id="mySidebar">
+        <a href="/">Projects</a>
+        <a href="https://github.com/ShadowCat117">GitHub</a>
+        <a href="/cv.html">CV</a>
+        <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;">
+            This page is about my contributions to the open source Minecraft mod, Wynntils.<br><br>
+            You can contact me at:
+            <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a> <br>
+            <a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a>
+        </p>
     </div>
     <main class="main">
         <h1>Wynntils</h1>
@@ -32,857 +29,146 @@
             <p> The mod was originally released in an alpha state with many features missing from the original but a lot of the framework existed for them to be added. Over time, many of these features were ported from different contributors and also some new features not present in the original were added. </p>
             <p> This is the first open source project I have contributed to so it has definitely helped me to have a better understanding on working on a bigger project and the process to go through getting a feature merged. </p>
             <p> Since I have now become an official member of the development team, I also have more experience working on a larger project as a team member since I can easily communicate with the other developers and I am more accustomed to reviewing others code. </p>
-            <h2>Contents</h2>
-            <div class="content-links-container">
-                <span class="content-link" onclick="showContent('features')">Features</span> |
-                <span class="content-link" onclick="showContent('bug-fixes')">Bug Fixes</span> |
-                <span class="content-link" onclick="showContent('code-refactoring-chores')">Code Refactoring/Chores</span>
-            </div>
+            <h2>GitHub Links</h2>
+            <p><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+feat+in%3Atitle" target="_blank">Features/New additions</a></p>
+            <p><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+fix+in%3Atitle" target="_blank">Bug fixes/Issues resolved</a></p>
+            <p><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+refactor+in%3Atitle" target="_blank">Code Refactors</a></p>
+            <p><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+chore+in%3Atitle" target="_blank">Miscellaneous chores</a></p>
+            <p><a href="https://github.com/Wynntils/Wynntils/pulls/ShadowCat117" target="_blank">Open pull requests</a></p>
 
-            <div id="features" class="content-section">
-                <h3>Features</h3>
-                <ul>
-                    <li><a href="#feature-one">Waypoint Manager</a></li>
-                    <li><a href="#feature-two">Seaskipper Map</a></li>
-                    <li><a href="#feature-three">Seaskipper Departure Board</a></li>
-                    <li><a href="#feature-four">Emerald Pouch Fill Arc</a></li>
-                    <li><a href="#feature-five">Guild Name and Rank in Content Book</a></li>
-                    <li><a href="#feature-six">Custom Bank Quick Jump Buttons</a></li>
-                    <li><a href="#feature-seven">Scrolling Support for Bookshelf</a></li>
-                    <li><a href="#feature-eight">Custom Bookshelf & Misc. Bucket Quick Jump Buttons</a></li>
-                    <li><a href="#feature-nine">Custom Block Bank Quick Jump Buttons</a></li>
-                    <li><a href="#feature-ten">Gavellian and Wynnic Transcription</a></li>
-                    <li><a href="#feature-eleven">Export Waypoints</a></li>
-                    <li><a href="#feature-twelve">Transcription Tooltips</a></li>
-                    <li><a href="#feature-thirteen">Armour and Accessory durability functions</a></li>
-                    <li><a href="#feature-fourteen">Custom Bank Page Names</a></li>
-                    <li><a href="#feature-fifteen">Per Character Guild Contribution</a></li>
-                    <li><a href="#feature-sixteen">Rarity and Quality Filters</a></li>
-                    <li><a href="#feature-seventeen">Scrolling in Guild Member List</a></li>
-                    <li><a href="#feature-eighteen">Highlight Duplicate Cosmetics</a></li>
-                    <li><a href="#feature-nineteen">Support 2.0.4 Banks</a></li>
-                    <li><a href="#feature-twenty">Waypoint Manager Redesign</a></li>
-                    <li><a href="#feature-twenty-one">Center Guild Map</a></li>
-                    <li><a href="#feature-twenty-two">Set Markers from Waypoint Manager</a></li>
-                    <li><a href="#feature-twenty-three">Hide Minimap and Center Main Map in Unmapped Areas</a></li>
-                    <li><a href="#feature-twenty-four">Item Sharing GUI</a></li>
-                    <li><a href="#feature-twenty-five">Item Storage GUI</a></li>
-                    <li><a href="#feature-twenty-six">Prevent Trade/Duels whilst holding Gathering Tool</a></li>
-                    <li><a href="#feature-twenty-seven">Custom Seaskipper Screen Redesign</a></li>
-                    <li><a href="#feature-twenty-eight">Favourite Filter</a></li>
-                    <li><a href="#feature-twenty-nine">Migrate to wiki.gg</a></li>
-                    <li><a href="#feature-thirty">Bomb Bell Overlay</a></li>
-                    <li><a href="#feature-thirty-one">onlinemembers and player command</a></li>
-                    <li><a href="#feature-thirty-two">Item Filter GUI</a></li>
-                    <li><a href="#feature-thirty-three">Raid Progress Overlay and Print Times feature</a></li>
-                    <li><a href="#feature-thirty-four">Click Territory pois to set markers</a></li>
-                    <li><a href="#feature-thirty-five">Use Scrolling Text in various screens</a></li>
-                    <li><a href="#feature-thirty-six">Shift middle click to place multiple markers on guild map</a></li>
-                    <li><a href="#feature-thirty-seven">Settings Smooth Scrolling</a></li>
-                    <li><a href="#feature-thirty-eight">Colour territory attack timer when inside</a></li>
-                    <li><a href="#feature-thirty-nine">Custom Names for Info boxes and Custom bars</a></li>
-                    <li><a href="#feature-fourty">Backwards container searching and continue current search</a></li>
-                    <li><a href="#feature-fourty-one">Overlay selection & management screen redesign</a></li>
-                    <li><a href="#feature-fourty-two">Improvements to profession highlight feature</a></li>
-                    <li><a href="#feature-fourty-three">Add InStream function</a></li>
-                    <li><a href="#feature-fourty-four">Add option to limit number of leaderboard badges shown</a></li>
-                    <li><a href="#feature-fourty-five">Settings Screen Redesign</a></li>
-                    <li><a href="#feature-fourty-six">Is territory queued function</a></li>
-                    <li><a href="#feature-fourty-seven">Add option to disable Discord rich presence in streamer mode</a></li>
-                    <li><a href="#feature-fourty-eight">Item Filter Screen smooth scrolling</a></li>
-                    <li><a href="#feature-fourty-nine">Allow opening delete potions menu when item locked in blocking mode</a></li>
-                    <li><a href="#feature-fifty">Rework custom bank page names and quick jumps for 2.1</a></li>
-                    <li><a href="#feature-fifty-one">Add ability tree reset and aspect containers</a></li>
-                    <li><a href="#feature-fifty-two">Annotate Aspects</a></li>
-                    <li><a href="#feature-fifty-three">Aspect Container Scrolling</a></li>
-                    <li><a href="#feature-fifty-four">Add ModMenu support for Fabric and Configuration screen for NeoForge</a></li>
-                    <li><a href="#feature-fifty-five">Add world event container as a reward container</a></li>
-                    <li><a href="#feature-fifty-six">Update various <q>paper</q> textures to new Wynn style</a></li>
-                    <li><a href="#feature-fifty-seven">Add badges for new leaderboards</a></li>
-                    <li><a href="#feature-fifty-eight">Add option to hide vanilla powder bar</a></li>
-                    <li><a href="#feature-fifty-nine">Add ironman and publicProfile toggle to command expansion</a></li>
-                    <li><a href="#feature-sixty">Annihilation Sun Overlay</a></li>
-                    <li><a href="#feature-sixty-one">Update the visuals of the custom player list</a></li>
-                    <li><a href="#feature-sixty-two">Add CorruptedCacheAnnotator</a></li>
-                    <li><a href="#feature-sixty-three">Add colour picker for colour inputs</a></li>
-                    <li><a href="#feature-sixty-four">Add raid scoreboard leaderboard badges</a></li>
-                    <li><a href="#feature-sixty-five">Poi Creation Screen redesign</a></li>
-                    <li><a href="#feature-sixty-six">Highlight jump button for current page</a></li>
-                    <li><a href="#feature-sixty-seven">Add functions for damage dealt in raids</a></li>
-                    <li><a href="#feature-sixty-eight">Add keybind options for opening overlay selection and management screens</a></li>
-                    <li><a href="#feature-sixty-nine">Hide raid intermission by default and don't include in raid best time</a></li>
-                    <li><a href="#feature-seventy">Add new mythic found sound</a></li>
-                    <li><a href="#feature-seventy-one">Hide original activity beacon & marker</a></li>
-                </ul>
-                <h3 id="feature-one">Waypoint Manager</h3>
-                <p> This feature added a custom screen to allow users to easily view all of their custom waypoints and edit/delete them. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1382" target="_blank"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/WaypointManager.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-two">Seaskipper Map</h3>
-                <p> The Seaskipper Map screen replaces the default container screen with an overhead map view of the Wynncraft world with boxes around the available destinations the Seaskipper can take you to. </p>
-                <p> You can use the options at the bottom of the screen to purchase a boat, toggle the borders, show unavailable destinations and draw lines along routes. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1473"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/SeaskipperMap.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-three">Seaskipper Departure Board</h3>
-                <p> The Seaskipper Departure Board is an alternative version of the Seaskipper Map screen that instead uses a list of the available destinations on the left side of the screen and those are used to select the destination instead. </p>
-                <p> The alternative screen was still available as an option in the mod config until the screens were merged into one at a later date. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1545"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/SeaskipperDepartureBoard.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-four">Emerald Pouch Fill Arc</h3>
-                <p> Emerald Pouches are in-game items that allow you to store emeralds in a single slot up to a certain amount, with the higher tiers increasing their capacity. </p>
-                <p> This feature draws an arc around the item to show how full it is, also going from green to red in the process. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1549"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/EmeraldPouchFilledArc.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-five">Guild Name and Rank in Content Book</h3>
-                <p> This feature simply adds the rank for your current guild as well as the name of that guild to the book. It gets the information from reading the <q>lore</q> of an item in the compass menu which is read each time the player logs in to the server. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1652"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/GuildNameAndRankInBook.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-six">Custom Bank Quick Jump Buttons</h3>
-                <p> Personal Storage Containers such as banks contain quick jump buttons to quickly navigate through the pages. By default these are set to 1, 5, 9, 13, 17 and 21 but this feature allows you to set custom ones. </p>
-                <p> As we cannot directly modify which pages they jump to, the feature instead uses a combination of the vanilla jump buttons and the next/previous page buttons to get to the desired page. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1670"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/BankQuickJumpButtons.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-seven">Scrolling Support for Bookshelf</h3>
-                <p> A new update to the server added a new personal storage type so it was added to the scrollable list </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1734"><u>here</u></a>. </p>
-                <h3 id="feature-eight">Feature Eight - Custom Bookshelf & Misc. Bucket Quick Jump Buttons</h3>
-                <p> Two other personal storage containers that can have the quick jump buttons were the bookshelf and misc bucket. This feature does change the way you choose the destinations by making a list of 6 values, rather than 6 individual configs. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1754"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/QuickJumpButtons.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-nine">Custom Block Bank Quick Jump Buttons</h3>
-                <p> The final personal storage container is the block bank, it works slightly different to the others by having a personal and island storage mode which currently is not fully supported as we have no method to detect current island but hopefully in the future it can be improved. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1788"><u>here</u></a>. </p>
-                <h3 id="feature-ten">Gavellian and Wynnic Transcription</h3>
-                <p> Ancient Wynnic and High Gavellian are two languages used throughout the game. This feature transcribes the languages back into plain English characters. </p>
-                <p> It also adds the ability for the user to send messages in these languages by surrounding their text in brackets or by using the buttons added to the chat screen to select language. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1901"><u>here</u></a>.</p> <video controls>
-                    <source src="/Resources/Wynntils/WynnicAndGavellianTranscription.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-eleven">Export Waypoints</h3>
-                <p> Since you can import waypoints, it made sense for there to be an export option too. So this feature allows you to export all of your waypoints for them to be easily shared with others. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1903"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/ExportWaypoints.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-twelve">Transcription Tooltips</h3>
-                <p> This adds the ability to see transcriptions in a tooltip by hovering the text. If the option is disabled, a tooltip will still be shown but instead of showing the transcribed text it will show the original. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1961"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/TranscriptionTooltips.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-thirteen">Armour and Accessory durability functions</h3>
-                <p> In the game, you can craft armour and accessories and these will have durability, unlike regular items. But, you have to hover over them in your inventory to be able to see what their durability values are so this adds functions to see them more easily. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2013"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/EquipmentDurabilityFunctions.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-fourteen">Custom Bank Page Names</h3>
-                <p> This feature allows you to give custom names for the pages in your personal storage containers. </p>
-                <p> It also hooks into the quick jumps feature by displaying the name of the page on the quick jump button. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2023"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/CustomBankPageNames.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-fifteen">Per Character Guild Contribution</h3>
-                <p> You can contribute a certain percentage of your XP gained to your guild if you choose to do so, but the set value applies globally to all of your characters. </p>
-                <p> This feature allows you to set it per character, so when you run the contribution command once, every time you load that character the command will automatically run with the saved amount. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2031"><u>here</u></a>. </p>
-                <p> After the feature was merged, a suggestion was made for a better way to implement the feature so I later followed up with that. The pull request for the change is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2044"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/PerCharacterGuildContribution.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-sixteen">Rarity and Quality Filters</h3>
-                <p> This is a small part of a larger feature, allowing users to perform advanced search filters in the guides and other screens. This pr added filters for rarity and quality stats. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2069"><u>here</u></a>. </p> <img src="/Resources/Wynntils/RarityAndQualityFilters.png" alt="A screenshot of the guide screen with quality and rarity filters active.">
-                <h3 id="feature-seventeen">Feature Seventeen - Scrolling in Guild Member List</h3>
-                <p> Another container that contains pages so scrolling it was worth adding. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2076"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/MemberScrolling.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-eighteen">Highlight Duplicate Cosmetics</h3>
-                <p> For my next addition I added the ability to see duplicate cosmetics in the scrap menu. </p>
-                <p> On Wynncraft you can get cosmetic items in crates, however they are not unique and you can get multiple of the same cosmetic. To account for this, you can scrap 5 of the same rarity cosmetics in exchange for 1 cosmetic of a higher rarity. </p>
-                <p> Since some people only like to scrap cosmetics they have more than 1 of, this feature allows you to see if you have any duplicates of a cosmetic by hovering it, or selecting it to be scrapped. Hovering it will show duplicates in a blue ring and selected cosmetic duplicates in an orange ring. However the user can change the logic in the config to only highlight hovered or selected duplicates but the default is both. </p>
-                <p> This feature was originally from the legacy version of the mod, however it only had support for hovering cosmetics, I believe this is an improvement as not all cosmetics are displayed at once so this allows you to see duplicates on all pages. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2135"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/HighlightDuplicateCosmetics.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-nineteen">Support 2.0.4 Banks</h3>
-                <p> The server announced a new update, 2.0.4, and with it came some changes to the way banks worked, so as I had done some features relating to the banks I decided to add support for them. </p>
-                <p> The changes split the regular bank into two types, account and character. Previously, only account existed where all your items in the bank were accessible by all characters, but now there would be a bank for your account and a bank for each character. </p>
-                <p> To accomodate for the changes, it was mostly editing regex patterns to read the new bank labels and modifying previous bank features to support the new character banks. There is a seperate set of quick jump destinations for account and character and then account and each character can have a unique set of custom names. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2140"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/SupportNewBanks.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-twenty">Waypoint Manager Redesign</h3>
-                <p> As I had gotten a lot more familiar with working on the mod, I decided to revisit some of my previous additions starting with my very first one, the waypoint manager. </p>
-                <p> When I first ported it originally, I knew it wasn't matching the original perfectly, as I didn't have support for filtering by icons or importing and exporting waypoints. Since then, an import button was added by another contributor and I added an export button. But one of the things I wanted to include in this redesign was the icon filtering. </p>
-                <p> The redesign includes scrolling by 1 waypoint at a time instead of displaying a full page and scrolling past that page so it appears much smoother, the ability to select waypoints for better exporting and deleting, sorting waypoints by icon, name and coordinates as well as the ability to filter waypoints by name or icon. Name filtering is simply using a text input and looking for matching names. </p>
-                <p> The icon filtering takes a different approach from the legacy implementation, it instead uses a seperate screen displaying all used icons which can be toggled by clicking them. The reason for this more advanced system was due to a new system coming soon to the mod which would allow for custom icons and therefore a better system was needed for displaying many icons. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2154"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/WaypointManagerRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-twenty-one">Center Guild Map</h3>
-                <p> Something simple I'd seen requested a lot was the ability to center the guild map when you are outside of the main area since unlike the main map, the guild map is only relevant for the main areas as that's where the territores are. </p>
-                <p> This was a rather simple feature to add, simply defining bounds for what classed as inside the area and simply checking the player position. </p>
-                <p> The border shown in the video is simply for display purposes and does not appear in the final feature. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2216"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/CenterGuildMap.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-twenty-two">Set Markers from Waypoint Manager</h3>
-                <p> Another simple feature that I saw requested was being able to set markers for custom waypoint from the waypoint manager. </p>
-                <p> It allows this via two methods, either middle clicking a poi to add and right clicking to remove, or selecting pois and then clicking the set/remove markers buttons to add or remove markers at all of the selected pois. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2218"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/WaypointManagerMarkers.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-twenty-three">Hide Minimap and Center Main Map in Unmapped Areas</h3>
-                <p> After adding the ability to center the guild map when outside of the main map region, a similar feature was to center the main map when outside of a mapped area and also to hide the minimap when in an unmapped area. </p>
-                <p> A check is made to see if there are any map files in a certain radius around the player, and if there are not then it will count you as in an unmapped area. </p>
-                <p> Opening the map when in an unmapped area will center the map on the main area. And if the setting is enabled, the minimap will not render when in an unmapped area. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2222"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/UnmappedAreas.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-twenty-four">Item Sharing GUI</h3>
-                <p> As another developer was reworking the feature that allowed you to share items in chat, one thing they wanted to add but didn't have the time to work on was a new GUI for sharing items, instead of a prompt in chat. </p>
-                <p> The original chat prompt still exists as a config option, but this GUI is the default, allowing you to see a preview of the item, save to your item record and quick share options for party and guild. This is also where you can edit options to show crafted item names, or to use extended encoding. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2304"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/ItemSharingGUI.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-twenty-five">Item Storage GUI</h3>
-                <p> Another part to the rework of sharing items was the ability to save certain items for quick access so you wouldn't have to return to your in-game bank to share the item. </p>
-                <p> The item record also allows players to sort their saved items into different categories, and allow items to be in various different categories. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2312"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/ItemStorageGUI.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-twenty-six">Prevent Trade/Duels whilst holding Gathering Tool</h3>
-                <p> A feature has exited for a while, preventing you from requesting trades or duels with players after dealing damage to a mob within a duration, this is useful when doing activities together where you may accidently send a trade/duel request. </p>
-                <p> Another area where this can happen unintentionally is when gathering profession nodes near other players so this feature simply detects if you are holding one and will cancel the request if so. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2345"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/BlockHoldingGatheringTool.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-twenty-seven">Custom Seaskipper Screen Redesign</h3>
-                <p> Similarly to the Waypoint Manager Redesign, I wanted to revists the Seaskipper screen as I was more confident in my skills. So as there was not much point in having the map and departure board screens being separate, they should instead just be merged. </p>
-                <p> With this redesign, I also made the departure board scrollable as if any new destinations were to be added, the old screen would have not supported that. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2364"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/CustomSeaskipperScreen.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-twenty-eight">Favourite Filter</h3>
-                <p> One filter that was present in the old version of the mod was a filter to only see items you had favourited, so I added it back with the ability to see items that are favourited and items that aren't. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2376"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/FavouriteFilter.png" alt="A screenshot of a bank with the favourite filter active.">
-                <h3 id="feature-twenty-nine">Migrate to wiki.gg</h3>
-                <p> The Wynncraft community decided to move the main wiki from Fandom to wiki.gg, so once they had fully migrated the content over, I changed all our references to the wiki to use the new wiki.gg instead. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2378"><u>here</u></a>. </p>
-                <h3 id="feature-thirty">Bomb Bell Overlay</h3>
-                <p> Another popular mod in the Wynncraft community known as fuy.gg had a lot of features that would fit with Wynntils, so we decided to implement a lot of them ourselves as since fuy.gg relies on Wynntils to work, if we were to change something it uses then that mod would break until an update was made. </p>
-                <p> One such feature was an overlay to display active bombs gathered from the bomb bell feature. The overlay allows you to choose which bombs you want to see, so if you do not want to see combat XP bombs, you can hide those from the overlay. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2409"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/BombBellOverlay.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-thirty-one">onlinemembers and player command</h3>
-                <p> Another fuy.gg feature was a command to see the online members of a guild, the onlinemembers command displays the current online players in a guild, sorted by their guild rank. The player command is either used to display the last login of that player, or to see what guild they are in, their rank and how long they have been in that guild for. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2412"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/onlinemembers.png" alt="The response for the /onlinemembers command.">
-                <img src="/Resources/Wynntils/playerlastseen.png" alt="The response for the /player lastseen command.">
-                <img src="/Resources/Wynntils/playerguild.png" alt="The response for the /player guild command.">
-                <h3 id="feature-thirty-two">Item Filter GUI</h3>
-                <p> Since the item filter system was made, there have been complaints about it being too complicated for users to use so I decided to create a GUI that would hopefully make the system a lot more accessible to users. </p>
-                <p> Boolean filters have a true/false checkbox. And strings and numeric filters get a text box. Some filters only have a few valid inputs, so the GUI will only show those valid inputs with checkboxes to select the desired filters. </p>
-                <p> You can also save presets so if you want to search for a specific query multiple times, it's easier to do so. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2417"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/ItemFilterGUI.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-thirty-three">Raid Progress Overlay and Print Times feature</h3>
-                <p> The final feature from fuy.gg that I worked on was a feature to track and display your time spent in a raid. </p>
-                <p> Raids are split up into 4 main sections, 3 challenges and a boss fight. There are also some intermissions in between. </p>
-                <p> The feature will start a timer once it detects you are in a raid, until you start the 1st challenge this goes towards the intermission timer. After completing the challenge, the time will then count towards intermission. This will repeat for challenge 2 and 3, then the boss timer starts when the boss fight begins and once defeated the timer will end and your times will be sent to chat. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2446"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/TNA.png" alt="A screenshot of the raid times for a completed run of The Nameless Anomaly.">
-                <h3 id="feature-thirty-four">Click Territory pois to set markers</h3>
-                <p> This feature allowed users to set markers on territory pois on the map. </p>
-                <p> This change was later reverted and replaced with <a href="#feature-thirty-six">Shift middle click to place multiple markers on guild map</a> as there was an unintended side effect of not being able to pan the map without setting markers. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2455"><u>here</u></a>. </p>
-                <h3 id="feature-thirty-five">Use Scrolling Text in various screens</h3>
-                <p> This feature utilities the newly implemented feature of scrolling text left and right when it does not fit into the desired space so that it can still be fully read without overflowing the area. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2461"><u>here</u></a>. </p>
-                <h3 id="feature-thirty-six">Shift middle click to place multiple markers on guild map</h3>
-                <p> This feature allows users to place multiple markers on the guild map by pressing shift. This is useful for when planning attacks on territories so you know where to go. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2469"><u>here</u></a>. </p>
-                <h3 id="feature-thirty-seven">Settings Smooth Scrolling</h3>
-                <p> I had begun working on redesigning the settings screen but was waiting on some textures to be finished, so I decided to add some of the features that did not rely on textures separately. </p>
-                <p> One feature the redesign of the settings screen had was better scrolling, however I decided to improve it further and make it smooth scrolling instead of 1. This was a major improvement to the scrolling of the settings screen, as prior to this the scroll bar was not synced to mouse movement correctly and wasn't actually scrolling, it was just displaying pages of 13 rows at a time. <q>row</q> at a time. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2472"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/SmoothSettings.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-thirty-eight">Colour territory attack timer when inside</h3>
-                <p> This feature is very simple, it just makes the territory you are in coloured in the attack timer overlay as well as being bold to help differentiate it from others. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2475"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/ColourTerritory.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-thirty-nine">Custom Names for Info boxes and Custom bars</h3>
-                <p> This feature allows users to set a custom name for info boxes or custom bars. </p>
-                <p> It allows users to more easily identify their info boxes and custom bars as by default they are simply given an ID for their type. Eg, Info Box 1 or Custom Experience Bar 1. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2480"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/InfoBoxNames.png" alt="A screenshot showing an info box with a custom name">
-                <h3 id="feature-fourty">Backwards container searching and continue current search</h3>
-                <p> This feature restores functionality from the old version of the mod where you can continue a search by pressing enter again, or search backwards by hovering the previous page button and pressing enter. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2483"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/ContainerSearching.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-fourty-one">Overlay selection & management screen redesign</h3>
-                <p> I completely redesigned the overlay selection screen, now featuring a search bar and category tags to show built in vs custom ones. It also persists your scroll position between edits so you don't have to keep scrolling back down after editing each overlay. </p>
-                <p> Another new addition is the ability to edit the configs for each overlay directly, without having to go to the settings screen to do it. You can also preview the overlay by itself or show other overlays too. </p>
-                <p> The management screen wasn't changed much, the position of the buttons was changed from the center of the screen to the bottom with a button to switch between displaying them at the bottom and the top. There is also a new option to show only the selected overlay or to show all. </p>
-                <p> The main change was being able to see the real overlay whilst moving and resizing it, instead of just seeing the green box with the overlay name and having to go into test mode to see how it actually looked. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2502"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/OverlaySelectionRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <video controls>
-                    <source src="/Resources/Wynntils/OverlayManagementRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-fourty-two">Improvements to profession highlight feature</h3>
-                <p> I made some changes to the existing profession highlight feature for the way they interact with crafting stations. As crafting stations only use 1 type of profession each, I made the feature work as a toggle when using these stations rather than cycling through all profession types like in other containers. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2523"><u>here</u></a>. </p>
-                <h3 id="feature-fourty-three">Add InStream function</h3>
-                <p> I simply added a function that will return if you are currently in streamer mode or not. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2524"><u>here</u></a>. </p>
-                <h3 id="feature-fourty-four">Add option to limit number of leaderboard badges shown</h3>
-                <p> For this feature I made the leaderboard badges <q>scroll</q> through if a player has more than your set display amount (default 7). </p>
-                <p> As we are adding new leaderboard badges soon, increasing the amount from 13 to 33, I thought it would be smart to set a cap on how many are displayed at once, though unlikely that a player would have 33 it would not look good in-game. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2525"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/BadgeScrolling.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-fourty-five">Settings Screen Redesign</h3>
-                <p> As I got some improved textures for the settings screen I was able to finish the settings screen redesign. </p>
-                <p> It features the ability to filter visible settings by category to help narrow down what setting you want or to make it easier to go through each setting. </p>
-                <p> The search bar was also improved, now it displays the settings for current selected category first, followed by any settings matching the search query from other categories. It also adds a number in square brackets after the feature name to show how many configs match the current query. Upon selecting a feature, the configs on the right will automatically scroll down to make the first config matching the search query be visible. </p>
-                <p> The other improvements are a checkbox next to each feature to quickly enable/disable a feature without having to click it and then press the button on the right page. And also, the ability to import/export configs, you can either do this for currently selected feature or for all settings. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2335"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/SettingsRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-fourty-six">Is territory queued function</h3>
-                <p> This was a very basic function to return true if the current territory you are in is queued for an attack or not. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2575"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/IsTerritoryQueued.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-fourty-seven">Add option to disable Discord rich presence in streamer mode</h3>
-                <p> As the Discord rich presence displays that you are online and what world you are on and where you are, if you haven't disabled those configs, it made sense to add an option to disable it entirely if you were in streamer mode. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2585"><u>here</u></a>. </p>
-                <h3 id="feature-fourty-eight">Item Filter Screen smooth scrolling</h3>
-                <p> Since I had added smooth scrolling to the settings screen, I decided to go through existing screens and add it to those, starting with the item filter screen. It works the same as the settings screen. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2590"><u>here</u></a>. </p>
-                <h3 id="feature-fourty-nine">Allow opening delete potions menu when item locked in blocking mode</h3>
-                <p> This feature restores functionality from the old version of the mod where you can continue a search by pressing enter again, or search backwards by hovering the previous page button and pressing enter. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2609"><u>here</u></a>. </p>
-                <h3 id="feature-fifty">Rework custom bank page names and quick jumps for 2.1</h3>
-                <p> Wynncraft released the beta for their new update 2.1 and we began fixing up the mod to support it so that it would be ready for when the full update dropped. </p>
-                <p> One feature that required a lot of changes were my custom bank page names and quick jumps features. As the banks no longer display the page number at the top and the quick jumps are now handled by pressing the 1-9 keys whilst hovering a next/previous button. </p>
-                <p> In order to support the new banks, I reworked the feature to add an extra panel to the left side of the banks, this would display the page name and also the quick jump buttons. </p>
-                <p> Custom names work the same as before for the most part, but quick jumps have been completely changed. They are no longer 6 set destinations that can be customised, now all destinations are available and you can jump to any page you desire. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2637"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/NamesAndJumps.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-fifty-one">Add ability tree reset and aspect containers</h3>
-                <p> Another very simple feature, this just adds the ability tree reset and aspects containers as known fullscreen containers to prevent features like item lock and item favourite from working on these containers. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2645"><u>here</u></a>. </p>
-                <h3 id="feature-fifty-two">Annotate Aspects</h3>
-                <p> A new feature of 2.1 was aspects, which are class specific items that give buffs to certain abilities. </p>
-                <p> What this feature does, is allow the mod to identify if an item is an aspect and if so, highlight it based on the rarity and add an annotation for what class it is used on. The annotation colour also changes based on the tier of the aspect. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2686"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/aspects.png" alt="A screenshot showing annotated aspects">
-                <h3 id="feature-fifty-three">Aspect Container Scrolling</h3>
-                <p> After earning more aspects I discovered the container was scrollable so I added it to the list of scrollable containers for use in the container scroll feature. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2691"><u>here</u></a>. </p>
-                <h3 id="feature-fifty-four">Add ModMenu support for Fabric and Configuration screen for NeoForge</h3>
-                <p> ModMenu is a mod for Fabric that allows you to edit configs for mods. Many mods use this as they do not have configs of their own but since we have our own, this simply adds support for ModMenu to open our settings screen from the list of installed mods. This also allows users to edit their settings whilst not logged in to Wynncraft which is something that is required by default. </p>
-                <p> As for NeoForge, it has a built in mod list where you can configure settings so I just had to set our settings screen in NeoForge to allow it to access it. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2703"><u>here</u></a>. </p>
-                <h3 id="feature-fifty-five">Add world event container as a reward container</h3>
-                <p> Adds the containers from completing world events as a reward container so that features that affect reward containers will apply to it. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2737"><u>here</u></a>. </p>
-                <h3 id="feature-fifty-six">Update various <q>paper</q> textures to new Wynn style</h3>
-                <p> The new Wynncraft update changed their artstyle so in order to make the mod blend in better I updated some of our textures that used that old style. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2754"><u>here</u></a>. </p>
-                <h3 id="feature-fifty-seven">Add badges for new leaderboards</h3>
-                <p> Many new leaderboards have been added to the API since the original version of the mod so I added support for those new leaderboards by adding badges for each of them. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2568"><u>here</u></a>. </p>
-                <h3 id="feature-fifty-eight">Add option to hide vanilla powder bar</h3>
-                <p> Adds the option to hide the vanilla version of the powder special. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2765"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/Powder.png" alt="A screenshot showing the custom powder special bar without the vanilla one underneath the crosshair">
-                <h3 id="feature-fifty-nine">Add ironman and publicProfile toggle to command expansion</h3>
-                <p> Adds 2 commands to the command expansion feature so they can be autocompleted. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2776"><u>here</u></a>. </p>
-                <h3 id="feature-sixty">Annihilation Sun Overlay</h3>
-                <p> One of the new features of the Wynncraft update was a boss called Annihilation with a powerful sun attack that if not destroyed can kill all players, this feature detects when the sun begins forming and displays an overlay on screen with the progress towards its completion. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2786"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/SunOverlay.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-sixty-one">Update the visuals of the custom player list</h3>
-                <p> The custom player list texture was very old and outdated so I decided to update it by editing an existing texture in the Wynncraft resource pack. At the same time I also made the actual displayed text better as category headers were no longer hardcoded and would change if the one displayed in the vanilla list changed. Eg, the party category would update to raid info when in a raid. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2803"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/PlayerList.png" alt="A screenshot showing the updated visuals of the custom player list overlay">
-                <h3 id="feature-sixty-two">Add CorruptedCacheAnnotator</h3>
-                <p> A new item added in the Wynncraft update is a Corrupted Cache, this is a very rare item so I added the ability for the mod to correctly identify one so that features like the mythic blocker can prevent you from closing a chest containing one. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2804"><u>here</u></a>. </p>
-                <h3 id="feature-sixty-three">Add colour picker for colour inputs</h3>
-                <p> When I first started contributing to Wynntils, a feature that I liked in the legacy mod but was not present was the colour picker. Unfortunately I was not experienced enough with Minecraft modding to correctly implement it, but now that I am much more experienced with it I decided to tackle it again and this time I was successful creating an even better version than the one present in the original mod. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2818"><u>here</u></a>. </p> <video controls>
-                    <source src="/Resources/Wynntils/ColourPicker.mp4" type="video/mp4"> Your browser does not support the video tag.
-                </video>
-                <h3 id="feature-sixty-four">Add raid scoreboard leaderboard badges</h3>
-                <p> New leaderboards were added for raid scores so I added badges for those leaderboards. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2823"><u>here</u></a>. </p>
-                <h3 id="feature-sixty-five">Poi Creation Screen redesign</h3>
-                <p> I redesigned the Poi creation screen for a larger project some weeks prior to this but as that feature was delayed and there were benefits in the redesign that did not rely on that feature I took some of them and implemented them separately. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2850"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/PoiRedesign.png" alt="A screenshot showing the redesigned Poi creation screen">
-                <h3 id="feature-sixty-six">Highlight jump button for current page</h3>
-                <p> A very simple feature to change the text colour of the current page number in banks so that you can easily tell what page you are on. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2868"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/BankHighlight.png" alt="A screenshot showing current bank page being highlighted">
-                <h3 id="feature-sixty-seven">Add functions for damage dealt in raids</h3>
-                <p> This feature adds the ability for the mod to track how much damage you have dealt in each room of a raid. These functions are now used in the raid progress overlay. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2882"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/RaidDamage.png" alt="A screenshot showing the raid overlay with damage per room">
-                <h3 id="feature-sixty-eight">Add keybind options for opening overlay selection and management screens</h3>
-                <p> This simply adds keybinds to open the overlay selection screen and overlay management screen directly. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2894"><u>here</u></a>. </p>
-                <h3 id="feature-sixty-nine">Hide raid intermission by default and don't include in raid best time</h3>
-                <p> Since Wynncraft now provides their own time taken to complete raids and it does not include the intermission time, this changes the raid personal best tracking to not include the intermission and also makes the intermission hidden by default. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2903"><u>here</u></a>. </p>
-                <h3 id="feature-seventy">Add new mythic found sound</h3>
-                <p> The mythic found sound is another one of those assets that has been around and left untouched for a long time. As Wynncraft now supports new instruments, a user sent an updated version of the sound that I asked if it could be included in the mod so it was. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2911"><u>here</u></a>. </p>
-                <h3 id="feature-seventy-one">Hide original activity beacon & marker</h3>
-                <p> The new Wynncraft updated added their own version of beacons and markers for activities however they are not as smooth as our custom one due to them being limited to vanilla so this feature hides the vanilla ones by default. </p>
-                <p> The pull request for the feature is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2882"><u>here</u></a>. </p>
-                <img src="/Resources/Wynntils/ActivityBeacon.png" alt="A screenshot showing the activity beacon & marker being hidden">
-            </div>
-
-            <div id="bug-fixes" class="content-section">
-                <h3>Bug Fixes</h3>
-                <ul>
-                    <li><a href="#fix-one">Bank final page being reset</a></li>
-                    <li><a href="#fix-two">Highest buy offer tooltip</a></li>
-                    <li><a href="#fix-three">Wrap config button descriptions</a></li>
-                    <li><a href="#fix-four">Transcribed NPC dialogue repeating</a></li>
-                    <li><a href="#fix-five">Container search skipping final row</a></li>
-                    <li><a href="#fix-six">Custom Bank Pages Names crash</a></li>
-                    <li><a href="#fix-seven">Reset search query on container close</a></li>
-                    <li><a href="#fix-eight">War message getting recruit prefix</a></li>
-                    <li><a href="#fix-nine">Guild contribution message appearing in housing</a></li>
-                    <li><a href="#fix-ten">Login redirect not redirecting renamed players</a></li>
-                    <li><a href="#fix-eleven">Chat Coordinates improvements</a></li>
-                    <li><a href="#fix-twelve">Update class item patterns</a></li>
-                    <li><a href="#fix-thirteen">Waypoint manager & icon filter crash</a></li>
-                    <li><a href="#fix-fourteen">Disable editing of provided pois</a></li>
-                    <li><a href="#fix-fifteen">Fix custom quick jumps not working</a></li>
-                    <li><a href="#fix-sixteen">Fix grid screens not rendering all elements</a></li>
-                    <li><a href="#fix-seventeen">Player name not rendering with Wynntils marker disabled</a></li>
-                    <li><a href="#fix-eighteen">Display attack timer and territory name on hover</a></li>
-                    <li><a href="#fix-nineteen">Detect soul points in hunted</a></li>
-                    <li><a href="#fix-twenty">Use poi icon when setting markers from waypoint manager</a></li>
-                    <li><a href="#fix-twenty-one">Fix item record category being deleted if renamed to same name</a></li>
-                    <li><a href="#fix-twenty-two">Fix adding new custom bars duplicating config options</a></li>
-                    <li><a href="#fix-twenty-three">Prevent right clicking helper button in guides clearing input</a></li>
-                    <li><a href="#fix-twenty-four">Don't render lootrun path chests on air or barriers</a></li>
-                    <li><a href="#fix-twenty-five">Parse awakened bar & mask correctly</a></li>
-                    <li><a href="#fix-twenty-six">Fix crops resource name causing TerritoryAnnotator to crash</a></li>
-                    <li><a href="#fix-twenty-seven">Detect flying chests correctly</a></li>
-                    <li><a href="#fix-twenty-eight">Actually track raid succeeded stats</a></li>
-                    <li><a href="#fix-twenty-nine">Parse shaman mask correctly when only one mask available</a></li>
-                    <li><a href="#fix-thirty">Fix transcription tooltip option not working correctly</a></li>
-                    <li><a href="#fix-thirty-one">Don't overwrite current world name when entering housing</a></li>
-                    <li><a href="#fix-thirty-two">Fix DeathCoordinatesFeature</a></li>
-                    <li><a href="#fix-thirty-three">Don't return null in profession last harvest functions</a></li>
-                    <li><a href="#fix-thirty-four">Use scale in bomb bell overlay</a></li>
-                    <li><a href="#fix-thirty-five">Detect insulators and simulators in mythic found feature</a></li>
-                    <li><a href="#fix-thirty-six">Handle streamer mode correctly in WorldStateModel</a></li>
-                    <li><a href="#fix-thirty-seven">Detect raid failure from chat message</a></li>
-                    <li><a href="#fix-thirty-eight">Detect TCC failure correctly</a></li>
-                    <li><a href="#fix-thirty-nine">Scroll text fully in config tiles</a></li>
-                    <li><a href="#fix-fourty">Account for timezone in player commands</a></li>
-                    <li><a href="#fix-fourty-one">Fix tomes being counted as defective, if they had no identifications</a></li>
-                    <li><a href="#fix-fourty-two">Fix charms being counted as defective, if they had no identifications</a></li>
-                    <li><a href="#fix-fourty-three">Set inStream to false in WorldStateModel when changing world state</a></li>
-                    <li><a href="#fix-fourty-four">Don't block emerald pouches inside reward containers</a></li>
-                    <li><a href="#fix-fourty-five">Correct war horn configs</a></li>
-                    <li><a href="#fix-fourty-six">Fix discoveries not being queried when only showing undiscovered</a></li>
-                    <li><a href="#fix-fourty-seven">Fix tracked bars not updating</a></li>
-                    <li><a href="#fix-fourty-eight">Update containers for 2.1</a></li>
-                    <li><a href="#fix-fourty-nine">Fix skill point annotator</a></li>
-                    <li><a href="#fix-fifty">Fix custom seaskipper screen</a></li>
-                    <li><a href="#fix-fifty-one">Fix emerald pouch annotator</a></li>
-                    <li><a href="#fix-fifty-two">Fix crashing in character selection screen</a></li>
-                    <li><a href="#fix-fifty-three">Fix quick jump issues</a></li>
-                    <li><a href="#fix-fifty-four">Fix raid tracking for 2.1</a></li>
-                    <li><a href="#fix-fifty-five">Fix time spent in raid stats</a></li>
-                    <li><a href="#fix-fifty-six">Fix flow mod crashing banks</a></li>
-                    <li><a href="#fix-fifty-seven">Fix bank name edit input alignment</a></li>
-                    <li><a href="#fix-fifty-eight">Fix scrolling in content book</a></li>
-                    <li><a href="#fix-fifty-nine">Fix character ID parsing for 2.1</a></li>
-                    <li><a href="#fix-sixty">Annotate mythic aspects</a></li>
-                    <li><a href="#fix-sixty-one">Don't spam tracker update sound when tracking world events</a></li>
-                    <li><a href="#fix-sixty-two">Fix player nametags rendering incorrectly</a></li>
-                    <li><a href="#fix-sixty-three">Fix annotating tier 4 aspects</a></li>
-                    <li><a href="#fix-sixty-four">Ophanim bar overlay with mythic aspects and add tracking for 4th shaman totem</a></li>
-                    <li><a href="#fix-sixty-five">Fix TCC boss scoreboard pattern</a></li>
-                    <li><a href="#fix-sixty-six">Fix gathering tool annotator</a></li>
-                    <li><a href="#fix-sixty-seven">Don't allow weapons as a valid item for mounting horses</a></li>
-                    <li><a href="#fix-sixty-eight">Fix widgets with scrolling text not being masked</a></li>
-                    <li><a href="#fix-sixty-nine">Fix player swimming in character selection screen</a></li>
-                    <li><a href="#fix-seventy">Fix TradeMarketAutoOpenChatFeature</a></li>
-                    <li><a href="#fix-seventy-one">Update bank page names after setting/resetting</a></li>
-                    <li><a href="#fix-seventy-two">Fix ReplayMod causing container features to not work</a></li>
-                    <li><a href="#fix-seventy-three">Fix tutorial content book</a></li>
-                    <li><a href="#fix-seventy-four">Reset current container if on a container screen</a></li>
-                    <li><a href="#fix-seventy-five">Fix TradeMarketPriceConversionFeature</a></li>
-                    <li><a href="#fix-seventy-six">Fix raid tracking not detecting failure from running out of time</a></li>
-                    <li><a href="#fix-seventy-seven">Use title to detect raid failure</a></li>
-                    <li><a href="#fix-seventy-eight">Fix ingredient pouch annotator</a></li>
-                    <li><a href="#fix-seventy-nine">Fix reveal nicknames not working for nicknames ending with s</a></li>
-                    <li><a href="#fix-eighty">Fix ghost player detection</a></li>
-                    <li><a href="#fix-eighty-one">Fix auto progress NPC dialogue not releasing sneak</a></li>
-                    <li><a href="#fix-eighty-two">Fix nicknames being changed by chat coordinates</a></li>
-                    <li><a href="#fix-eighty-three">Fix hide player armor hiding new cosmetics</a></li>
-                    <li><a href="#fix-eighty-four">Unfocus search widget in containers after searching</a></li>
-                </ul>
-                <h3 id="fix-one">Bank final page being reset</h3>
-                <p> This fixed an issue where the final page of a bank was being reset, causing quick jumps to not fully work. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1753" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-two">Highest buy offer tooltip</h3>
-                <p> This fixed an issue where a button was displaying the wrong tooltip. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1786" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-three">Wrap config button descriptions</h3>
-                <p> This made config tooltips wrap onto multiple lines instead of one long line, causing most descriptions to be unreadable. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1900" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-four">Transcribed NPC dialogue repeating</h3>
-                <p> This fixed an issue with transcribed NPC dialogue being repeated, due to the transcribed text containing the original Wynnic/Gavellian in the tooltip and triggering another transcription. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/1975" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-five">Container search skipping final row</h3>
-                <p> This fixed an issue where when searching in containers, the final row was being ignored. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2019" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-six">Custom Bank Pages Names crash</h3>
-                <p> This fixed an issue where the custom bank page names feature would sometimes crash if the ScreenInitEvent was called in the feature before the bank model. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2042" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seven">Reset search query on container close</h3>
-                <p> This fix causes the search query to be reset when you exit the current container so that it is not present when you open a new one. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2043" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-eight">War message getting recruit prefix</h3>
-                <p> This fixed an issue where war messages would be incorrectly labelled as recruits and given the recruit prefix. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2046" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-nine">Guild contribution message appearing in housing</h3>
-                <p> This fixed an issue where the guild contribution message would be sent each time you entered or exited a housing island. While not an ideal solution, I did eventually do a proper fix for the root cause some time later. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2054" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-ten">Login redirect not redirecting renamed players</h3>
-                <p> This fixed an issue where players who had a nickname were not correctly redirected upon logging in. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2114" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-eleven">Chat Coordinates improvements</h3>
-                <p> This fixed an issue where the chat coordinates feature essentially didn't work. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2120" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twelve">Update class item patterns</h3>
-                <p> This fixed an issue that occured when Wynncraft released the 2.0.4 update, causing some regex patterns to fail. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2171" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirteen">Waypoint manager & icon filter crash</h3>
-                <p> This fixed an issue when performing a right or middle click on the waypoint manager and icon filter screen. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2176" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourteen">Disable editing of provided pois</h3>
-                <p> This fix stopped users from being able to perform the quick delete action on provided pois, causing a crash. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2200" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifteen">Fix custom quick jumps not working</h3>
-                <p> This fixed an issue where a hotfix for Wynncraft changed how content was set in banks, causing quick jumps to break. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2213" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixteen">Fix grid screens not rendering all elements</h3>
-                <p> This fixed an issue which was an oversight from another developer during a refactor, causing a render method to not be called on certain screens. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2238" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventeen">Player name not rendering with Wynntils marker disabled</h3>
-                <p> This fixed an issue where if the Wynntils marker config was disabled, then player names would not be rendered at all. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2242" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-eighteen">Display attack timer and territory name on hover</h3>
-                <p> The fixed two issues, one where the timer for an upcoming attack was not displayed on the guild map and another where the name from hovering a territory would display the owner instead of the territory name. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2244" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-nineteen">Detect soul points in hunted</h3>
-                <p> This fixed an issue where soul points would not be recognised whilst in hunted mode due to them being a diamond axe item rather than a nether star. I also noticed a fixme in the code that I was able to fix as it required the veteran tag on the server which I have. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2254" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twenty">Use poi icon when setting markers from waypoint manager</h3>
-                <p> This fixed an oversight from me where I called a method that would use a default icon/colour when setting a marker instead of one that would use the icon/colour from the waypoint. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2274" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twenty-one">Fix item record category being deleted if renamed to same name</h3>
-                <p> This fixed an issue where categories in the item record would be deleted if their name was not changed. This was due to the way renames were handled, by adding the new category and then deleting the old but since it was a set the new could not be added as it was the same. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2324" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twenty-two">Fix adding new custom bars duplicating config options</h3>
-                <p> This fixed an issue where when adding a new custom bar, the config options in the settings menu would be duplicated until closing and reopening the menu. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2330" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twenty-three">Prevent right clicking helper button in guides clearing input</h3>
-                <p> This fixed an issue where trying to go to the next help page of the guides filter help button would end up clearing the input. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2372" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twenty-four">Don't render lootrun path chests on air or barriers</h3>
-                <p> This wasn't necessarily an issue, but it was a request by the Wynncraft team to remove this functionality as it could be used for unintended purposes. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2400" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twenty-five">Parse awakened bar & mask correctly</h3>
-                <p> This fixed an issue where the shaman awakened bar and mask were not properly parsed. I did remove some functionality in this fix that I was unsure if it was still relevant but it was and I fixed it later. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2402" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twenty-six">Fix crops resource name causing TerritoryAnnotator to crash</h3>
-                <p> This fixed an issue where the annotator for territory items would fail due to it expecting <q>Crop</q> instead of <q>Crops</q>. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2425" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twenty-seven">Detect flying chests correctly</h3>
-                <p> This fixed an issue where the pattern for flying chests was not correct, causing them to not be detected. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2428" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twenty-eight">Actually track raid succeeded stats</h3>
-                <p> This fixed an issue where raids succeeded were not actually be tracked in statistics. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2462" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-twenty-nine">Parse shaman mask correctly when only one mask available</h3>
-                <p> This reverts the removed functionality in the previous shaman mask fix. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2467" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirty">Fix transcription tooltip option not working correctly</h3>
-                <p> This fixed an issue where when the tooltips option for transcription was enabled it would not work and would always transcribe the text instead of displaying it in a tooltip. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2476" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirty-one">Don't overwrite current world name when entering housing</h3>
-                <p> This fixed a long standing issue where the world state would be triggered again after entering/exiting housing due causing issues in various places. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2477" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirty-two">Fix DeathCoordinatesFeature</h3>
-                <p> This fixed another long standing issue where the death coordinates feature would not work. I also made it so it will not send both the vanilla and the custom death message. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2478" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirty-three">Don't return null in profession last harvest functions</h3>
-                <p> This fixed an issue where some functions were returning null which is unusable by the function system. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2479" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirty-four">Use scale in bomb bell overlay</h3>
-                <p> This fixed an issue where I forgot to use the scale config in the bomb bell overlay. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2486" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirty-five">Detect insulators and simulators in mythic found feature</h3>
-                <p> This fixed an issue where corkian insulators and simulators were not identified in the mythic found feature for lootruns. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2487" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirty-six">Handle streamer mode correctly in WorldStateModel</h3>
-                <p> This fixed an issue where being in streamer mode would cause the world name to be set to <q>-</q> causing similar issues to the housing name issue I fixed earlier. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2491" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirty-seven">Detect raid failure from chat message</h3>
-                <p> This fixed an issue where The Nameless Anomaly raid would not send a title to signal raid failure and instead sent it as a chat message. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2496" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirty-eight">Detect TCC failure correctly</h3>
-                <p> This fixed an issue with The Canyon Colossus raid not sending any kind of fail indication message. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2505" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-thirty-nine">Scroll text fully in config tiles</h3>
-                <p> This fixed an issue where scrolling text was not scrolling all the way, causing it to be cut off near the end. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2513" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourty">Account for timezone in player commands</h3>
-                <p> This fixed an issue with the player commands not accounting for timezone and displaying inaccurate times. I also ended up using and replacing all instances of java.util.Date in the mod with java.time.Instant. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2517" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourty-one">Fix tomes being counted as defective, if they had no identifications</h3>
-                <p> This fixed an issue where tomes would show as defective (0% roles) when they did not have any rollable identifications. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2529" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourty-two">Fix charms being counted as defective, if they had no identifications</h3>
-                <p> This fixed the same issue as above but for charms. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2530" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourty-three">Set inStream to false in WorldStateModel when changing world state</h3>
-                <p> This fixed an issue where if you were in streamer mode, it would never set you as not in streamer mode unless you manually left as changing worlds takes you out of it automatically. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2534" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourty-four">Don't block emerald pouches inside reward containers</h3>
-                <p> This fixed an oversight from another developer that prevented you from taking emerald pouches from reward containers. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2565" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourty-five">Correct war horn configs</h3>
-                <p> This fixed an issue where the Minecraft method had labelled the parameters for a method incorrectly and we were parsing them in the wrong way. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2584" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourty-six">Fix discoveries not being queried when only showing undiscovered</h3>
-                <p> This fixed an issue that made it so you could not view any discoveries in the content book if you only wanted to see undiscovered ones. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2588" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourty-seven">Fix tracked bars not updating</h3>
-                <p> This fixed an issue where boss bars that we were tracking did not get updated so our overlays and other features that relied on that information did not work. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2622" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourty-eight">Update containers for 2.1</h3>
-                <p> With the Wynncraft 2.1 beta beginning, we had to start fixing many features for it so I began with fixing our container detection system to check for the new titles and also moved some UI elements to better accomodate the new textures. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2627" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fourty-nine">Fix skill point annotator</h3>
-                <p> This fixed the skill point annotator not working in 2.1. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2638" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifty">Fix custom seaskipper screen</h3>
-                <p> This fixed the custom seaskipper screen not working in 2.1 as the contents of the container were now set once instead of each slot individually. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2639" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifty-one">Fix emerald pouch annotator</h3>
-                <p> This fixed the emerald pouch annotator not working in 2.1. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2640" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifty-two">Fix crashing in character selection screen</h3>
-                <p> This fixed an oversight by another developer causing the character selection screen to crash when hovering certain UI elements. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2646" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifty-three">Fix quick jump issues</h3>
-                <p> This fixed an issue where I forgot to update some variables in an event. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2651" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifty-four">Fix raid tracking for 2.1</h3>
-                <p> Raids were completely overhauled in 2.1 so the raid tracking needed to be reworked completely, now relying on the scoreboard instead of labels for tracking progress. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2662" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifty-five">Fix time spent in raid stats</h3>
-                <p> This fixed an oversight from me where I forgot to update the time spent stat to use milliseconds as it was originally only seconds. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2663" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifty-six">Fix flow mod crashing banks</h3>
-                <p> This fixed a mod interaction issue with the <q>Flow</q> mod. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2668" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifty-seven">Fix bank name edit input alignment</h3>
-                <p> This fixed an issue where the bank name edit input was not alligned correctly after I added the new textures. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2678" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifty-eight">Fix scrolling in content book</h3>
-                <p> This fixed an issue where the content book was no longer scrollable as the navigation button item names changed. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2685" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-fifty-nine">Fix character ID parsing for 2.1</h3>
-                <p> This fixed an issue where the character ID was not being parsed as the original item it was on was removed in the 2.1 update. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2688" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixty">Annotate mythic aspects</h3>
-                <p> This fixed an issue where mythic aspects were not annotated as they had a different name pattern to non-mythic ones. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2690" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixty-one">Don't spam tracker update sound when tracking world events</h3>
-                <p> This fixed an issue where the tracker updated sound would play repeatedly whilst the timer for a world event ticked down. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2692" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixty-two">Fix player nametags rendering incorrectly</h3>
-                <p> This fixed an unnoticed issue in the 1.21 port that broke nametag rendering if the background was not hidden. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2693" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixty-three">Fix annotating tier 4 aspects</h3>
-                <p> This fixed an issue where tier 4 aspects were not correctly annotated, this was due to me not having a tier 4 aspects to test a pattern on but I was able to see it from someone else. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2699" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixty-four">Ophanim bar overlay with mythic aspects and add tracking for 4th shaman totem</h3>
-                <p> This fixed an issue where the ophanim bar overlay and shaman totem tracking features would not fully work when mythic aspects affected their counts. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2700" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixty-five">Fix TCC boss scoreboard pattern</h3>
-                <p> This updates the pattern for the boss room detection in the canyon colossus raid. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2719" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixty-six">Fix gathering tool annotator</h3>
-                <p> This updates the pattern for the gathering tool annotator so it can correctly detect gathering tool items again. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2721" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixty-seven">Don't allow weapons as a valid item for mounting horses</h3>
-                <p> This fix prevents the horse mounting feature from trying to mount whilst holding a weapon as this input is not allowed and causes the feature to not work. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2722" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixty-eight">Fix widgets with scrolling text not being masked</h3>
-                <p> This fix makes it so widgets with scrolling text do not appear outside of masked areas. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2723" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-sixty-nine">Fix player swimming in character selection screen</h3>
-                <p> This fix ensures that the player is always standing in the character selection screen instead of doing a swimming animation. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2724" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventy">Fix TradeMarketAutoOpenChatFeature</h3>
-                <p> This fixes the trade market auto open chat feature by updating the expected chat message. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2727" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventy-one">Update bank page names after setting/resetting</h3>
-                <p> This makes it so bank page names actually change after they have been set or reset instead of requiring a page change to update. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2728" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventy-two">Fix ReplayMod causing container features to not work</h3>
-                <p> The replay mod adds another screen on top of containers which our container model was not compatible with, causing any feature that relies on the container model to not function correctly. This fixes it by not setting current container to null every time a screen is opened and only doing that on screen close. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2729" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventy-three">Fix tutorial content book</h3>
-                <p> This fixes the tutorial book detection so that the tutorial can be completed without opening our content book instead. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2730" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventy-four">Reset current container if on a container screen</h3>
-                <p> This fix restores similar functionality to the original functionality prior to my other recent fix to fix compatibility with replay mod however this maintains that functionality and compatibility. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2731" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventy-five">Fix TradeMarketPriceConversionFeature</h3>
-                <p> This fixes the trade market price conversion feature by updating the expected chat pattern. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2738" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventy-six">Fix raid tracking not detecting failure from running out of time</h3>
-                <p> This makes raid tracking detect a failure from running out of time as well as from too many players dying. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2751" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventy-seven">Use title to detect raid failure</h3>
-                <p> This makes raid tracking detect a failure from the title shown as well as the scoreboard as certain challenges can fail their objectives which will not show the expected scoreboard message. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2755" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventy-eight">Fix ingredient pouch annotator</h3>
-                <p> This fixes the ingredient pouch annotator so it can be correctly detected again, it also makes it so the pouch is detected when using the ultimate ironman gamemode. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2766" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-seventy-nine">Fix reveal nicknames not working for nicknames ending with s</h3>
-                <p> This fixes the reveal nicknames feature to work for nicknames that end in a s meaning they won't have a 2nd s after the apostrophe. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2767" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-eighty">Fix ghost player detection</h3>
-                <p> This fix changes the pattern for detecting ghost players by checking their team name. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2768" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-eighty-one">Fix auto progress NPC dialogue not releasing sneak</h3>
-                <p> This fix ensures that the sneak key is released after dialogue has been auto progressed. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2770" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-eighty-two">Fix nicknames being changed by chat coordinates</h3>
-                <p> This fix makes it so that nicknames are not changed by the chat coordinates feature. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2774" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-eighty-three">Fix hide player armor hiding new cosmetics</h3>
-                <p> This fix stops new cosmetics being hidden by the hide player armour feature. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2775" target="_blank"><u>here</u></a>. </p>
-                <h3 id="fix-eighty-four">Unfocus search widget in containers after searching</h3>
-                <p> This fix makes it so that the search widget is unfocused after searching in a container. This allows users to perform actions on items via keyboard which are used in certain containers. </p>
-                <p> The pull request for the fix is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2778" target="_blank"><u>here</u></a>. </p>
-            </div>
-
-            <div id="code-refactoring-chores" class="content-section">
-                <h3>Code Refactoring/Chores</h3>
-                <ul>
-                    <li><a href="#code-one">Organise textures directory</a></li>
-                    <li><a href="#code-two">Update item record textures</a></li>
-                    <li><a href="#code-three">Turn SearchableContainerType into InteractiveContainerType</a></li>
-                    <li><a href="#code-four">Remove InteractiveContainerType and replace with WynncraftContainers</a></li>
-                    <li><a href="#code-five">Sort ItemAnnotators into Game and Gui annotators</a></li>
-                    <li><a href="#code-six">Move onlinemembers and player command json handling to models</a></li>
-                    <li><a href="#code-seven">Update the failed to connect messages</a></li>
-                    <li><a href="#code-eight">Update beta messages</a></li>
-                    <li><a href="#code-nine">Update bank textures</a></li>
-                </ul>
-                <h3 id="code-one">Organise textures directory</h3>
-                <p> This refactor organised the textures directory into categories instead of one directory containing everything. </p>
-                <p> The pull request is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2007" target="_blank"><u>here</u></a>. </p>
-                <h3 id="code-two">Update item record textures</h3>
-                <p> This updated the textures for the item record. </p>
-                <p> The pull request is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2322" target="_blank"><u>here</u></a>. </p>
-                <h3 id="code-three">Turn SearchableContainerType into InteractiveContainerType</h3>
-                <p> This refactor turned the SearchableContainerType into InteractiveContainerType which gave more details on containers and allowed for cleaner code and less duplication. </p>
-                <p> The pull request is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2353" target="_blank"><u>here</u></a>. </p>
-                <h3 id="code-four">Remove InteractiveContainerType and replace with WynncraftContainers</h3>
-                <p> This refactor made further improvements to the codebase by replacing InteractiveContainerType with abstract WynncraftContainer's that contained information on all containers we use in the mod allowing for a much cleaner approach to various features that used containers. </p>
-                <p> The pull request is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2416" target="_blank"><u>here</u></a>. </p>
-                <h3 id="code-five">Sort ItemAnnotators into Game and Gui annotators</h3>
-                <p> This refactor sorted ItemAnnotators into two types, Game and Gui. This was so that the item filter GUI could get a list of all game items that didn't need to be manually updated. </p>
-                <p> The pull request is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2420" target="_blank"><u>here</u></a>. </p>
-                <h3 id="code-six">Move onlinemembers and player command json handling to models</h3>
-                <p> This refactor moved the handling of the onlinemembers and player command to models, where they would now store all the information from the API call and the command would just display the relevant information. </p>
-                <p> The pull request is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2438" target="_blank"><u>here</u></a>. </p>
-                <h3 id="code-seven">Update the failed to connect messages</h3>
-                <p> This replaced the failed to connect messages with ones that were more relevant to the new version of the mod and gave clearer details. </p>
-                <p> The pull request is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2574" target="_blank"><u>here</u></a>. </p>
-                <h3 id="code-eight">Update beta messages</h3>
-                <p> This updated the messages for connecting to the beta server on a build not intended for it and vice versa. It also fixed an issue where failing to connect to the beta server then joining the normal server would still send the error. </p>
-                <p> The pull request is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2614" target="_blank"><u>here</u></a>. </p>
-                <h3 id="code-nine">Update bank textures</h3>
-                <p> This updated the texture for the bank panel. </p>
-                <p> The pull request is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/Wynntils/Wynntils/pull/2644" target="_blank"><u>here</u></a>. </p>
-            </div>
-
-            <br>
-            <br>
+            <h2>Prominent Contributions</h2>
+            <p> Listed below are some of the more prominent contributions I have made to the project. As of the time of writing this I have over 200 contributions to the project so listing them all here would not be practical. </p>
+            <input type="radio" id="tab1" class="tab" name="tabs">
+            <label for="tab1" class="tab-label">Waypoint Manager</label>
+                <div class="tab-content">
+                    <p> The waypoint manager was the very first contribution I made to Wynntils. It existed in the original version of the mod and was something I liked for the brief period I used that old version for so I decided to port it myself. </p>
+                    <p> At the time it was missing 3 features from the original version those being the import button, export button and icon filtering. Importing was added by another developer at a later date and I added exporting later too. The icon filtering did not come until I remade the GUI as I was more confident in my skills. </p>
+                    <p> The redesign of the screen featured searching for waypoints by name. Sorting waypoints by icon, name or any of the coordinates. Filtering by icon to only display waypoints using specified icons. Selectable widgets so you could mass delete or export specific waypoints. And finally the list of waypoints was now scrollable instead of paginated. </p>
+                    <p> The pull request for the original port is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1382" target="_blank"><u>here</u></a>. </p>
+                    <p> The pull request for the export button is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1903" target="_blank"><u>here</u></a>. </p>
+                    <p> The pull request for the redesign is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2154" target="_blank"><u>here</u></a>. </p>
+                    <video controls>
+                        <source src="/Resources/Wynntils/WaypointManagerRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                </div>
+            <input type="radio" id="tab2" class="tab" name="tabs">
+            <label for="tab2" class="tab-label">Custom Seaskipper Screeen</label>
+                <div class="tab-content">
+                    <p> After the waypoint manager another UI feature that I thought could be interesting to work on was the custom seaskipper screen. </p>
+                    <p> This screen replaced the container shop that the base game uses and instead replaces it with a map view and creates clickable borders around the destinations available. Clicking one of these destinations will press the corresponding item in the original UI automatically. </p>
+                    <p> Another developer commented on the original post with an idea for a <q>departure board</q> that would list all available destinations so for users who did not know the map locations they could use that instead, whilst still having a visually improved UI compared to the base game. </p>
+                    <p> Eventually I decided to merge the two screens and make a few changes as well, such as making the departure board list scroll so that it would be better suited for when more destinations were added. </p>
+                    <p> The pull request for the original port is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1473" target="_blank"><u>here</u></a>. </p>
+                    <p> The pull request for the departure board is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1545" target="_blank"><u>here</u></a>. </p>
+                    <p> The pull request for the redesign is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2364" target="_blank"><u>here</u></a>. </p>
+                    <video controls>
+                        <source src="/Resources/Wynntils/CustomSeaskipperScreen.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                </div>
+            <input type="radio" id="tab3" class="tab" name="tabs">
+            <label for="tab3" class="tab-label">Bank Quick Jumps & Custom Names</label>
+                <div class="tab-content">
+                    <p> Banks on Wynncraft allow players to store items in various types of bank which contain a number of pages. As navigating through up to 21 pages can take time they have the ability to <q>quick jump</q> to specific pages. </p>
+                    <p> Due to vanilla limitations they can only have a set amount of destinations, so a feature from the old mod allowed users to set custom destinations and the mod would use the default destinations and the next/previous buttons to navigate to the desired destination as fast as possible. </p>
+                    <p> I ported this feature over for regular banks originally and then expanded it to support other bank types like the bookshelf, misc bucket and block bank. </p>
+                    <p> Another feature from the original mod was the ability to set custom names for each of the pages in your bank, so I also ported that functionality including support for the newer bank types. </p>
+                    <p> After the Wynncraft 2.1 update, banks were overhauled and their quick jump buttons were removed and instead now required pressing 1-9 whilst hovering the next/previous page buttons to perform the quick jumps. To work with the new banks I opted to add a widget to the side of the screen with buttons to jump to any page, instead of just 6 custom destinations. </p>
+                    <p> As the new UI for banks no longer displayed the page name, I had to rework the custom page names feature too so I merged the quick jumps feature with the custom names feature and the names are displayed on the same widget. </p>
+                    <p> The pull request for the original quick jumps port is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1670" target="_blank"><u>here</u></a>. </p>
+                    <p> The pull request for adding bookshelf and misc bucket support for quick jumps is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1754" target="_blank"><u>here</u></a>. </p>
+                    <p> The pull request for adding block bank support for quick jumps is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1788" target="_blank"><u>here</u></a>. </p>
+                    <p> The pull request for porting custom page names is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2023" target="_blank"><u>here</u></a>. </p>
+                    <p> The pull request for reworking the features for the 2.1 update is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2637" target="_blank"><u>here</u></a>. </p>
+                    <video controls>
+                        <source src="/Resources/Wynntils/NamesAndJumps.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                </div>
+            <input type="radio" id="tab4" class="tab" name="tabs">
+            <label for="tab4" class="tab-label">Transcribe into and from Gavellian and Wynnic</label>
+                <div class="tab-content">
+                    <p> On Wynncraft there are 3 languages. English, Ancient Wynnic and High Gavellian. English is what most NPC's speak and the majority of the playerbase too but certain NPC's will occasionaly speak in one of the other two languages. These use certain unicode characters that are changed via the server resource pack. </p>
+                    <p> What this feature does is convert those unicode characters back into plain English characters so they can actually be read by players, this works for both player chat messages and NPC dialogue. </p>
+                    <p> It also allows players to easily send messages in these languages either via surrounding the text in &lt;&lt;&gt;&gt; for Wynnic or [[]] for Gavellian, or by pressing the buttons in the corner of the chat screen to change input language. </p>
+                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1901" target="_blank"><u>here</u></a>. </p>
+                    <video controls>
+                        <source src="/Resources/Wynntils/WynnicAndGavellianTranscription.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                </div>
+            <input type="radio" id="tab5" class="tab" name="tabs">
+            <label for="tab5" class="tab-label">Settings Screen Redesign</label>
+                <div class="tab-content">
+                    <p> In the mod there are many features each with varying amounts of configuration options so the settings screen needs to be easy to navigate to help users more easily configure the mod to their liking. </p>
+                    <p> Up until this redesign, the screen was just 2 book pages, the left with a list of features, a search bar and a save and cancel button. And the right with the config options for the feature. Both sides originally had <q>fake</q> scrolling, so whilst there was a scroll bar it still used pagination and the mouse handle didn't follow the mouse cursor properly. </p>
+                    <p> For the redesign I added tags on the sides of the book to free up more space on the left page to see more features at once and also category tags so you could filter to find relevant features quickly. There are also checkboxes by features to quickly enable/disable them. </p>
+                    <p> Searching was also improved, features now show a number next to a feature to say how many config options match the search query and selecting a feature will scroll the config list to ensure that matched option is visible. </p>
+                    <p> Both the feature and config list also now have smooth scrolling and the scroll handle correctly follows the mouse. </p>
+                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2335" target="_blank"><u>here</u></a>. </p>
+                    <video controls>
+                        <source src="/Resources/Wynntils/SettingsRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                </div>
+            <input type="radio" id="tab6" class="tab" name="tabs">
+            <label for="tab6" class="tab-label">Container Model Refactor</label>
+                <div class="tab-content">
+                    <p> Due to Wynncraft being based on vanilla Minecraft they use chests (containers) for most of their user interfaces and using the server resource pack they can modify the texture of the background and various items to create those custom interfaces. </p>
+                    <p> As many of our features rely on knowing if we are on a specific container a ContainerModel class was made so that other classes can query it to check if the current screen is the requested one. This was done by calling a method such as isSeaskipperScreen or isLootChest. This meant the class needed methods for every container and also stored the pattern for the container title. </p>
+                    <p> For the refactor I instead created a new abstract class WynncraftContainer (renamed to just Container in a later pr by another developer) that had a Pattern as the only parameter for construction that would be used to create a Predicate. The Model registered all known WynncraftContainers on initialization so that each time a container screen opened it would check the registered containers for a match, then other classes could simply request the current container and do and instanceof check to see if it was what they wanted. </p>
+                    <p> Certain containers also have different properties such as ScrollableContainerProperty or FullscreenContainerProperty. These are helpful for other features so they don't need to store certain information, such as for ScrollableContainerProperty the slots of where the next/previous buttons are can be stored in a scrollable containers class. </p>
+                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2416" target="_blank"><u>here</u></a>. </p>
+                </div>
+            <input type="radio" id="tab7" class="tab" name="tabs">
+            <label for="tab7" class="tab-label">Item Filter GUI</label>
+                <div class="tab-content">
+                    <p> The mod has an advanced filtering system that allows users to filter items on our guide screens or in their own banks but the syntax isn't the most user friendly. </p>
+                    <p> To search for items with Mana Regen greater than 5 requires entering <q>manaRegen:>5</q> or to sort by level <q>sort:level</q> and reversing that sort <q>sort:^level</q>. </p>
+                    <p> What this screen does is present the user with a UI that will create the filter queries for them they only have to interact with buttons and type in the values for the filters, instead of also typing the filter name. </p>
+                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2417" target="_blank"><u>here</u></a>. </p>
+                    <video controls>
+                        <source src="/Resources/Wynntils/ItemFilterGUI.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                </div>
+            <input type="radio" id="tab8" class="tab" name="tabs">
+            <label for="tab8" class="tab-label">Raid Progress Overlay and Print Times Feature</label>
+                <div class="tab-content">
+                    <p> Raids are a feature on Wynncraft that see players team up to tackle challenges and a boss fight. This features adds an overlay to the screen showing your time spent in each of the 3 challenge rooms and the boss room and prints the data to chat after completing the raid. </p>
+                    <p> Originally the feature worked by looking for labels to detect current room, all challenges besides 1 had a label with the text <q>Instructions</q> on it and all of the power up rooms have a Blacksmith in them, so checking for that nametag worked for finding that room. A combination of chat and title checks were also used for seeing what a challenge was completed or the raid itself was completed or failed. </p>
+                    <p> With the 2.1 update for Wynncraft the raid system was overhauled and so the tracking had to be updated as well. It now uses the scoreboard to display progress so that is used for determining current room for most situations and chat is checked for the completed message as some challenges hide the scoreboard to play a cutscene on completion and the title is still checked for raid completion/failure. </p>
+                    <p> The pull request for the original feature is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2446" target="_blank"><u>here</u></a>. </p>
+                    <p> The pull request for the 2.1 update is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2662" target="_blank"><u>here</u></a>. </p>
+                    <img src="/Resources/Wynntils/TNA.png" alt="A screenshot of the raid times for a completed run of The Nameless Anomaly.">
+                </div>
+            <input type="radio" id="tab9" class="tab" name="tabs">
+            <label for="tab9" class="tab-label">Overlay selection & management screen redesign</label>
+                <div class="tab-content">
+                    <p> The overlay selection and management screens are essentially a separate settings screen specifically for overlays. The previous selection screen was just a list of overlays that you would click on and that would take you to the management screen to move and resize them. </p>
+                    <p> For the redesign, the selection screen now also has the config options for overlays so you don't need to go back to the settings screen to edit them. It also features a preview button and filters to only show built in or custom overlays and there are buttons to add new info boxes and custom bars instead of having to run a command to add new ones. </p>
+                    <p> The management screen didn't need as much of a redesign as it already worked well, the main change was being able to see the actual overlay as you moved and resized them instead of the green box showing the area it covers. </p>
+                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2502" target="_blank"><u>here</u></a>. </p>
+                    <video controls>
+                        <source src="/Resources/Wynntils/OverlaySelectionRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                        <source src="/Resources/Wynntils/OverlayManagementRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                </div>
+            <input type="radio" id="tab10" class="tab" name="tabs">
+            <label for="tab10" class="tab-label">Add colour picker for colour inputs</label>
+                <div class="tab-content">
+                    <p> There are a few config options and screens that allow users to input a custom colour to be used and previously this had to be entered by the hex value but this feature adds a screen that allows users to easily pick a colour by using sliders and their mouse to select a colour. </p>
+                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2818" target="_blank"><u>here</u></a>. </p>
+                    <video controls>
+                        <source src="/Resources/Wynntils/ColourPicker.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                </div>
+            <input type="radio" id="tab11" class="tab" name="tabs">
+            <label for="tab11" class="tab-label">Add support for Wynncraft 2.1.1</label>
+                <div class="tab-content">
+                    <p> The 2.1.1 update was a minor update for Wynncraft that changed a few things that broke compatibility with the mod. </p>
+                    <p> I updated the mod to be compatible with the beta version of the server so that once the update fully released then we could release an update to support it. </p>
+                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2980" target="_blank"><u>here</u></a>. </p>
+                </div>
         </div>
     </main>
-
-    <button class="scroll-to-top" onclick="scrollToTop()" id="scrollToTopButton">↑</button>
-
-    <script>
-        function toggleScrollToTopButton() {
-            const scrollToTopButton = document.getElementById('scrollToTopButton');
-            if (window.scrollY > 0) {
-                scrollToTopButton.style.display = 'block';
-            } else {
-                scrollToTopButton.style.display = 'none';
-            }
-        }
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        document.getElementById('scrollToTopButton').addEventListener('click', scrollToTop);
-
-        document.addEventListener('scroll', toggleScrollToTopButton);
-
-        function showContent(type) {
-            document.querySelectorAll('.content-section').forEach(function(section) {
-                section.classList.remove('active');
-            });
-
-            document.getElementById(type).classList.add('active');
-        }
-
-        window.onload = function() {
-            showContent('features');
-        };
-    </script>
 </body>
 
 </html>
