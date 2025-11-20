@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>RemoveHUD</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css">
-    <style>
-        .content-section { display: none; }
-        .content-section.active { display: block; }
-        .content-links-container {
-            text-align: center;
-            font-size: 1.5em;
-            margin: 20px 0;
-        }
-        .content-link {
-            cursor: pointer;
-            color: rgb(0, 0, 0);
-            text-decoration: underline;
-            margin: 0 10px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoveHUD | Project</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
-    <div class="sidebar" id="mySidebar"> <a href="/">Projects</a> <a href="https://github.com/ShadowCat117">GitHub</a> <a href="/cv.html">CV</a>
-        <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;"> This page is about my contributions to the open source Minecraft mod, RemoveHUD.<br><br>You can contact me at: <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a> <br><a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a> </p>
-    </div>
-    <main class="main">
-        <h1>RemoveHUD</h1>
-        <div class="content">
-            <p>RemoveHUD is a Minecraft mod for Fabric that allows users to customise the layout of their HUD. It features the ability to toggle or simply change the position of where elements are rendered.</p>
-            <p>My contributions to the mod were porting it to 1.20.2 and porting it to 1.21. In the 1.21 port I also added a few new options with offsets for the exp bar, hotbar, overlay message and held item tooltip.</p>
-            <img src="/Resources/RemoveHUD/removehud1202.png" alt="A screenshot of RemoveHUD running on 1.20.2.">
-            <p>The pull request for the 1.20.2 port is <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/IzzyDotExe/RemoveHud/pull/16" target="_blank"><u>here</u></a></p>
-            <img src="/Resources/RemoveHUD/removehud121.png" alt="A screenshot of RemoveHUD running on 1.21.">
-            <p>The pull request for the 1.21 port is <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/IzzyDotExe/RemoveHud/pull/19" target="_blank"><u>here</u></a></p>
-        </div>
-    </main>
-</body>
 
+<header class="hero">
+    <h1>RemoveHUD</h1>
+    <p>Minecraft HUD customization mod for Fabric</p>
+</header>
+
+<nav class="navbar">
+    <a href="../../index.html">Projects</a>
+    <a href="../../index.html#about">About</a>
+    <a href="../../cv.html">CV</a>
+    <a href="https://github.com/ShadowCat117" target="_blank">GitHub</a>
+    <a href="mailto:JamCal117@gmail.com">Contact</a>
+</nav>
+
+<!-- 👇 Added `project-content` class here -->
+<section class="section project-content">
+
+    <p>
+        RemoveHUD is a Fabric Minecraft mod that allows players to hide or reposition HUD elements.
+        It offers control over hotbar placement, overlays, tooltips, experience bars, and other
+        on-screen UI components to create a cleaner or more personalized interface.
+    </p>
+
+    <p>
+        I contributed by porting the mod to newer Minecraft versions and expanding its configuration
+        options to support new elements introduced in later updates.
+    </p>
+
+    <h2>Contributions</h2>
+
+    <img src="/Resources/RemoveHUD/removehud1202.png" alt="RemoveHUD screenshot on 1.20.2">
+
+    <p>
+        The pull request for the <strong>1.20.2</strong> port is
+        <a href="https://github.com/IzzyDotExe/RemoveHud/pull/16" target="_blank"><u>here</u></a>.
+    </p>
+
+    <img src="/Resources/RemoveHUD/removehud121.png" alt="RemoveHUD screenshot on 1.21">
+
+    <p>
+        The pull request for the <strong>1.21</strong> port (including new offsets for EXP bar,
+        hotbar, overlay messages and tooltips) is
+        <a href="https://github.com/IzzyDotExe/RemoveHud/pull/19" target="_blank"><u>here</u></a>.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 James Callan</p>
+    <p><a href="mailto:JamCal117@gmail.com">JamCal117@gmail.com</a></p>
+</footer>
+
+</body>
 </html>

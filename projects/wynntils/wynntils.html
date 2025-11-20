@@ -1,174 +1,320 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Wynntils</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css">
-    <style>
-        .highlight { margin: 20px 0; }
-        .highlight img, .highlight video { max-width: 100%; height: auto; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wynntils | Project</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
-    <div class="sidebar" id="mySidebar">
-        <a href="/">Projects</a>
-        <a href="https://github.com/ShadowCat117">GitHub</a>
-        <a href="/cv.html">CV</a>
-        <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;">
-            This page is about my contributions to the open source Minecraft mod, Wynntils.<br><br>
-            You can contact me at:
-            <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a> <br>
-            <a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a>
+
+<header class="hero">
+    <h1>Wynntils</h1>
+    <p>Open-source Wynncraft client mod supporting Fabric & NeoForge</p>
+</header>
+
+<nav class="navbar">
+    <a href="../../index.html">Projects</a>
+    <a href="../../index.html#about">About</a>
+    <a href="../../cv.html">CV</a>
+    <a href="https://github.com/ShadowCat117" target="_blank">GitHub</a>
+    <a href="mailto:JamCal117@gmail.com">Contact</a>
+</nav>
+
+<section class="section">
+    <h2>Overview</h2>
+
+    <p>
+        Wynntils is a Minecraft mod using Architectury to support Fabric and NeoForge, currently
+        supporting 1.21 & 1.21.1. It is a rewrite (originally codenamed Artemis) of the original
+        Wynntils mod, now known as Wynntils Legacy. I began contributing by porting a missing feature
+        and was later invited to join the official development team.
+    </p>
+
+    <p>
+        This was my first open source project and helped me gain experience collaborating on a large
+        codebase, submitting PRs, handling code review, and integrating features alongside other developers.
+    </p>
+
+    <h3>GitHub Links</h3>
+
+    <ul class="link-list">
+        <li><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+feat+in%3Atitle" target="_blank">Features & New Additions</a></li>
+        <li><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+fix+in%3Atitle" target="_blank">Bug Fixes</a></li>
+        <li><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+refactor+in%3Atitle" target="_blank">Refactors</a></li>
+        <li><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+chore+in%3Atitle" target="_blank">Misc. Chores</a></li>
+        <li><a href="https://github.com/Wynntils/Wynntils/pulls/ShadowCat117" target="_blank">Open PRs</a></li>
+    </ul>
+
+    <p>Below are some of the more notable contributions I've made (200+ contributions total).</p>
+</section>
+
+<section class="section">
+    <h2>Major Contributions</h2>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Waypoint Manager -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Waypoint Manager</summary>
+
+        <p>The waypoint manager was the very first contribution I made to Wynntils...</p>
+        <p>
+            Originally missing import, export, and icon filtering—these were later added and the entire
+            GUI was redesigned to include searching, sorting, mass selection, scrollable lists, and filters.
         </p>
-    </div>
-    <main class="main">
-        <h1>Wynntils</h1>
-        <div class="content">
-            <p> Wynntils is a Minecraft mod using Architectury to support Fabric and NeoForge, currently supporting 1.21 & 1.21.1. It is a rewrite (originally codenamed Artemis) of the original Wynntils mod, now known as Wynntils Legacy. I started out porting a feature from the original mod that was yet to be added and eventually added more over time to the point where I was asked to join the official development team. </p>
-            <p> The mod was originally released in an alpha state with many features missing from the original but a lot of the framework existed for them to be added. Over time, many of these features were ported from different contributors and also some new features not present in the original were added. </p>
-            <p> This is the first open source project I have contributed to so it has definitely helped me to have a better understanding on working on a bigger project and the process to go through getting a feature merged. </p>
-            <p> Since I have now become an official member of the development team, I also have more experience working on a larger project as a team member since I can easily communicate with the other developers and I am more accustomed to reviewing others code. </p>
-            <h2>GitHub Links</h2>
-            <p><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+feat+in%3Atitle" target="_blank">Features/New additions</a></p>
-            <p><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+fix+in%3Atitle" target="_blank">Bug fixes/Issues resolved</a></p>
-            <p><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+refactor+in%3Atitle" target="_blank">Code Refactors</a></p>
-            <p><a href="https://github.com/Wynntils/Wynntils/pulls?q=is%3Apr+is%3Amerged+author%3AShadowCat117+chore+in%3Atitle" target="_blank">Miscellaneous chores</a></p>
-            <p><a href="https://github.com/Wynntils/Wynntils/pulls/ShadowCat117" target="_blank">Open pull requests</a></p>
 
-            <h2>Prominent Contributions</h2>
-            <p> Listed below are some of the more prominent contributions I have made to the project. As of the time of writing this I have over 200 contributions to the project so listing them all here would not be practical. </p>
-            <input type="radio" id="tab1" class="tab" name="tabs">
-            <label for="tab1" class="tab-label">Waypoint Manager</label>
-                <div class="tab-content">
-                    <p> The waypoint manager was the very first contribution I made to Wynntils. It existed in the original version of the mod and was something I liked for the brief period I used that old version for so I decided to port it myself. </p>
-                    <p> At the time it was missing 3 features from the original version those being the import button, export button and icon filtering. Importing was added by another developer at a later date and I added exporting later too. The icon filtering did not come until I remade the GUI as I was more confident in my skills. </p>
-                    <p> The redesign of the screen featured searching for waypoints by name. Sorting waypoints by icon, name or any of the coordinates. Filtering by icon to only display waypoints using specified icons. Selectable widgets so you could mass delete or export specific waypoints. And finally the list of waypoints was now scrollable instead of paginated. </p>
-                    <p> The pull request for the original port is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1382" target="_blank"><u>here</u></a>. </p>
-                    <p> The pull request for the export button is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1903" target="_blank"><u>here</u></a>. </p>
-                    <p> The pull request for the redesign is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2154" target="_blank"><u>here</u></a>. </p>
-                    <video controls>
-                        <source src="/Resources/Wynntils/WaypointManagerRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
-                </div>
-            <input type="radio" id="tab2" class="tab" name="tabs">
-            <label for="tab2" class="tab-label">Custom Seaskipper Screeen</label>
-                <div class="tab-content">
-                    <p> After the waypoint manager another UI feature that I thought could be interesting to work on was the custom seaskipper screen. </p>
-                    <p> This screen replaced the container shop that the base game uses and instead replaces it with a map view and creates clickable borders around the destinations available. Clicking one of these destinations will press the corresponding item in the original UI automatically. </p>
-                    <p> Another developer commented on the original post with an idea for a <q>departure board</q> that would list all available destinations so for users who did not know the map locations they could use that instead, whilst still having a visually improved UI compared to the base game. </p>
-                    <p> Eventually I decided to merge the two screens and make a few changes as well, such as making the departure board list scroll so that it would be better suited for when more destinations were added. </p>
-                    <p> The pull request for the original port is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1473" target="_blank"><u>here</u></a>. </p>
-                    <p> The pull request for the departure board is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1545" target="_blank"><u>here</u></a>. </p>
-                    <p> The pull request for the redesign is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2364" target="_blank"><u>here</u></a>. </p>
-                    <video controls>
-                        <source src="/Resources/Wynntils/CustomSeaskipperScreen.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
-                </div>
-            <input type="radio" id="tab3" class="tab" name="tabs">
-            <label for="tab3" class="tab-label">Bank Quick Jumps & Custom Names</label>
-                <div class="tab-content">
-                    <p> Banks on Wynncraft allow players to store items in various types of bank which contain a number of pages. As navigating through up to 21 pages can take time they have the ability to <q>quick jump</q> to specific pages. </p>
-                    <p> Due to vanilla limitations they can only have a set amount of destinations, so a feature from the old mod allowed users to set custom destinations and the mod would use the default destinations and the next/previous buttons to navigate to the desired destination as fast as possible. </p>
-                    <p> I ported this feature over for regular banks originally and then expanded it to support other bank types like the bookshelf, misc bucket and block bank. </p>
-                    <p> Another feature from the original mod was the ability to set custom names for each of the pages in your bank, so I also ported that functionality including support for the newer bank types. </p>
-                    <p> After the Wynncraft 2.1 update, banks were overhauled and their quick jump buttons were removed and instead now required pressing 1-9 whilst hovering the next/previous page buttons to perform the quick jumps. To work with the new banks I opted to add a widget to the side of the screen with buttons to jump to any page, instead of just 6 custom destinations. </p>
-                    <p> As the new UI for banks no longer displayed the page name, I had to rework the custom page names feature too so I merged the quick jumps feature with the custom names feature and the names are displayed on the same widget. </p>
-                    <p> The pull request for the original quick jumps port is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1670" target="_blank"><u>here</u></a>. </p>
-                    <p> The pull request for adding bookshelf and misc bucket support for quick jumps is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1754" target="_blank"><u>here</u></a>. </p>
-                    <p> The pull request for adding block bank support for quick jumps is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1788" target="_blank"><u>here</u></a>. </p>
-                    <p> The pull request for porting custom page names is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2023" target="_blank"><u>here</u></a>. </p>
-                    <p> The pull request for reworking the features for the 2.1 update is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2637" target="_blank"><u>here</u></a>. </p>
-                    <video controls>
-                        <source src="/Resources/Wynntils/NamesAndJumps.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
-                </div>
-            <input type="radio" id="tab4" class="tab" name="tabs">
-            <label for="tab4" class="tab-label">Transcribe into and from Gavellian and Wynnic</label>
-                <div class="tab-content">
-                    <p> On Wynncraft there are 3 languages. English, Ancient Wynnic and High Gavellian. English is what most NPC's speak and the majority of the playerbase too but certain NPC's will occasionaly speak in one of the other two languages. These use certain unicode characters that are changed via the server resource pack. </p>
-                    <p> What this feature does is convert those unicode characters back into plain English characters so they can actually be read by players, this works for both player chat messages and NPC dialogue. </p>
-                    <p> It also allows players to easily send messages in these languages either via surrounding the text in &lt;&lt;&gt;&gt; for Wynnic or [[]] for Gavellian, or by pressing the buttons in the corner of the chat screen to change input language. </p>
-                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/1901" target="_blank"><u>here</u></a>. </p>
-                    <video controls>
-                        <source src="/Resources/Wynntils/WynnicAndGavellianTranscription.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
-                </div>
-            <input type="radio" id="tab5" class="tab" name="tabs">
-            <label for="tab5" class="tab-label">Settings Screen Redesign</label>
-                <div class="tab-content">
-                    <p> In the mod there are many features each with varying amounts of configuration options so the settings screen needs to be easy to navigate to help users more easily configure the mod to their liking. </p>
-                    <p> Up until this redesign, the screen was just 2 book pages, the left with a list of features, a search bar and a save and cancel button. And the right with the config options for the feature. Both sides originally had <q>fake</q> scrolling, so whilst there was a scroll bar it still used pagination and the mouse handle didn't follow the mouse cursor properly. </p>
-                    <p> For the redesign I added tags on the sides of the book to free up more space on the left page to see more features at once and also category tags so you could filter to find relevant features quickly. There are also checkboxes by features to quickly enable/disable them. </p>
-                    <p> Searching was also improved, features now show a number next to a feature to say how many config options match the search query and selecting a feature will scroll the config list to ensure that matched option is visible. </p>
-                    <p> Both the feature and config list also now have smooth scrolling and the scroll handle correctly follows the mouse. </p>
-                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2335" target="_blank"><u>here</u></a>. </p>
-                    <video controls>
-                        <source src="/Resources/Wynntils/SettingsRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
-                </div>
-            <input type="radio" id="tab6" class="tab" name="tabs">
-            <label for="tab6" class="tab-label">Container Model Refactor</label>
-                <div class="tab-content">
-                    <p> Due to Wynncraft being based on vanilla Minecraft they use chests (containers) for most of their user interfaces and using the server resource pack they can modify the texture of the background and various items to create those custom interfaces. </p>
-                    <p> As many of our features rely on knowing if we are on a specific container a ContainerModel class was made so that other classes can query it to check if the current screen is the requested one. This was done by calling a method such as isSeaskipperScreen or isLootChest. This meant the class needed methods for every container and also stored the pattern for the container title. </p>
-                    <p> For the refactor I instead created a new abstract class WynncraftContainer (renamed to just Container in a later pr by another developer) that had a Pattern as the only parameter for construction that would be used to create a Predicate. The Model registered all known WynncraftContainers on initialization so that each time a container screen opened it would check the registered containers for a match, then other classes could simply request the current container and do and instanceof check to see if it was what they wanted. </p>
-                    <p> Certain containers also have different properties such as ScrollableContainerProperty or FullscreenContainerProperty. These are helpful for other features so they don't need to store certain information, such as for ScrollableContainerProperty the slots of where the next/previous buttons are can be stored in a scrollable containers class. </p>
-                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2416" target="_blank"><u>here</u></a>. </p>
-                </div>
-            <input type="radio" id="tab7" class="tab" name="tabs">
-            <label for="tab7" class="tab-label">Item Filter GUI</label>
-                <div class="tab-content">
-                    <p> The mod has an advanced filtering system that allows users to filter items on our guide screens or in their own banks but the syntax isn't the most user friendly. </p>
-                    <p> To search for items with Mana Regen greater than 5 requires entering <q>manaRegen:>5</q> or to sort by level <q>sort:level</q> and reversing that sort <q>sort:^level</q>. </p>
-                    <p> What this screen does is present the user with a UI that will create the filter queries for them they only have to interact with buttons and type in the values for the filters, instead of also typing the filter name. </p>
-                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2417" target="_blank"><u>here</u></a>. </p>
-                    <video controls>
-                        <source src="/Resources/Wynntils/ItemFilterGUI.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
-                </div>
-            <input type="radio" id="tab8" class="tab" name="tabs">
-            <label for="tab8" class="tab-label">Raid Progress Overlay and Print Times Feature</label>
-                <div class="tab-content">
-                    <p> Raids are a feature on Wynncraft that see players team up to tackle challenges and a boss fight. This features adds an overlay to the screen showing your time spent in each of the 3 challenge rooms and the boss room and prints the data to chat after completing the raid. </p>
-                    <p> Originally the feature worked by looking for labels to detect current room, all challenges besides 1 had a label with the text <q>Instructions</q> on it and all of the power up rooms have a Blacksmith in them, so checking for that nametag worked for finding that room. A combination of chat and title checks were also used for seeing what a challenge was completed or the raid itself was completed or failed. </p>
-                    <p> With the 2.1 update for Wynncraft the raid system was overhauled and so the tracking had to be updated as well. It now uses the scoreboard to display progress so that is used for determining current room for most situations and chat is checked for the completed message as some challenges hide the scoreboard to play a cutscene on completion and the title is still checked for raid completion/failure. </p>
-                    <p> The pull request for the original feature is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2446" target="_blank"><u>here</u></a>. </p>
-                    <p> The pull request for the 2.1 update is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2662" target="_blank"><u>here</u></a>. </p>
-                    <img src="/Resources/Wynntils/TNA.png" alt="A screenshot of the raid times for a completed run of The Nameless Anomaly.">
-                </div>
-            <input type="radio" id="tab9" class="tab" name="tabs">
-            <label for="tab9" class="tab-label">Overlay selection & management screen redesign</label>
-                <div class="tab-content">
-                    <p> The overlay selection and management screens are essentially a separate settings screen specifically for overlays. The previous selection screen was just a list of overlays that you would click on and that would take you to the management screen to move and resize them. </p>
-                    <p> For the redesign, the selection screen now also has the config options for overlays so you don't need to go back to the settings screen to edit them. It also features a preview button and filters to only show built in or custom overlays and there are buttons to add new info boxes and custom bars instead of having to run a command to add new ones. </p>
-                    <p> The management screen didn't need as much of a redesign as it already worked well, the main change was being able to see the actual overlay as you moved and resized them instead of the green box showing the area it covers. </p>
-                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2502" target="_blank"><u>here</u></a>. </p>
-                    <video controls>
-                        <source src="/Resources/Wynntils/OverlaySelectionRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
-                    <video controls>
-                        <source src="/Resources/Wynntils/OverlayManagementRedesign.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
-                </div>
-            <input type="radio" id="tab10" class="tab" name="tabs">
-            <label for="tab10" class="tab-label">Add colour picker for colour inputs</label>
-                <div class="tab-content">
-                    <p> There are a few config options and screens that allow users to input a custom colour to be used and previously this had to be entered by the hex value but this feature adds a screen that allows users to easily pick a colour by using sliders and their mouse to select a colour. </p>
-                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2818" target="_blank"><u>here</u></a>. </p>
-                    <video controls>
-                        <source src="/Resources/Wynntils/ColourPicker.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
-                </div>
-            <input type="radio" id="tab11" class="tab" name="tabs">
-            <label for="tab11" class="tab-label">Add support for Wynncraft 2.1.1</label>
-                <div class="tab-content">
-                    <p> The 2.1.1 update was a minor update for Wynncraft that changed a few things that broke compatibility with the mod. </p>
-                    <p> I updated the mod to be compatible with the beta version of the server so that once the update fully released then we could release an update to support it. </p>
-                    <p> The pull request is <a style="margin-left: 0px;font-size: 20px;" href="https://github.com/Wynntils/Wynntils/pull/2980" target="_blank"><u>here</u></a>. </p>
-                </div>
-        </div>
-    </main>
+        <p>PRs:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/1382" target="_blank">Original port</a></li>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/1903" target="_blank">Export button</a></li>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2154" target="_blank">Redesign</a></li>
+        </ul>
+
+        <video controls>
+            <source src="/Resources/Wynntils/WaypointManagerRedesign.mp4" type="video/mp4">
+        </video>
+    </details>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Custom Seaskipper Screen -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Custom Seaskipper Screen</summary>
+
+        <p>
+            Replaced the base container UI with a custom map interface, clickable destinations, and
+            later merged with a “departure board” variant. Scrollable and supports new destinations.
+        </p>
+
+        <p>PRs:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/1473" target="_blank">Original port</a></li>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/1545" target="_blank">Departure board version</a></li>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2364" target="_blank">Redesign</a></li>
+        </ul>
+
+        <video controls>
+            <source src="/Resources/Wynntils/CustomSeaskipperScreen.mp4" type="video/mp4">
+        </video>
+    </details>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Bank Quick Jumps & Custom Names -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Bank Quick Jumps & Custom Names</summary>
+
+        <p>
+            Added custom quick-jump navigation for banks, bookshelf banks, misc bucket banks, and block banks.
+            Later updated to support Wynncraft 2.1 redesign and merged UI elements into a single widget.
+        </p>
+
+        <p>PRs:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/1670" target="_blank">Original port</a></li>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/1754" target="_blank">Bookshelf & misc bucket support</a></li>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/1788" target="_blank">Block bank support</a></li>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2023" target="_blank">Custom page names</a></li>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2637" target="_blank">2.1 Update merge</a></li>
+        </ul>
+
+        <video controls>
+            <source src="/Resources/Wynntils/NamesAndJumps.mp4" type="video/mp4">
+        </video>
+    </details>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Wynnic/Gavellian Transcription -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Transcribe into and from Gavellian and Wynnic</summary>
+
+        <p>
+            Converts Unicode Wynncraft glyphs back into readable English and allows input in either language
+            using << >> or [[]] syntax, as well as input mode toggles in chat UI.
+        </p>
+
+        <p>PR:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/1901" target="_blank">Main feature PR</a></li>
+        </ul>
+
+        <video controls>
+            <source src="/Resources/Wynntils/WynnicAndGavellianTranscription.mp4" type="video/mp4">
+        </video>
+    </details>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Settings Screen Redesign -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Settings Screen Redesign</summary>
+
+        <p>
+            Added proper scrolling, category tags, filtering, checkboxes, search highlighting,
+            and improved navigation between feature list and config options.
+        </p>
+
+        <p>PR:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2335" target="_blank">Settings redesign</a></li>
+        </ul>
+
+        <video controls>
+            <source src="/Resources/Wynntils/SettingsRedesign.mp4" type="video/mp4">
+        </video>
+    </details>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Container Model Refactor -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Container Model Refactor</summary>
+
+        <p>
+            Replaced manual screen checks with a new `WynncraftContainer` abstract class with pattern-based
+            matching and metadata properties like scrollable/resizeable/fullscreen container attributes.
+        </p>
+
+        <p>PR:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2416" target="_blank">Container refactor</a></li>
+        </ul>
+    </details>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Item Filter GUI -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Item Filter GUI</summary>
+
+        <p>
+            Added UI-driven item filtering so users no longer need to type syntax like
+            <code>manaRegen:>5</code> manually. UI builds syntax behind the scenes.
+        </p>
+
+        <p>PR:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2417" target="_blank">Feature PR</a></li>
+        </ul>
+
+        <video controls>
+            <source src="/Resources/Wynntils/ItemFilterGUI.mp4" type="video/mp4">
+        </video>
+    </details>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Raid Progress Overlay -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Raid Progress Overlay & Print Times</summary>
+
+        <p>
+            Tracks raid times for each challenge room and boss room. Originally used labels and chat hooks,
+            later updated for Wynncraft 2.1 to use scoreboards instead.
+        </p>
+
+        <p>PRs:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2446" target="_blank">Original feature</a></li>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2662" target="_blank">2.1 update</a></li>
+        </ul>
+
+        <img src="/Resources/Wynntils/TNA.png" alt="Screenshot of raid progress overlay.">
+    </details>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Overlay Selection & Management UI -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Overlay Selection & Management Screen Redesign</summary>
+
+        <p>
+            Combined overlay config options with selection UI, added filters, new overlay types,
+            preview button, and improved resizing visuals.
+        </p>
+
+        <p>PR:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2502" target="_blank">UI redesign</a></li>
+        </ul>
+
+        <video controls>
+            <source src="/Resources/Wynntils/OverlaySelectionRedesign.mp4" type="video/mp4">
+        </video>
+        <video controls>
+            <source src="/Resources/Wynntils/OverlayManagementRedesign.mp4" type="video/mp4">
+        </video>
+    </details>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Colour Picker -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Add Colour Picker for Colour Inputs</summary>
+
+        <p>
+            Added a UI allowing users to select colours using sliders and input fields,
+            replacing manual hex entry for several configuration screens.
+        </p>
+
+        <p>PR:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2818" target="_blank">Colour picker PR</a></li>
+        </ul>
+
+        <video controls>
+            <source src="/Resources/Wynntils/ColourPicker.mp4" type="video/mp4">
+        </video>
+    </details>
+
+
+    <!-- ===================================================================================== -->
+    <!-- Wynncraft 2.1.1 Support -->
+    <!-- ===================================================================================== -->
+
+    <details class="collapsible">
+        <summary>Add support for Wynncraft 2.1.1</summary>
+
+        <p>
+            Updated the mod to support the beta version of Wynncraft 2.1.1 so that a compatible update
+            could be released immediately when the server update went live.
+        </p>
+
+        <p>PR:</p>
+        <ul>
+            <li><a href="https://github.com/Wynntils/Wynntils/pull/2980" target="_blank">Compatibility update</a></li>
+        </ul>
+    </details>
+
+</section>
+
+<footer>
+    <p>© 2025 James Callan</p>
+    <p><a href="mailto:JamCal117@gmail.com">JamCal117@gmail.com</a></p>
+</footer>
+
 </body>
-
 </html>

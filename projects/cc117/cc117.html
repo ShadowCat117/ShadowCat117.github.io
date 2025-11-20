@@ -1,58 +1,138 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>CC-117</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC-117 | Project</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
-    <div class="sidebar" id="mySidebar"> <a href="/">Projects</a> <a href="https://github.com/ShadowCat117">GitHub</a> <a href="/cv.html">CV</a>
-        <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;"> This page is about my Discord bot that I made for my Wynncraft Guild.<br><br>You can contact me at: <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a> <br><a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a> </p>
-    </div>
-    <main class="main">
-        <h1>CC-117</h1>
-        <div class="content">
-            <p> This is a Discord bot that was originally made for my Wynncraft guild but has since been made publicly available. It reads various data from the public Wynncraft API and stores both raw and edited data into a database which the bot then uses to display information in command responses and update roles correctly. </p>
-            <p> It is technically split into two programs, one is the Discord bot that responds to user commands and performs certain actions on intervals. The other is the database populator which repeatedly calls the Wynncraft API to populate the database with various information. </p>
 
-            <p> The original bot was just to apply guild rank roles to members of the Discord server, so chiefs would get the @Chief role, recruits would get the @Recruit role etc. However as I looked more into what information the API offered I thought of other features could be added to the bot so I began work on various other features. </p>
-            <img src="/Resources/CC-117/UpdateRoles.png" alt="The bot responding to a command to update member roles.">
+<header class="hero">
+    <h1>CC-117</h1>
+    <p>Discord bot for Wynncraft guild management & activity analysis</p>
+</header>
 
-            <p> One of the first commands added after updating roles was the ability to track certain guilds to see how many players they have online on average. There is one command to add a guild to your tracked list, one to remove a guild and then the command to view the list. </p>
-            <img src="/Resources/CC-117/TrackedGuilds.png" alt="The bot responding to a command to show tracked guilds activity.">
+<nav class="navbar">
+    <a href="../../index.html">Projects</a>
+    <a href="../../index.html#about">About</a>
+    <a href="../../cv.html">CV</a>
+    <a href="https://github.com/ShadowCat117" target="_blank">GitHub</a>
+    <a href="mailto:JamCal117@gmail.com">Contact</a>
+</nav>
 
-            <p> In order to get more accurate guild activity, a command was added to view the active hours for any guild. This shows the average online players at each hour, with the option to sort by time or activity and display the info in a different timezone. </p>
-            <img src="/Resources/CC-117/ActiveHours.png" alt="The bot responding to a command to show guild active hours.">
+<section class="section project-content">
 
-            <p> To help find inactive players in your guild a command to see the last login for each player was added, this shows if a player is online or when they last logged in. </p>
-            <img src="/Resources/CC-117/LastLogins.png" alt="The bot responding to a command to show a guilds last logins.">
+    <p>
+        CC-117 is a Discord bot originally created for my Wynncraft guild and later made publicly
+        available. It reads data from the public Wynncraft API, storing both raw and processed data for
+        use in commands, activity tracking, and automated role updates.
+    </p>
 
-            <p> A command to view the online members for a specific guild was also added, it will also display the active server if multiple members are on one world. </p>
-            <img src="/Resources/CC-117/Online.png" alt="The bot responding to a command to show a guilds online members.">
+    <p>
+        The system is split into two separate programs:
+    </p>
 
-            <p> Some commands to view stats were also added. One for guilds, one for players and another that generated an image showing some player stats. </p>
-            <img src="/Resources/CC-117/GuildStats.png" alt="The bot responding to a command to show guild stats.">
-            <img src="/Resources/CC-117/PlayerStats.png" alt="The bot responding to a command to show player stats.">
-            <img src="/Resources/CC-117/PlayerBanner.png" alt="The bot responding to a command to generate a player banner.">
+    <ul>
+        <li><strong>The bot</strong> — handles commands, responds to users, updates roles</li>
+        <li><strong>The data collector</strong> — repeatedly queries the Wynncraft API and updates the database</li>
+    </ul>
 
-            <p> Another command was also added to determine the <q>sus</q> level of a player, basically to try and find out if that player is an alt account or not. </p>
-            <img src="/Resources/CC-117/Sus.png" alt="The bot responding to a command to show a player's sus level.">
 
-            <p> Sometimes guilds or players can have the same identifiers, in those cases the bot will display the choices for you and you press a button in order to select the desired choice. </p>
-            <img src="/Resources/CC-117/MultipleGuilds.png" alt="The bot displaying a choice between two guilds.">
+    <p>
+        The first feature implemented was automated role assignment based on guild ranks on Wynncraft.
+    </p>
 
-            <p> There are also many other commands for guild management to handle promotions and inactivity. These are all configured by the bots config commands and can be viewed by a command. </p>
-            <img src="/Resources/CC-117/ViewConfig.png" alt="The bot responding to a command to show the servers config.">
+    <img src="/Resources/CC-117/UpdateRoles.png" alt="Update roles command response">
 
-            <p> Originally the bot was written in Python but when I started to add more functionality I had to change to Java due to the server hosting not supporting a Python version that was required for slash commands. </p>
-            <p> Whilst the Java version was fine due to it being my strongest language, I decided to rewrite the bot in JavaScript and migrate to using SQLite instead of storing data in text files to improve the performance of the bot and allow for more features. </p>
-            <p> After some time, longstanding issues needed to be solved so I rewrote a large amount of the bot opting to use embeds for command responses instead of code blocks for everything allowing for a better appearance. </p>
 
-            <p>The GitHub repository for the new JavaScript bot is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/ShadowCat117/CC-117"><u>here</u></a>. </p>
-            <p>The GitHub repository for the old Java bot is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/ShadowCat117/CC-117-legacy-"><u>here</u></a>. </p>
-        </div>
-    </main>
+    <p>
+        One of the first additional features allowed users to track guilds and monitor average activity.
+        Commands exist to add/remove tracked guilds and list activity results.
+    </p>
+
+    <img src="/Resources/CC-117/TrackedGuilds.png" alt="Tracked guilds activity screenshot">
+
+
+    <p>
+        To provide more precise insight, a feature was added to graph average online players per hour with
+        sorting and timezone support.
+    </p>
+
+    <img src="/Resources/CC-117/ActiveHours.png" alt="Active hours chart screenshot">
+
+
+    <p>
+        To help identify inactive members, a command was added to check last login times for players in a guild.
+    </p>
+
+    <img src="/Resources/CC-117/LastLogins.png" alt="Last login timestamps screenshot">
+
+
+    <p>
+        A command was added to list online players within a guild and show which server they are active on.
+    </p>
+
+    <img src="/Resources/CC-117/Online.png" alt="Online members screenshot">
+
+
+    <p>
+        Additional commands allow users to view stats for guilds and players, including image-generated banners.
+    </p>
+
+    <img src="/Resources/CC-117/GuildStats.png" alt="Guild stats screenshot">
+    <img src="/Resources/CC-117/PlayerStats.png" alt="Player stats screenshot">
+    <img src="/Resources/CC-117/PlayerBanner.png" alt="Player banner screenshot">
+
+
+    <p>
+        A novelty feature was added to estimate how likely a player is an alt account (<q>sus level</q>).
+    </p>
+
+    <img src="/Resources/CC-117/Sus.png" alt="Sus level screenshot">
+
+
+    <p>
+        If multiple guilds or players match a given identifier, the bot will present selection options via buttons.
+    </p>
+
+    <img src="/Resources/CC-117/MultipleGuilds.png" alt="Guild selection prompt screenshot">
+
+
+    <p>
+        Additional commands assist guild moderation, configuration, and promotion workflows.
+    </p>
+
+    <img src="/Resources/CC-117/ViewConfig.png" alt="Bot configuration screen screenshot">
+
+
+    <p>
+        The bot was originally written in Python, but migrated to Java due to hosting limitations for slash
+        commands. Afterward, it was rewritten in JavaScript and migrated to SQLite for improved structure,
+        performance, and extensibility.
+    </p>
+
+    <p>
+        Eventually, long-standing issues led to a major overhaul, including redesigned responses using embeds
+        rather than plain text blocks.
+    </p>
+
+
+    <p>
+        GitHub repositories:
+        <br>
+        <a href="https://github.com/ShadowCat117/CC-117" target="_blank"><u>Current JavaScript bot</u></a>
+        <br>
+        <a href="https://github.com/ShadowCat117/CC-117-legacy-" target="_blank"><u>Original Java version</u></a>
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2025 James Callan</p>
+    <p><a href="mailto:JamCal117@gmail.com">JamCal117@gmail.com</a></p>
+</footer>
+
 </body>
-
 </html>

@@ -1,46 +1,111 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Accessible Codenames</title>
-    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Codenames | Project</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
-    <div class="sidebar" id="mySidebar"> <a href="/">Projects</a> <a href="https://github.com/ShadowCat117">GitHub</a> <a href="/cv.html">CV</a>
-        <p style="color: #ccc; position: absolute; bottom: 80px; padding-right: 20px;"> This page is about my final year project I completed at University.<br><br>You can contact me at: <a href="mailto:JamCal117@gmail.com" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">JamCal117@gmail.com</a> <br><a href="/projects/mazebounce/privacypolicy.html" style="color: #ccc; text-decoration: underline; font-size: inherit; padding: 0;">Maze Bounce Privacy Policy</a> </p>
-    </div>
-    <main class="main">
-        <h1>Accessible Codenames</h1>
-        <div class="content">
-            <p>This was my final year project for my Software Engineering course at Swansea University. I recreated the board game Codenames as an Android application with a strong focus on accessibility. </p> <img src="/Resources/Codenames/Codenames.jpg" alt="A screenshot of the board of the game as shown in the app.">
-            <p>Codenames is played with 2 teams of players, both having a minimum of 2 members. One member per team is assigned the role of 'spymaster' whilst every other member is simply just a regular player. </p> <img src="/Resources/Codenames/CodenamesTeamSetup.jpg" alt="A screenshot of the scene for setting up teams for the game.">
-            <p>Once the teams have been setup and you start the game, you will be presented with the board which contains 25 unique words all assigned to one of 4 colours. By default these are blue for team A, red for team B, a light green for neutral and black for the bomb word. </p>
-            <p>To play the game, the starting teams spymaster must find a word that links to as many of the words coloured with their teams colour. For example, if their team has the words "file" and "root" you could give the hint "directory" as that relates to both words. To indiciate to your team how many words they have to choose, you must also give a number along with the word, in this case 2. </p> <img src="/Resources/Codenames/CodenamesGuess.jpg" alt="A screenshot of the game in the guessing phase of the game.">
-            <p>After a hint has been given, the other members of the team must select which words they think the hint relates to. They are allowed to guess 1 more than the number given, so if the hint relates to 2 words, 3 guesses can be made. </p>
-            <p>However, you aren't allowed to freely guess as guessing a word belonging to the other team or a neutral word will end your teams turn early and clicking the bomb word will instantly end the game with your loss. </p>
-            <p>After your team completes your turn, the opposing teams spymaster must now give a hint for their team and the cycle repeats until either the bomb word is clicked, or one team successfully clicks all of their words. </p>
-            <p>The game features two ways to play, either as a replacement to the board game or you can play online with friends. If you choose to play locally then you can select team members to make it easier to remember whos team everyone is on, or you can play without setting up teams. You then pass the device around your group dependent on who the current game phase applies too. </p>
-            <p>The online version of the game can be played on your own device and allows you to play with people not in the same room as you. The game still functions the same but now includes a chat option to communicate with team members. </p> <img src="/Resources/Codenames/CodenamesOnline.jpg" alt="A screenshot of the teams in an online match of the game.">
-            <p>For the accessibility features in the game, I chose to go with Text-to-Speech and customising colours. The Text-to-Speech is triggered by performing a held press on an element that has text associated with it, so a button or just plain text for example. This will then read the text out to the user. </p>
-            <p>As for customising colours, you have free control over the colour of 8 different categories in the app. These are: </p>
-            <ul>
-                <li>Team A</li>
-                <li>Team B</li>
-                <li>Bomb Square</li>
-                <li>Neutral Square</li>
-                <li>Unmodified Square</li>
-                <li>Application Background</li>
-                <li>Menu Buttons</li>
-                <li>Menu Text</li>
-            </ul>
-            <p>There are 3 available slots to save different combinations of colours. </p> <img src="/Resources/Codenames/CodenamesColours.jpg" alt="A screenshot of the scene in the game that allows you to choose the colours of different elements of the game.">
-            <p>I initially started by created designs for how each scene in the app would look and then I created that using XML in Android Studio. Afterwards I created basic code in Kotlin for navigating through the different scenes, testing that every piece of code I wrote worked as intended as I went. </p>
-            <p>The server to connect the devices together for online play was written in JavaScript using the Node.js framework. Whilst is certainly has room for improvement, given that it was self taught due to JavaScript not being taught on my course at University I think it works very well. </p>
-            <p>The GitHub repository for the Android application is <br>available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/ShadowCat117/AccessibleCodenames"><u>here</u></a> and the server is available <a style="margin-left: 0px;font-size: 20px;" ; href="https://github.com/ShadowCat117/AccessibleCodenamesServer"><u>here</u></a>. </p>
-            <p>My dissertation for this project is available below.</p> <embed src="/Resources/PDFs/Dissertation.pdf" width="800px" height="1150px" />
-        </div>
-    </main>
-</body>
 
+<header class="hero">
+    <h1>Accessible Codenames</h1>
+    <p>Android adaptation of the board game Codenames with accessibility features</p>
+</header>
+
+<nav class="navbar">
+    <a href="../../index.html">Projects</a>
+    <a href="../../index.html#about">About</a>
+    <a href="../../cv.html">CV</a>
+    <a href="https://github.com/ShadowCat117" target="_blank">GitHub</a>
+    <a href="mailto:JamCal117@gmail.com">Contact</a>
+</nav>
+
+<section class="section project-content">
+
+    <p>
+        This was my final year project for my Software Engineering degree at Swansea University. I recreated
+        the board game <strong>Codenames</strong> as an Android application with a strong focus on accessibility,
+        including text-to-speech support and fully customizable colours.
+    </p>
+
+    <img src="/Resources/Codenames/Codenames.jpg" alt="Game board screenshot">
+
+    <p>
+        Codenames is played with two teams, each containing at least two players. One player from each team
+        becomes the spymaster while everyone else guesses based on hints provided.
+    </p>
+
+    <img src="/Resources/Codenames/CodenamesTeamSetup.jpg" alt="Team setup screen">
+
+    <p>
+        The game board contains 25 unique words assigned to four categories: Team A, Team B, neutral, and the
+        bomb word. Spymasters provide a word and number as a hint to guide their team toward selecting linked
+        words while avoiding opposing or bomb words.
+    </p>
+
+    <img src="/Resources/Codenames/CodenamesGuess.jpg" alt="Guessing phase screenshot">
+
+    <p>
+        The app includes multiple playstyles: local pass-and-play or online multiplayer. Online play includes
+        chat support, while local play allows assigning real players to teams for easier memory.
+    </p>
+
+    <img src="/Resources/Codenames/CodenamesOnline.jpg" alt="Online multiplayer screenshot">
+
+    <p>
+        Accessibility features include Text-to-Speech via long-pressing UI elements, and fully customizable
+        colour settings across eight interface categories:
+    </p>
+
+    <ul>
+        <li>Team A</li>
+        <li>Team B</li>
+        <li>Bomb Square</li>
+        <li>Neutral Square</li>
+        <li>Unmodified Square</li>
+        <li>Application Background</li>
+        <li>Menu Buttons</li>
+        <li>Menu Text</li>
+    </ul>
+
+    <img src="/Resources/Codenames/CodenamesColours.jpg" alt="Colour customization screen">
+
+    <p>
+        Users can save up to three colour configuration presets. Designs were created in XML layouts via
+        Android Studio, with navigation and logic written in Kotlin.
+    </p>
+
+    <p>
+        Online connectivity is powered by a custom Node.js server. While self-taught, the implementation
+        successfully handles real-time communication for gameplay and chat.
+    </p>
+
+    <p>
+        Source code repositories:
+        <br>
+        <a href="https://github.com/ShadowCat117/AccessibleCodenames" target="_blank"><u>Android App Repository</u></a>
+        <br>
+        <a href="https://github.com/ShadowCat117/AccessibleCodenamesServer" target="_blank"><u>Server Repository</u></a>
+    </p>
+
+    <h2>Dissertation</h2>
+
+    <p>The full dissertation for this project is available below.</p>
+
+    <embed
+            src="/Resources/PDFs/Dissertation.pdf"
+            type="application/pdf"
+            class="cv-embed"
+    />
+
+</section>
+
+<footer>
+    <p>© 2025 James Callan</p>
+    <p><a href="mailto:JamCal117@gmail.com">JamCal117@gmail.com</a></p>
+</footer>
+
+</body>
 </html>
