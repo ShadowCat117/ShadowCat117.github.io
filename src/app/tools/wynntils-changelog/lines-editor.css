@@ -1,0 +1,62 @@
+:host {
+  display: block;
+}
+.lines {
+  display: grid;
+  gap: 1rem;
+}
+.line {
+  display: grid;
+  gap: 0.4rem;
+}
+.row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: start;
+}
+.row input,
+.row textarea {
+  flex: 1;
+  min-width: 0;
+}
+.notes {
+  border-left: 2px solid var(--border);
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+button,
+input,
+textarea {
+  font: inherit;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.55rem 0.7rem;
+}
+input,
+textarea {
+  background: var(--background);
+  width: 100%;
+}
+textarea {
+  resize: vertical;
+}
+button {
+  background: var(--surface-raised);
+  cursor: pointer;
+  width: fit-content;
+}
+button:hover {
+  border-color: var(--accent);
+}
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}

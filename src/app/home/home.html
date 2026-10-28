@@ -1,0 +1,42 @@
+<section id="about" class="section">
+  <app-section-header title="About Me"></app-section-header>
+
+  <p class="section-content">
+    This page highlights software projects I've built or contributed to over time.
+    I work across game development, Minecraft modding, backend systems, and tools.
+    You can reach me at
+    <a href="mailto:JamCal117@gmail.com">JamCal117&#64;gmail.com</a>.
+  </p>
+</section>
+
+<section id="projects" class="section">
+  <app-section-header title="Primary Projects"></app-section-header>
+  <p class="section-content">Projects I either actively work on or built through full development lifecycle.</p>
+
+  <div class="project-grid">
+    @for (project of primaryProjects; track project.name) {
+      <app-project-card [project]="project"></app-project-card>
+    }
+  </div>
+</section>
+
+<section class="section">
+  <app-section-header title="Collaborative Contributions"></app-section-header>
+  <p class="section-content">Projects I contributed to but do not maintain or actively develop.</p>
+
+  <div class="project-grid">
+    @for (project of collaborativeProjects; track project.name) {
+      <app-project-card [project]="project"></app-project-card>
+    }
+  </div>
+</section>
+
+<section id="tools" class="section">
+  <app-section-header title="Tools"></app-section-header>
+  <p class="section-content">Useful tools for projects I work on.</p>
+  <div class="project-grid">
+    @for (tool of tools; track tool.name) {
+      <app-project-card [project]="tool"></app-project-card>
+    }
+  </div>
+</section>

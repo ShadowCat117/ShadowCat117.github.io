@@ -1,0 +1,38 @@
+<section class="section project-content">
+  @for (item of project().content; track $index) {
+    @if (item.type === 'text') {
+      <p>{{ item.content }}</p>
+    }
+
+    @if (item.type === 'image') {
+      <img [src]="item.content" [alt]="project().title + ' screenshot'" loading="lazy" />
+    }
+
+    @if (item.type === 'list') {
+      <ul>
+        @for (entry of item.content; track entry) {
+          <li>{{ entry }}</li>
+        }
+      </ul>
+    }
+  }
+
+  @if (project().repositories) {
+    <div class="repositories">
+      <p>Source code:</p>
+
+      @for (repository of project().repositories; track repository.url) {
+        <a [href]="repository.url" target="_blank" rel="noopener noreferrer">
+          {{ repository.name }}
+        </a>
+        <br />
+      }
+    </div>
+  }
+
+  @if (project().pdf) {
+    <h2>{{ project().pdf!.title }}</h2>
+
+    <app-pdf-viewer [link]="project().pdf!.link"> </app-pdf-viewer>
+  }
+</section>

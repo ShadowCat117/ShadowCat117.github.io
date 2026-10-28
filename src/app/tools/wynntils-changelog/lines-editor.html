@@ -1,0 +1,46 @@
+<div class="lines">
+  @for (line of lines(); track line.id; let index = $index) {
+    <div class="line">
+      <label [for]="'line-' + line.id">{{ label() }} {{ index + 1 }}</label>
+      <div class="row">
+        <textarea
+          [id]="'line-' + line.id"
+          rows="2"
+          [placeholder]="placeholder()"
+          [ngModel]="line.text"
+          (ngModelChange)="update(line.id, $event)"
+        ></textarea>
+        <button
+          type="button"
+          (click)="remove(line.id)"
+          [attr.aria-label]="'Remove ' + label() + ' ' + (index + 1)"
+        >
+          Remove
+        </button>
+      </div>
+      @if (allowNotes()) {
+        <div class="notes">
+          @for (note of line.notes; track note.id; let noteIndex = $index) {
+            <label [for]="'note-' + note.id">Note {{ noteIndex + 1 }}</label>
+            <div class="row">
+              <input
+                [id]="'note-' + note.id"
+                [ngModel]="note.text"
+                (ngModelChange)="updateNote(line.id, note.id, $event)"
+              />
+              <button
+                type="button"
+                (click)="removeNote(line.id, note.id)"
+                [attr.aria-label]="'Remove note ' + (noteIndex + 1)"
+              >
+                Remove
+              </button>
+            </div>
+          }
+          <button type="button" (click)="addNote(line.id)">+ Add indented note</button>
+        </div>
+      }
+    </div>
+  }
+  <button type="button" (click)="add()">+ {{ addLabel() }}</button>
+</div>

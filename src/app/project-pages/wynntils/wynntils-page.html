@@ -1,0 +1,70 @@
+<section class="section">
+  <app-section-header title="Overview"></app-section-header>
+
+  <p>
+    Wynntils is a Minecraft mod using Architectury to support Fabric and NeoForge, currently
+    supporting 1.21.4 &amp; 1.21.11. It is a rewrite (originally codenamed Artemis) of the original
+    Wynntils mod, now known as Wynntils Legacy. I began contributing by porting a missing feature
+    and was later invited to join the official development team after making significant
+    contributions. In early 2025 I was promoted from Developer to Senior Developer.
+  </p>
+
+  <p>
+    This was my first open source project and helped me gain experience collaborating on a large
+    codebase, submitting PRs, handling code review, and integrating features alongside other
+    developers.
+  </p>
+
+  <h3>GitHub Links</h3>
+  <ul class="link-list">
+    @for (link of githubLinks; track link.url) {
+      <li>
+        <a [href]="link.url" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
+      </li>
+    }
+  </ul>
+
+  <p>Below are some of the more notable contributions I've made (200+ contributions total).</p>
+</section>
+
+<section class="section contributions">
+  <app-section-header title="Major Contributions"></app-section-header>
+
+  @for (contribution of contributions; track contribution.title) {
+    <details class="contribution">
+      <summary>{{ contribution.title }}</summary>
+
+      @for (paragraph of contribution.description; track $index) {
+        <p>{{ paragraph }}</p>
+      }
+
+      <h3>Pull requests</h3>
+      <ul>
+        @for (pr of contribution.prs; track pr.url) {
+          <li>
+            <a [href]="pr.url" target="_blank" rel="noopener noreferrer">{{ pr.name }}</a>
+          </li>
+        }
+      </ul>
+
+      @for (media of contribution.media; track media.src) {
+        @switch (media.type) {
+          @case ('video') {
+            <video
+              controls
+              preload="none"
+              [attr.aria-label]="contribution.title + ' demonstration'"
+            >
+              <source [src]="media.src" type="video/mp4" />
+              Your browser does not support embedded video.
+              <a [href]="media.src">Download the demonstration video</a>.
+            </video>
+          }
+          @case ('image') {
+            <img [src]="media.src" [alt]="media.alt" loading="lazy" />
+          }
+        }
+      }
+    </details>
+  }
+</section>

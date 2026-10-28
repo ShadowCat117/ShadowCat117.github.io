@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>James Callan | Projects</title>
+    <base href="/" />
+    <meta
+      name="description"
+      content="Software projects by James Callan: Minecraft mods, games, backend systems and developer tools."
+    />
+    <script>
+      (() => {
+        let theme;
+        try {
+          theme = localStorage.getItem('portfolio-theme');
+        } catch {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>

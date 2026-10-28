@@ -1,0 +1,18 @@
+.section-header {
+  margin-bottom: 20px;
+}
+.section-header h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+.section-header h2::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin-bottom: 14px;
+  background: var(--rust);
+}

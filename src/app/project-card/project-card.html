@@ -1,0 +1,17 @@
+<div class="project-card">
+  @if (isExternal()) {
+    <a [href]="project().link" target="_blank" rel="noopener noreferrer">
+      <img [src]="project().image" [alt]="project().name" loading="lazy" />
+      <h3>{{ project().name }}</h3>
+      <p>{{ project().description }}</p>
+      <span class="card-link">{{ isExternal() ? 'View on GitHub ↗' : 'Explore project →' }}</span>
+    </a>
+  } @else {
+    <a [routerLink]="project().link">
+      <img [src]="project().image" [alt]="project().name" loading="lazy" />
+      <h3>{{ project().name }}</h3>
+      <p>{{ project().description }}</p>
+      <span class="card-link">{{ isExternal() ? 'View on GitHub ↗' : 'Explore project →' }}</span>
+    </a>
+  }
+</div>

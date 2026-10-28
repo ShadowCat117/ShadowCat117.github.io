@@ -1,0 +1,449 @@
+<div class="generator">
+  <div class="editor">
+    <p class="intro">
+      Build your changelog in release order. Empty fields and sections are left out. You can use
+      Markdown, including backticks, in descriptions and notes.
+    </p>
+
+    <section class="panel" aria-labelledby="updates-title">
+      <h2 id="updates-title">Updates &amp; opening notes</h2>
+      <p class="hint">Enter a version to include its update line.</p>
+      <div class="fields">
+        <label
+          >Minecraft version
+          <input
+            placeholder="1.21.11"
+            [ngModel]="draft().minecraft"
+            (ngModelChange)="setField(draft(), 'minecraft', $event)"
+          />
+        </label>
+        <label
+          >Required Fabric version
+          <input
+            placeholder="0.18.4"
+            [ngModel]="draft().fabric"
+            (ngModelChange)="setField(draft(), 'fabric', $event)"
+          />
+        </label>
+        <label
+          >Required NeoForge version
+          <input
+            placeholder="21.11.23-beta"
+            [ngModel]="draft().neoforge"
+            (ngModelChange)="setField(draft(), 'neoforge', $event)"
+          />
+        </label>
+      </div>
+      <app-changelog-lines
+        label="Opening note"
+        addLabel="Add opening note"
+        [allowNotes]="false"
+        [lines]="draft().notes"
+        (linesChange)="setField(draft(), 'notes', $event)"
+      ></app-changelog-lines>
+    </section>
+
+    <section class="panel" aria-labelledby="features-title">
+      <h2 id="features-title">Features &amp; overlays</h2>
+      @for (feature of draft().features; track feature.id; let index = $index) {
+        <details class="entry" open>
+          <summary>{{ feature.name || 'Untitled feature' }}</summary>
+          <div class="entry-body">
+            <div class="actions">
+              <button
+                type="button"
+                (click)="move(draft().features, index, -1)"
+                [disabled]="$first"
+                aria-label="Move feature up"
+              >
+                Move up
+              </button>
+              <button
+                type="button"
+                (click)="move(draft().features, index, 1)"
+                [disabled]="$last"
+                aria-label="Move feature down"
+              >
+                Move down
+              </button>
+              <button type="button" (click)="remove(draft().features, index)">
+                Remove feature
+              </button>
+            </div>
+            <label
+              >Feature or overlay name
+              <input
+                [ngModel]="feature.name"
+                (ngModelChange)="setField(feature, 'name', $event)"
+                placeholder="Player Ping"
+              />
+            </label>
+            <label class="check">
+              <input
+                type="checkbox"
+                [ngModel]="feature.isNew"
+                (ngModelChange)="setField(feature, 'isNew', $event)"
+              />New feature
+            </label>
+            @if (feature.isNew) {
+              <label
+                >Feature description
+                <textarea
+                  rows="2"
+                  [ngModel]="feature.description"
+                  (ngModelChange)="setField(feature, 'description', $event)"
+                  placeholder="displays ping markers from other Hades users in your current party"
+                ></textarea>
+              </label>
+              <fieldset>
+                <legend>Enabled by default in</legend>
+                <label class="check"
+                  ><input
+                    type="checkbox"
+                    [ngModel]="allProfiles(feature)"
+                    (ngModelChange)="toggleAllProfiles(feature, $event)"
+                  />All supported profiles</label
+                >
+                <div class="profiles">
+                  @for (profile of profiles; track profile) {
+                    <label class="check"
+                      ><input
+                        type="checkbox"
+                        [ngModel]="feature.profiles.includes(profile)"
+                        (ngModelChange)="toggleProfile(feature, profile, $event)"
+                      />{{ profile }}</label
+                    >
+                  }
+                </div>
+                <p class="hint">
+                  Blank Slate is always excluded. Leave all unticked for “disabled by default in all
+                  profiles”.
+                </p>
+              </fieldset>
+            }
+
+            <h3>Changes &amp; configs</h3>
+            @for (change of feature.changes; track change.id; let changeIndex = $index) {
+              <div class="sub-entry">
+                <label
+                  >Entry type
+                  <select [ngModel]="change.kind" (ngModelChange)="setChangeKind(change, $event)">
+                    <option value="text">Write a change</option>
+                    <option value="config">{{ feature.isNew ? 'Config' : 'New config' }}</option>
+                    <option value="removed-config">Removed config</option>
+                  </select>
+                </label>
+                @if (change.kind === 'text') {
+                  <label
+                    >Change description
+                    <textarea
+                      rows="2"
+                      [ngModel]="change.text"
+                      (ngModelChange)="setField(change, 'text', $event)"
+                    ></textarea>
+                  </label>
+                } @else {
+                  <label
+                    >Config name<input
+                      [ngModel]="change.name"
+                      (ngModelChange)="setField(change, 'name', $event)"
+                  /></label>
+                  @if (change.kind === 'config') {
+                    <label
+                      >Config description<textarea
+                        rows="2"
+                        [ngModel]="change.description"
+                        (ngModelChange)="setField(change, 'description', $event)"
+                      ></textarea>
+                    </label>
+                    <label
+                      >Default value<input
+                        placeholder="enabled, disabled, 5, floating icon…"
+                        [ngModel]="change.defaultValue"
+                        (ngModelChange)="setField(change, 'defaultValue', $event)"
+                    /></label>
+                  }
+                }
+                @for (note of change.notes; track note.id; let noteIndex = $index) {
+                  <div class="note">
+                    <label
+                      >Indented note<input
+                        [ngModel]="note.text"
+                        (ngModelChange)="setField(note, 'text', $event)"
+                    /></label>
+                    <button type="button" (click)="remove(change.notes, noteIndex)">
+                      Remove note
+                    </button>
+                  </div>
+                }
+                <div class="actions">
+                  <button type="button" (click)="append(change.notes, createNote())">
+                    + Add indented note
+                  </button>
+                  <button
+                    type="button"
+                    (click)="move(feature.changes, changeIndex, -1)"
+                    [disabled]="$first"
+                  >
+                    Move up
+                  </button>
+                  <button
+                    type="button"
+                    (click)="move(feature.changes, changeIndex, 1)"
+                    [disabled]="$last"
+                  >
+                    Move down
+                  </button>
+                  <button type="button" (click)="remove(feature.changes, changeIndex)">
+                    Remove entry
+                  </button>
+                </div>
+              </div>
+            }
+            <button type="button" (click)="append(feature.changes, createChange())">
+              + Add change or config
+            </button>
+          </div>
+        </details>
+      }
+      <button type="button" (click)="append(draft().features, createFeature())">
+        + Add feature or overlay
+      </button>
+    </section>
+
+    <section class="panel" aria-labelledby="commands-title">
+      <h2 id="commands-title">Commands</h2>
+      @for (command of draft().commands; track command.id; let index = $index) {
+        <details class="entry" open>
+          <summary>{{ command.name || 'Untitled command' }}</summary>
+          <div class="entry-body">
+            <label
+              >Command name<input
+                placeholder="Ping"
+                [ngModel]="command.name"
+                (ngModelChange)="setField(command, 'name', $event)"
+            /></label>
+            <p class="hint">“Command” is added to the title automatically.</p>
+            <app-changelog-lines
+              [lines]="command.lines"
+              (linesChange)="setField(command, 'lines', $event)"
+              label="Command description"
+              addLabel="Add description or usage"
+            ></app-changelog-lines>
+            <div class="actions">
+              <button type="button" (click)="move(draft().commands, index, -1)" [disabled]="$first">
+                Move up
+              </button>
+              <button type="button" (click)="move(draft().commands, index, 1)" [disabled]="$last">
+                Move down
+              </button>
+              <button type="button" (click)="remove(draft().commands, index)">
+                Remove command
+              </button>
+            </div>
+          </div>
+        </details>
+      }
+      <button type="button" (click)="append(draft().commands, createCommand())">
+        + Add command
+      </button>
+    </section>
+
+    <section class="panel" aria-labelledby="statistics-title">
+      <h2 id="statistics-title">Statistics</h2>
+      <app-changelog-lines
+        [lines]="draft().statistics"
+        (linesChange)="setField(draft(), 'statistics', $event)"
+        label="Statistic change"
+        addLabel="Add statistic change"
+      ></app-changelog-lines>
+    </section>
+
+    <section class="panel" aria-labelledby="functions-title">
+      <h2 id="functions-title">Functions</h2>
+      @for (category of draft().categories; track category.id; let categoryIndex = $index) {
+        <details class="entry" open>
+          <summary>{{ category.name || 'Untitled function category' }}</summary>
+          <div class="entry-body">
+            <label
+              >Category<input
+                placeholder="Combat or Character"
+                [ngModel]="category.name"
+                (ngModelChange)="setField(category, 'name', $event)"
+            /></label>
+            <p class="hint">“Functions” is added to each category title automatically.</p>
+            @for (fn of category.functions; track fn.id; let functionIndex = $index) {
+              <div class="sub-entry">
+                <label
+                  >Function name<input
+                    placeholder="debuffs_in_radius_value"
+                    [ngModel]="fn.name"
+                    (ngModelChange)="setField(fn, 'name', $event)"
+                    spellcheck="false"
+                /></label>
+                <label
+                  >Aliases, separated by commas<input
+                    placeholder="alias_one, alias_two"
+                    [ngModel]="fn.aliases"
+                    (ngModelChange)="setField(fn, 'aliases', $event)"
+                    spellcheck="false"
+                /></label>
+                <label
+                  >What it returns<textarea
+                    rows="2"
+                    placeholder="the total value of the given debuff in the given radius around you"
+                    [ngModel]="fn.description"
+                    (ngModelChange)="setField(fn, 'description', $event)"
+                  ></textarea>
+                </label>
+                <label
+                  >Return type (optional)<input
+                    placeholder="Integer, Double, String…"
+                    [ngModel]="fn.returnType"
+                    (ngModelChange)="setField(fn, 'returnType', $event)"
+                /></label>
+                <h3>Arguments</h3>
+                @for (argument of fn.arguments; track argument.id; let argumentIndex = $index) {
+                  <div class="sub-entry">
+                    <div class="fields">
+                      <label
+                        >Argument name<input
+                          [ngModel]="argument.name"
+                          (ngModelChange)="setField(argument, 'name', $event)"
+                          spellcheck="false"
+                      /></label>
+                      <label
+                        >Argument type<input
+                          placeholder="double"
+                          [ngModel]="argument.type"
+                          (ngModelChange)="setField(argument, 'type', $event)"
+                      /></label>
+                    </div>
+                    <label class="check"
+                      ><input
+                        type="checkbox"
+                        [ngModel]="argument.required"
+                        (ngModelChange)="setField(argument, 'required', $event)"
+                      />Required argument</label
+                    >
+                    <label
+                      >Argument description<input
+                        [ngModel]="argument.description"
+                        (ngModelChange)="setField(argument, 'description', $event)"
+                    /></label>
+                    <button type="button" (click)="remove(fn.arguments, argumentIndex)">
+                      Remove argument
+                    </button>
+                  </div>
+                }
+                <button type="button" (click)="append(fn.arguments, createArgument())">
+                  + Add argument
+                </button>
+                <h3>Alias details &amp; notes</h3>
+                @for (note of fn.notes; track note.id; let noteIndex = $index) {
+                  <div class="note">
+                    <label
+                      >Function note<input
+                        [ngModel]="note.text"
+                        (ngModelChange)="setField(note, 'text', $event)"
+                    /></label>
+                    <button type="button" (click)="remove(fn.notes, noteIndex)">Remove note</button>
+                  </div>
+                }
+                <div class="actions">
+                  <button type="button" (click)="append(fn.notes, createNote())">
+                    + Add function note
+                  </button>
+                  <button
+                    type="button"
+                    (click)="move(category.functions, functionIndex, -1)"
+                    [disabled]="$first"
+                  >
+                    Move up
+                  </button>
+                  <button
+                    type="button"
+                    (click)="move(category.functions, functionIndex, 1)"
+                    [disabled]="$last"
+                  >
+                    Move down
+                  </button>
+                  <button type="button" (click)="remove(category.functions, functionIndex)">
+                    Remove function
+                  </button>
+                </div>
+              </div>
+            }
+            <button type="button" (click)="append(category.functions, createFunction())">
+              + Add function
+            </button>
+            <div class="actions">
+              <button
+                type="button"
+                (click)="move(draft().categories, categoryIndex, -1)"
+                [disabled]="$first"
+              >
+                Move up
+              </button>
+              <button
+                type="button"
+                (click)="move(draft().categories, categoryIndex, 1)"
+                [disabled]="$last"
+              >
+                Move down
+              </button>
+              <button type="button" (click)="remove(draft().categories, categoryIndex)">
+                Remove category
+              </button>
+            </div>
+          </div>
+        </details>
+      }
+      <button type="button" (click)="append(draft().categories, createCategory())">
+        + Add function category
+      </button>
+    </section>
+
+    <section class="panel" aria-labelledby="closing-notes-title">
+      <h2 id="closing-notes-title">Closing notes</h2>
+      <app-changelog-lines
+        label="Closing note"
+        addLabel="Add closing note"
+        [allowNotes]="false"
+        [lines]="draft().closingNotes"
+        (linesChange)="setField(draft(), 'closingNotes', $event)"
+      ></app-changelog-lines>
+    </section>
+
+    <section class="panel" aria-labelledby="fixes-title">
+      <h2 id="fixes-title">Fixes</h2>
+      <app-changelog-lines
+        [lines]="draft().fixes"
+        (linesChange)="setField(draft(), 'fixes', $event)"
+        label="Fix"
+        addLabel="Add fix"
+        placeholder="Fixed…"
+      ></app-changelog-lines>
+    </section>
+  </div>
+
+  <aside class="preview panel" aria-labelledby="preview-title">
+    <div class="preview-heading">
+      <h2 id="preview-title">Markdown preview</h2>
+      <button type="button" class="primary" [disabled]="!markdown()" (click)="copyMarkdown()">
+        Copy Markdown
+      </button>
+    </div>
+    <p class="hint">Matches your existing changelog format. Updates as you type.</p>
+    <p class="status" role="status">{{ copyStatus() }}</p>
+    <textarea
+      #preview
+      class="markdown"
+      readonly
+      [value]="markdown()"
+      aria-label="Generated Markdown"
+      placeholder="Your changelog will appear here."
+      spellcheck="false"
+    ></textarea>
+  </aside>
+</div>

@@ -1,0 +1,9 @@
+<div class="pdf-actions">
+  <a class="download-btn" [href]="link()" download
+    >Download PDF <span aria-hidden="true">↓</span></a
+  >
+  <a [href]="link()" target="_blank" rel="noopener noreferrer">Open in a new tab ↗</a>
+</div>
+<div class="pdf-container">
+  <embed [src]="safeLink" type="application/pdf" class="pdf-embed" title="PDF document" />
+</div>
