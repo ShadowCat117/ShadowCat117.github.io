@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "AngularTesting": {
+    "shadowcat117.github.io": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -17,6 +17,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
+            "outputPath": "dist/shadowcat117.github.io",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -56,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "AngularTesting:build:production"
+              "buildTarget": "shadowcat117.github.io:build:production"
             },
             "development": {
-              "buildTarget": "AngularTesting:build:development"
+              "buildTarget": "shadowcat117.github.io:build:development"
             }
           },
           "defaultConfiguration": "development"

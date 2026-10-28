@@ -1,59 +1,40 @@
-# AngularTesting
+# ShadowCat117.github.io
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.0.
+James Callan's portfolio, built with Angular and hosted at https://shadowcat117.github.io/.
 
-## Development server
+## Local development
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Use Node.js 24 and install the locked dependencies:
 
 ```bash
-ng generate component component-name
+npm ci
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Open http://localhost:4200/. Changes to the source files reload automatically.
+
+## Build and test
 
 ```bash
-ng generate --help
+npm run build
+npm test -- --watch=false
 ```
 
-## Building
+The production website is generated in `dist/shadowcat117.github.io/browser/`.
 
-To build the project run:
+## GitHub Pages deployment
 
-```bash
-ng build
-```
+The source files need to be compiled before GitHub Pages can serve the Angular app.
+Publishing the repository root directly can display this README instead of the website.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+1. In the GitHub repository, open **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Push these changes to `main`. The **Deploy GitHub Pages** workflow installs the
+   dependencies, builds the app, and publishes only the production website.
+4. Check the workflow in the **Actions** tab. It can also be run manually using
+   **Run workflow**.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The site is hosted at the domain root, so its base URL is `/`.
+The workflow also copies the app entry point to `404.html`, allowing Angular to
+handle direct visits and refreshes on routes such as `/cv` and `/projects/wynntils`.
+GitHub Pages returns HTTP 404 for those fallback responses, but the app still loads.
